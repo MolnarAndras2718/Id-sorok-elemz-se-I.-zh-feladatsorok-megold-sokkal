@@ -754,21 +754,24 @@
   </div>
 
   <details>
-    <summary>Megoldás mutatása</summary>
-    <p>
-      Helyes válasz:
-      <span class="helyes">c</span>
-    </p>
+  <summary>Megoldás mutatása</summary>
+  <p>
+    Helyes válasz a feltöltött jegyzet explicit periodogram-képlete alapján:
+    <span class="helyes">d</span>
+  </p>
 
-    <p class="magyarazat">
-      A periodogram a frekvenciatartalom becslésére szolgál. Periodikus komponens
-      plusz zaj esetén a periodogram várható értéke a zajból származó konstans
-      alapszintből, azaz kétszer a zaj szórásnégyzetéből, valamint a valódi
-      frekvenciák köré koncentrálódó Fejér-magok súlyozott összegéből áll.
-      A súlyok a periodikus komponensek amplitúdóitól függenek, ezért nem
-      egyszerű Fejér-magok összege, hanem súlyozott összeg.
-    </p>
-  </details>
+  <p class="magyarazat">
+    A jegyzetben a periodogram az autokovariancia-becslés csonkított
+    Fourier-transzformáltjaként szerepel:
+    \[
+    I_N(\lambda)
+    =
+    2\sum_{\tau=-(N-1)}^{N-1}\widehat R(\tau)\cos(\tau\lambda).
+    \]
+    Ez autokovarianciákkal súlyozott trigonometrikus, konkrétan koszinuszos
+    tagok összege, ezért a megadott válaszok közül a <strong>d)</strong>
+    illeszkedik közvetlenül a feltöltött jegyzethez.
+  </p>
 </div>
 
 
