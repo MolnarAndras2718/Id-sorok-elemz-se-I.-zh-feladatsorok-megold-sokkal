@@ -1565,6 +1565,191 @@
 </div>
 
 
+
+
+
+
+<h3>4. feladat</h3>
+
+<p class="utasitas">
+  <strong>4. feladat (2 pont)</strong>
+</p>
+
+<div class="feladat">
+  <p>
+    Adjon meg két okot, amiért nem használjuk az autokovariancia-függvény
+    <em>torzítatlan</em> becslését!
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+
+    <p class="magyarazat">
+      <strong>1.</strong> A torzítatlan autokovariancia-becslés nem feltétlenül
+      pozitív szemidefinit függvény. Emiatt előfordulhatna, hogy egy belőle
+      számolt variancia negatív lenne, ami lehetetlen.
+    </p>
+
+    <p class="magyarazat">
+      <strong>2.</strong> Spektrális becslésnél problémát okozhat, mert ha az
+      autokovariancia-becslés nem pozitív szemidefinit, akkor a hozzá tartozó
+      spektrális sűrűségbecslés sem lesz feltétlenül nemnegatív. Ezért inkább
+      enyhén torzított, de strukturálisan helyes, pozitív szemidefinit becslést
+      használunk.
+    </p>
+  </details>
+</div>
+
+
+<h3>8. feladat</h3>
+
+<p class="utasitas">
+  <strong>8. feladat (2 pont)</strong>
+</p>
+
+<div class="feladat">
+  <p>
+    Mi a Gauss-zajból generált ARCH(1) folyamat erős stacionaritásának
+    parametrikus feltétele?
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+
+    <p class="magyarazat">
+      ARCH(1) modell:
+      \[
+      X_t=\sigma_t\varepsilon_t,
+      \qquad
+      \sigma_t^2=\alpha_0+\alpha_1X_{t-1}^2.
+      \]
+      A szigorú, vagyis erős stacionaritás feltétele a Ljapunov-exponens
+      negativitása:
+      \[
+      E\log(\alpha_1\varepsilon_t^2)&lt;0.
+      \]
+    </p>
+
+    <p class="magyarazat">
+      Gauss-zaj esetén ebből:
+      \[
+      0&lt;\alpha_1&lt;2e^C\approx 3.5686,
+      \]
+      ahol $C$ az Euler--Mascheroni-állandó. Természetesen $\alpha_0&gt;0$
+      szükséges a feltételes variancia pozitivitásához.
+    </p>
+  </details>
+</div>
+
+
+<h3>10. feladat</h3>
+
+<p class="utasitas">
+  <strong>10. feladat (5 pont)</strong>
+</p>
+
+<div class="feladat">
+  <p>
+    A
+    \[
+    \frac{5}{2\pi}
+    \frac{1}{\left|e^{2i\lambda}+\frac13 e^{i\lambda}-\frac23\right|^2}
+    \]
+    függvény milyen típusú és milyen paraméterű folyamat spektrálsűrűség-függvénye?
+  </p>
+
+  <p>A folyamatmodell (1 pont):</p>
+  <p>A modell rendje (1 pont):</p>
+  <p>A folyamat paraméterei, vagyis az egyenlet együtthatói (2 pont):</p>
+  <p>A zaj szórása (1 pont):</p>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+
+    <p class="magyarazat">
+      Általánosan egy ARMA$(p,q)$ folyamat spektrálsűrűsége:
+      \[
+      f(\lambda)
+      =
+      \frac{\sigma^2}{2\pi}
+      \frac{\left|\theta(e^{-i\lambda})\right|^2}
+           {\left|\varphi(e^{-i\lambda})\right|^2},
+      \]
+      ahol
+      \[
+      \varphi(e^{-i\lambda})
+      =
+      1-\varphi_1e^{-i\lambda}-\cdots-\varphi_pe^{-ip\lambda},
+      \]
+      és
+      \[
+      \theta(e^{-i\lambda})
+      =
+      1+\theta_1e^{-i\lambda}+\cdots+\theta_qe^{-iq\lambda}.
+      \]
+    </p>
+
+    <p class="magyarazat">
+      A megadott spektrálsűrűség számlálójában nincs mozgóátlag-polinom,
+      csak konstans szerepel, ezért ez tiszta autoregresszív folyamat,
+      vagyis AR-folyamat.
+    </p>
+
+    <p class="magyarazat">
+      A nevező:
+      \[
+      \left|e^{2i\lambda}+\frac13e^{i\lambda}-\frac23\right|^2.
+      \]
+      Ezt átírjuk úgy, hogy az AR-spektrálsűrűség szokásos alakjához
+      hasonlítsuk. Mivel komplex abszolútértékben vagyunk, szorozhatunk
+      $e^{-2i\lambda}$-val, mert annak abszolútértéke 1:
+      \[
+      \left|e^{2i\lambda}+\frac13e^{i\lambda}-\frac23\right|
+      =
+      \left|1+\frac13e^{-i\lambda}-\frac23e^{-2i\lambda}\right|.
+      \]
+    </p>
+
+    <p class="magyarazat">
+      Az AR(2) spektrálsűrűség nevezője általánosan:
+      \[
+      \left|1-\varphi_1e^{-i\lambda}-\varphi_2e^{-2i\lambda}\right|^2.
+      \]
+      Ezt összehasonlítva:
+      \[
+      1-\varphi_1e^{-i\lambda}-\varphi_2e^{-2i\lambda}
+      =
+      1+\frac13e^{-i\lambda}-\frac23e^{-2i\lambda}.
+      \]
+      Ezért
+      \[
+      \varphi_1=-\frac13,
+      \qquad
+      \varphi_2=\frac23.
+      \]
+    </p>
+
+    <p class="magyarazat">
+      Tehát a folyamatmodell:
+      \[
+      X_t=-\frac13X_{t-1}+\frac23X_{t-2}+\varepsilon_t.
+      \]
+    </p>
+
+    <p class="magyarazat">
+      <strong>A folyamatmodell:</strong> AR-folyamat.
+      <br>
+      <strong>A modell rendje:</strong> AR(2).
+      <br>
+      <strong>Paraméterek:</strong>
+      $\varphi_1=-\frac13$, $\varphi_2=\frac23$.
+      <br>
+      <strong>A zaj varianciája:</strong> $\sigma^2=5$.
+      <br>
+      <strong>A zaj szórása:</strong> $\sigma=\sqrt{5}$.
+    </p>
+  </details>
+</div>
   
 </section>
   
