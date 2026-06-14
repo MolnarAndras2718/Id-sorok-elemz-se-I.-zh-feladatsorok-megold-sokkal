@@ -2260,7 +2260,7 @@
 
 <div class="feladat">
   <p>
-    <strong>1.</strong> Mit jelent az exponenciális mozgóátlagunk (EMA)?
+    <strong>1.</strong> Mi a fő jellemzője az exponenciális mozgóátlagnak (EMA)?
   </p>
 
   <p><strong>a)</strong> Minden múltbeli megfigyelés azonos súllyal szerepel</p>
@@ -2428,14 +2428,11 @@
     <summary>Megoldás mutatása</summary>
     <p>
       Helyes válasz:
-      <span class="helyes">b</span>,
-      <span class="helyes">d</span>
+      <span class="helyes">b</span>
     </p>
 
     <p class="magyarazat">
-      Nagyobb sávszélességnél több, illetve távolabbi pont is hat a lokális
-      illesztésre. Emiatt a görbe simább lesz, kevésbé követi a lokális zajt,
-      és a távolabbi pontok relatív szerepe is nő.
+      Ha növeljük a sávszélességet, akkor a lokális ablak tágul, vagyis több adatpont átlagolásával alakul ki a becslés. Ez kiszűri a véletlen ingadozásokat, így a kapott trendvonal simább lesz (csökken a varianciája), viszont nő a torzítása (elsimíthat valós, éles mintázatokat)
     </p>
   </details>
 </div>
@@ -2527,9 +2524,7 @@
     </p>
 
     <p class="magyarazat">
-      A nyers periodogram önmagában nem konzisztens spektrumsűrűség-becslő,
-      mert a varianciája nem tűnik el. Viszont megfelelő feltételek mellett
-      aszimptotikusan torzítatlan. Konzisztens becsléshez simítás/windowing szükséges.
+      Aszimptotikusan torzítatlan: Ha a mintaméret ($n$) a végtelenbe tart, a periodogram várható értéke valóban a valódi spektrálsűrűség-függvényhez konvergál. Nem konzisztens: A mintanagyság növelésével a periodogram értékeinek szórása (varianciája) nem tart a nullához, hanem állandó marad
     </p>
   </details>
 </div>
@@ -2558,11 +2553,9 @@
     </p>
 
     <p class="magyarazat">
-      A teljes likelihood tartalmazza a kezdőérték stacionárius eloszlását és
-      a teljes kovarianciaszerkezetet is, ezért technikailag bonyolultabb,
-      gyakran mátrixműveleteket vagy numerikus optimalizálást igényel.
-      A feltételes likelihood egyszerűbb: a kezdeti értékekre feltételezünk,
-      és nagy mintában általában aszimptotikusan ekvivalens becslést kapunk.
+      A stacionárius autoregresszív (AR) modellek paraméterbecslése során a teljes likelihood (maximum likelihood) függvény maximalizálása egy nemlineáris optimalizálási problémát eredményez. Ez azért van, mert a kezdeti megfigyelések (idősor eleje) eloszlása maguktól a modell paramétereitől (a stacionárius kovarianciamátrixtól) függ.
+
+Ezzel szemben a feltételes likelihood (conditional likelihood) elhagyja az első néhány megfigyelés sűrűségfüggvényét (azokat adottnak, rögzítettnek tekinti). Ennek köszönhetően a becslési eljárás leegyszerűsödik egy közönséges legkisebb négyzetek (OLS) feladatra, amely lineáris mátrixműveletekkel (zárt alakban) gyorsan és közvetlenül kiszámítható.
     </p>
   </details>
 </div>
