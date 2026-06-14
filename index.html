@@ -2250,88 +2250,356 @@
   </div>
 
 
-  <h3>4. feladat</h3>
 
-  <p class="utasitas">
-    <strong>4. feladat (5 pont)</strong>
+
+<h3>5. feladat</h3>
+
+<p class="utasitas">
+  <strong>5. feladat (22 pont)</strong> — minden jó válasz 2 pont, rossz válasz -1 pontot ér.
+</p>
+
+<div class="feladat">
+  <p>
+    <strong>1.</strong> Mit jelent az exponenciális mozgóátlagunk (EMA)?
   </p>
 
-  <div class="feladat">
+  <p><strong>a)</strong> Minden múltbeli megfigyelés azonos súllyal szerepel</p>
+  <p><strong>b)</strong> Csak az utolsó érték számít</p>
+  <p><strong>c)</strong> A régebbi értékek kisebb súllyal szerepelnek</p>
+  <p><strong>d)</strong> Múltbeli adatokat figyelmen kívül hagyja</p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
     <p>
-      A
-      \[
-      \frac{5}{2\pi}
-      \frac{1}{\left|e^{2i\lambda}+\frac13e^{i\lambda}-\frac23\right|^2}
-      \]
-      függvény milyen típusú és milyen paraméterű folyamat spektrálsűrűség-függvénye?
+      Helyes válasz:
+      <span class="helyes">c</span>
     </p>
 
-    <p>A folyamatmodell, típusa és rendje:</p>
-    <p>A folyamat paraméterei:</p>
-    <p>A zaj szórásnégyzete:</p>
+    <p class="magyarazat">
+      Az EMA-nál a frissebb megfigyelések nagyobb súlyt kapnak, a régebbi
+      megfigyelések súlya pedig exponenciálisan csökken.
+    </p>
+  </details>
+</div>
 
-    <details>
-      <summary>Megoldás mutatása</summary>
 
-      <p class="magyarazat">
-        Általánosan egy ARMA$(p,q)$ folyamat spektrálsűrűsége:
-        \[
-        f(\lambda)
-        =
-        \frac{\sigma^2}{2\pi}
-        \frac{|\theta(e^{-i\lambda})|^2}
-             {|\varphi(e^{-i\lambda})|^2}.
-        \]
-        AR$(p)$ esetén nincs MA-rész, tehát:
-        \[
-        f(\lambda)
-        =
-        \frac{\sigma^2}{2\pi}
-        \frac{1}
-             {|1-\varphi_1e^{-i\lambda}-\cdots-\varphi_pe^{-ip\lambda}|^2}.
-        \]
-      </p>
+<div class="feladat">
+  <p>
+    <strong>2.</strong> Mit jelent, ha az $\alpha$ paraméter kicsi az EMA-ban?
+  </p>
 
-      <p class="magyarazat">
-        A nevező:
-        \[
-        \left|e^{2i\lambda}+\frac13e^{i\lambda}-\frac23\right|^2.
-        \]
-        Mivel $|e^{-2i\lambda}|=1$, szorozhatunk vele az abszolútértéken belül:
-        \[
-        \left|e^{2i\lambda}+\frac13e^{i\lambda}-\frac23\right|
-        =
-        \left|1+\frac13e^{-i\lambda}-\frac23e^{-2i\lambda}\right|.
-        \]
-      </p>
+  <p><strong>a)</strong> Nagyon érzékeny a változásokra</p>
+  <p><strong>b)</strong> Lassabban reagál, simább lesz</p>
+  <p><strong>c)</strong> Teljesen eltünteti a zajt</p>
+  <p><strong>d)</strong> Nincs hatása</p>
 
-      <p class="magyarazat">
-        Ezt összevetjük az AR(2) nevezőjével:
-        \[
-        1-\varphi_1e^{-i\lambda}-\varphi_2e^{-2i\lambda}.
-        \]
-        Így:
-        \[
-        \varphi_1=-\frac13,
-        \qquad
-        \varphi_2=\frac23.
-        \]
-      </p>
-
-      <p class="magyarazat">
-        <strong>A folyamatmodell:</strong>
-        \[
-        X_t=-\frac13X_{t-1}+\frac23X_{t-2}+\varepsilon_t.
-        \]
-      </p>
-
-      <p class="magyarazat">
-        <strong>Típusa és rendje:</strong> AR(2).<br>
-        <strong>Paraméterei:</strong> $\varphi_1=-\frac13$, $\varphi_2=\frac23$.<br>
-        <strong>A zaj szórásnégyzete:</strong> $\sigma^2=5$.
-      </p>
-    </details>
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
   </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>
+      Helyes válasz:
+      <span class="helyes">b</span>
+    </p>
+
+    <p class="magyarazat">
+      Az EMA képlete:
+      \[
+      EMA_t=\alpha x_t+(1-\alpha)EMA_{t-1}.
+      \]
+      Ha $\alpha$ kicsi, akkor az új megfigyelés kis súlyt kap, ezért a simított
+      sor lassabban reagál, de simább lesz.
+    </p>
+  </details>
+</div>
+
+
+<div class="feladat">
+  <p>
+    <strong>3.</strong> Miért használunk spline-t simításra?
+  </p>
+
+  <p><strong>a)</strong> Egész adathalmazra illesztett magas fokú polinom miatt</p>
+  <p><strong>b)</strong> Frekvenciatartományba transzformálás miatt</p>
+  <p><strong>c)</strong> Részenkénti polinomok sima csatlakozása miatt</p>
+  <p><strong>d)</strong> Adatok véletlenszerű elhagyása miatt</p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>
+      Helyes válasz:
+      <span class="helyes">c</span>
+    </p>
+
+    <p class="magyarazat">
+      A spline részenként illesztett polinomokból áll, amelyek a csomópontokban
+      simán csatlakoznak. Ezért rugalmasabb és stabilabb lehet, mint egyetlen
+      magas fokú globális polinom.
+    </p>
+  </details>
+</div>
+
+
+<div class="feladat">
+  <p>
+    <strong>4.</strong> Mi biztosítja a spline-ok csomópontjainál a simaságot?
+  </p>
+
+  <p><strong>a)</strong> Legközelebbi szomszédhoz illeszt</p>
+  <p><strong>b)</strong> Deriváltak folytonossága</p>
+  <p><strong>c)</strong> Fourier-együtthatók korrekciója</p>
+  <p><strong>d)</strong> Ugrásszerű szakadások beiktatása</p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>
+      Helyes válasz:
+      <span class="helyes">b</span>
+    </p>
+
+    <p class="magyarazat">
+      A spline-oknál a simaságot az biztosítja, hogy a darabonkénti polinomok
+      a csomópontokban nemcsak értékben, hanem megfelelő rendű deriváltakban is
+      illeszkednek.
+    </p>
+  </details>
+</div>
+
+
+<div class="feladat">
+  <p>
+    <strong>5.</strong> Mi a LOESS lényege?
+  </p>
+
+  <p><strong>a)</strong> Globális polinomiális illesztés</p>
+  <p><strong>b)</strong> Lokális súlyozott polinomiális regresszió</p>
+  <p><strong>c)</strong> Spektrális dekompozíció</p>
+  <p><strong>d)</strong> Differenciálegyenlet megoldása</p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>
+      Helyes válasz:
+      <span class="helyes">b</span>
+    </p>
+
+    <p class="magyarazat">
+      A LOESS lokálisan illeszt regressziót: minden pont környezetében
+      súlyozott polinomiális regressziót használ, ahol a közeli pontok nagyobb
+      súlyt kapnak.
+    </p>
+  </details>
+</div>
+
+
+<div class="feladat">
+  <p>
+    <strong>6.</strong> Mi történik a LOESS sávszélesség növelésekor?
+  </p>
+
+  <p><strong>a)</strong> Nő a becslés varianciája</p>
+  <p><strong>b)</strong> Simább lesz, kevésbé érzékeny a lokális zajra</p>
+  <p><strong>c)</strong> Több csomópont kerül a spline-ba</p>
+  <p><strong>d)</strong> Távoli pontok súlya nő</p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>
+      Helyes válasz:
+      <span class="helyes">b</span>,
+      <span class="helyes">d</span>
+    </p>
+
+    <p class="magyarazat">
+      Nagyobb sávszélességnél több, illetve távolabbi pont is hat a lokális
+      illesztésre. Emiatt a görbe simább lesz, kevésbé követi a lokális zajt,
+      és a távolabbi pontok relatív szerepe is nő.
+    </p>
+  </details>
+</div>
+
+
+<div class="feladat">
+  <p>
+    <strong>7.</strong> Hogyan viselkedik a mintaátlag hosszú emlékezetű folyamat esetén,
+    ha a Hurst-paraméter $H&gt;0.5$?
+  </p>
+
+  <p><strong>a)</strong> Mindig aszimptotikusan normális, függetlenül $H$-tól</p>
+  <p><strong>b)</strong> Lassabban konvergál, mint $\sqrt{n}$</p>
+  <p><strong>c)</strong> Divergál $n\to\infty$ esetén</p>
+  <p><strong>d)</strong> A mediánhoz konvergál az átlag helyett</p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>
+      Helyes válasz:
+      <span class="helyes">b</span>
+    </p>
+
+    <p class="magyarazat">
+      Hosszú emlékezetnél a megfigyelések távoli értékei is tartósan függnek.
+      Emiatt a mintaátlag varianciája lassabban csökken, és a szokásos
+      $\sqrt{n}$-es konvergencia helyett lassabb konvergencia jelenik meg.
+    </p>
+  </details>
+</div>
+
+
+<div class="feladat">
+  <p>
+    <strong>8.</strong> Mi történik a korrigált tapasztalati szórásnégyzettel
+    hosszú emlékezetű folyamatnál?
+  </p>
+
+  <p><strong>a)</strong> Gyorsan konvergál az elméleti értékhez, elhanyagolható varianciával</p>
+  <p><strong>b)</strong> Alábecsüli a rövid távú memóriát</p>
+  <p><strong>c)</strong> Torzítottá válik a tartós függőség miatt</p>
+  <p><strong>d)</strong> Mindig megegyezik az elméleti értékkel</p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>
+      Helyes válasz:
+      <span class="helyes">c</span>
+    </p>
+
+    <p class="magyarazat">
+      A szokásos korrigált tapasztalati szórásnégyzet független vagy rövid
+      emlékezetű mintákra van természetesen motiválva. Hosszú emlékezetnél
+      a tartós függőség miatt a mintaelemek nem viselkednek úgy, mintha
+      gyorsan függetlenednének, ezért a becslés torzulhat és lassabban stabilizálódik.
+    </p>
+  </details>
+</div>
+
+
+<div class="feladat">
+  <p>
+    <strong>9.</strong> Mi a nyers, nem simított periodogram egyik fő tulajdonsága
+    a spektrumsűrűség becslésére?
+  </p>
+
+  <p><strong>a)</strong> Torzítatlan és konzisztens becslés</p>
+  <p><strong>b)</strong> Aszimptotikusan torzítatlan, de nem konzisztens</p>
+  <p><strong>c)</strong> Torzított, és mindig túlbecsüli a magas frekvenciákat</p>
+  <p><strong>d)</strong> A frekvenciatartományban az autokorrelációs függvényt becsüli</p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>
+      Helyes válasz:
+      <span class="helyes">b</span>
+    </p>
+
+    <p class="magyarazat">
+      A nyers periodogram önmagában nem konzisztens spektrumsűrűség-becslő,
+      mert a varianciája nem tűnik el. Viszont megfelelő feltételek mellett
+      aszimptotikusan torzítatlan. Konzisztens becsléshez simítás/windowing szükséges.
+    </p>
+  </details>
+</div>
+
+
+<div class="feladat">
+  <p>
+    <strong>10.</strong> Miért használunk feltételes likelihoodot a teljes helyett
+    stacionárius AR-modell paraméterbecslésére? Mert a teljes likelihood
+  </p>
+
+  <p><strong>a)</strong> nem értelmezhető a becslés végtelen varianciája miatt</p>
+  <p><strong>b)</strong> nemlineáris optimalizálást igényel mátrixműveletek helyett</p>
+  <p><strong>c)</strong> konzisztens marad, de nem hatékony, félrevezető következtetést adhat</p>
+  <p><strong>d)</strong> automatikusan maximum likelihood becslést ad</p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>
+      Helyes válasz:
+      <span class="helyes">b</span>
+    </p>
+
+    <p class="magyarazat">
+      A teljes likelihood tartalmazza a kezdőérték stacionárius eloszlását és
+      a teljes kovarianciaszerkezetet is, ezért technikailag bonyolultabb,
+      gyakran mátrixműveleteket vagy numerikus optimalizálást igényel.
+      A feltételes likelihood egyszerűbb: a kezdeti értékekre feltételezünk,
+      és nagy mintában általában aszimptotikusan ekvivalens becslést kapunk.
+    </p>
+  </details>
+</div>
+
+
+<div class="feladat">
+  <p>
+    <strong>11.</strong> Mi a következménye annak, ha az innovációk nem Gauss-eloszlásúak
+    egy stacionárius AR-modellben?
+  </p>
+
+  <p><strong>a)</strong> Az autokorrelációs függvény nem értelmezhető</p>
+  <p><strong>b)</strong> A Gauss-feltételezésen alapuló standard hibák lehet, hogy érvénytelenek</p>
+  <p><strong>c)</strong> A folyamat nem lesz stacionárius</p>
+  <p><strong>d)</strong> A paramétereket csak wavelet transzformációval lehet becsülni</p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>
+      Helyes válasz:
+      <span class="helyes">b</span>
+    </p>
+
+    <p class="magyarazat">
+      Nem Gauss-innovációk mellett az AR-modell stacionaritása és az
+      autokorrelációs függvény értelmezhetősége nem szűnik meg. Viszont a
+      Gauss-feltételezésre épülő standard hibák, konfidenciaintervallumok és
+      tesztek hibásak lehetnek, ezért robusztusabb következtetésre lehet szükség.
+    </p>
+  </details>
+</div>
+  
+  
 </section>
 
 
