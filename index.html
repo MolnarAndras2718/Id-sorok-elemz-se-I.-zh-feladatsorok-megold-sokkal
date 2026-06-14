@@ -1752,7 +1752,474 @@
 </div>
   
 </section>
-  
+
+
+<section class="feladatsor">
+  <h2 class="feladatsor-cim">2026.05.28.</h2>
+  <p class="meta">Idősorok vizsga</p>
+
+  <div class="feladat">
+    <p><strong>Név:</strong></p>
+    <p><strong>Hallgatói azonosító:</strong></p>
+
+    <p>
+      <strong>A feladatsor kitöltésére 60 perc áll rendelkezésre.</strong><br>
+      Összesen 95 pont érhető el. A sikeres teszthez kb. 30%, 28 pont elérése szükséges.<br>
+      A vizsga során segédeszköz nem használható.<br>
+      Figyelem! A tesztfeladatok kitöltése során a rossz válasz -1 pontot ér.
+    </p>
+  </div>
+
+  <h3>1. feladat</h3>
+
+  <p class="utasitas">
+    <strong>1. feladat</strong> — minden jó válasz 2 pont, rossz válasz -1 pontot ér.
+  </p>
+
+  <div class="feladat">
+    <p><strong>a)</strong> Stacionárius eloszlásának faroka minden olyan paraméterérték mellett,
+    amelyre létezik véges szórású stacionárius megoldás, nagyobb, mint a generáló zajé.</p>
+
+    <p><strong>b)</strong> A normális zaj eloszlása befolyásolja a stacionárius eloszlás
+    létezésének parametrikus feltételét.</p>
+
+    <p><strong>c)</strong> Normális eloszlású zajból generálva a stacionárius eloszlás
+    minden egész rendű momentuma lehet végtelen megfelelő paraméterek esetén.</p>
+
+    <p><strong>d)</strong> Autokorreláció függvényének egynél több, de csak véges sok értéke nem 0.</p>
+
+    <p><strong>e)</strong> A konstans $\frac{1}{2\pi}$ függvény lehet ilyen folyamat
+    spektrálsűrűség-függvénye.</p>
+
+    <p><strong>f)</strong> Rögzített zaj mellett csak a paraméter értékétől függően
+    egyaránt lehet reguláris változású és nem reguláris változású stacionárius megoldása.</p>
+  </div>
+
+  <p class="utasitas">
+    Karikázza be, hogy a <strong>tanultak alapján</strong>,
+    <strong>degenerált, 0 paraméterű folyamatot nem véve figyelembe</strong>
+    a fentiek közül melyek igazak.
+  </p>
+
+  <div class="feladat">
+    <p><strong>1.</strong> Az AR(1) folyamatra/egyenletre?</p>
+
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+
+      <p>
+        Helyes válasz:
+        <span class="helyes">nincs ilyen állítás</span>
+      </p>
+
+      <p class="magyarazat">
+        <strong>a) Hamis.</strong> AR(1)-nél a stacionárius eloszlás farokviselkedése
+        közvetlenül a zajtól függ. Normális zaj esetén például normális jellegű
+        stacionárius eloszlás adódik, nem lesz a generáló zajnál nehezebb farkú.
+      </p>
+
+      <p class="magyarazat">
+        <strong>b) Hamis.</strong> AR(1)-nél a stacionárius megoldás létezésének
+        paraméterfeltétele $|\alpha|&lt;1$, ez nem a normális zajeloszlástól függ.
+      </p>
+
+      <p class="magyarazat">
+        <strong>c) Hamis.</strong> Normális zajból generált stacionárius AR(1)
+        normális eloszlású, ezért minden momentuma véges.
+      </p>
+
+      <p class="magyarazat">
+        <strong>d) Hamis.</strong> AR(1)-nél az autokorrelációs függvény
+        $r(k)=\alpha^k$, tehát általában végtelen sok nemnulla értéke van.
+      </p>
+
+      <p class="magyarazat">
+        <strong>e) Hamis.</strong> Nemdegenerált AR(1) spektrálsűrűsége nem konstans;
+        konstans spektrum fehérzaj-jellegű folyamatra jellemző.
+      </p>
+
+      <p class="magyarazat">
+        <strong>f) Hamis.</strong> Ez a paramétertől függő reguláris/nem reguláris
+        farokváltás nem az AR(1) lineáris modell tipikus tulajdonsága.
+      </p>
+    </details>
+  </div>
+
+  <div class="feladat">
+    <p><strong>2.</strong> Az MA(1) folyamatra/egyenletre?</p>
+
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+
+      <p>
+        Helyes válasz:
+        <span class="helyes">d</span>
+      </p>
+
+      <p class="magyarazat">
+        <strong>a) Hamis.</strong> MA(1) véges lineáris zajkombináció, nem Kesten-típusú
+        nehézfarkú rekurziós modell.
+      </p>
+
+      <p class="magyarazat">
+        <strong>b) Hamis.</strong> MA(1)-nél a stacionaritás nem ilyen zajeloszlástól
+        függő paraméterfeltételen múlik; véges rendű MA-folyamat fehér zajból
+        stacionárius.
+      </p>
+
+      <p class="magyarazat">
+        <strong>c) Hamis.</strong> Normális zajból generált MA(1) normális eloszlású
+        véges lineáris kombináció, így minden momentuma véges.
+      </p>
+
+      <p class="magyarazat">
+        <strong>d) Igaz.</strong> MA(1)-nél az autokorreláció csak a 0. és legfeljebb
+        az 1. késleltetésnél nem nulla, utána levág.
+      </p>
+
+      <p class="magyarazat">
+        <strong>e) Hamis.</strong> Nemdegenerált MA(1) spektruma általában nem konstans.
+      </p>
+
+      <p class="magyarazat">
+        <strong>f) Hamis.</strong> MA(1) lineáris, véges zajkombináció; nem a paramétertől
+        függő reguláris/nem reguláris farokváltás jellemzi.
+      </p>
+    </details>
+  </div>
+
+  <div class="feladat">
+    <p><strong>3.</strong> ARCH(1) folyamatra/egyenletre?</p>
+
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+
+      <p>
+        Helyes válasz:
+        <span class="helyes">a</span>,
+        <span class="helyes">b</span>,
+        <span class="helyes">c</span>,
+        <span class="helyes">e</span>,
+        <span class="helyes">f</span>
+      </p>
+
+      <p class="magyarazat">
+        <strong>a) Igaz.</strong> ARCH(1)-nél a stacionárius eloszlás gyakran
+        nehézfarkúbb, mint a generáló zaj, még Gauss-zaj esetén is.
+      </p>
+
+      <p class="magyarazat">
+        <strong>b) Igaz.</strong> ARCH(1)-nél a szigorú stacionaritás feltétele
+        Lyapunov-exponensből adódik:
+        $E\log(\alpha_1\varepsilon_t^2)&lt;0$, ezért függ a zaj eloszlásától.
+      </p>
+
+      <p class="magyarazat">
+        <strong>c) Igaz.</strong> Normális zaj mellett megfelelő paraméterek esetén
+        az ARCH(1) stacionárius eloszlása annyira nehézfarkú lehet, hogy egész
+        rendű momentumai is végtelenek.
+      </p>
+
+      <p class="magyarazat">
+        <strong>d) Hamis.</strong> ARCH(1)-nél maga az $X_t$ folyamat korrelálatlan
+        értékű, tehát az autokorrelációk pozitív késleltetésnél nullák. Nem az
+        jellemzi, hogy egynél több, de véges sok autokorrelációja nem nulla.
+      </p>
+
+      <p class="magyarazat">
+        <strong>e) Igaz.</strong> ARCH(1) korrelálatlan értékű, ezért ha a varianciája
+        1, akkor spektrálsűrűsége konstans $\frac{1}{2\pi}$ lehet.
+      </p>
+
+      <p class="magyarazat">
+        <strong>f) Igaz.</strong> Rögzített zajeloszlás mellett a paraméter értékétől
+        függően lehet a stacionárius eloszlás reguláris változású vagy nem reguláris
+        változású.
+      </p>
+    </details>
+  </div>
+
+  <div class="feladat">
+    <p><strong>4.</strong> BL(0,0,1,1) folyamatra/egyenletre?</p>
+
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+
+      <p>
+        Helyes válasz:
+        <span class="helyes">a</span>,
+        <span class="helyes">b</span>,
+        <span class="helyes">c</span>,
+        <span class="helyes">e</span>,
+        <span class="helyes">f</span>
+      </p>
+
+      <p class="magyarazat">
+        <strong>a) Igaz.</strong> A BL(0,0,1,1) nemlineáris rekurziós modell,
+        és stacionárius megoldása lehet a zajnál nehezebb farkú.
+      </p>
+
+      <p class="magyarazat">
+        <strong>b) Igaz.</strong> A stacionárius megoldás létezésének paraméterfeltétele
+        Lyapunov-exponens jellegű feltételből adódik, ezért függhet a generáló zaj
+        eloszlásától.
+      </p>
+
+      <p class="magyarazat">
+        <strong>c) Igaz.</strong> Normális zaj mellett megfelelő paraméterek esetén
+        a bilineáris modell stacionárius eloszlása is lehet olyan nehézfarkú, hogy
+        egész rendű momentumai végtelenek.
+      </p>
+
+      <p class="magyarazat">
+        <strong>d) Hamis.</strong> Ez az MA(1)-re jellemző levágó ACF-tulajdonság.
+        A BL(0,0,1,1) nem véges rendű MA-folyamat.
+      </p>
+
+      <p class="magyarazat">
+        <strong>e) Igaz.</strong> A BL(0,0,1,1) lehet korrelálatlan értékű,
+        fehérzaj-jellegű folyamat, ezért megfelelő varianciával konstans
+        $\frac{1}{2\pi}$ spektrum is előfordulhat.
+      </p>
+
+      <p class="magyarazat">
+        <strong>f) Igaz.</strong> Rögzített zajeloszlás mellett a paraméter értéke
+        döntheti el, hogy a stacionárius eloszlás reguláris változású vagy nem
+        reguláris változású.
+      </p>
+    </details>
+  </div>
+
+
+  <h3>2. feladat</h3>
+
+  <p class="utasitas">
+    <strong>2. feladat</strong> — minden jó válasz 2 pont, rossz válasz -1 pontot ér.
+  </p>
+
+  <div class="feladat">
+    <p>
+      Az információs kritériumok közül melyikre igaz, hogy
+    </p>
+
+    <p><strong>a)</strong> a mintaszám növekedésével egyre valószínűbben választja ki az igazi rendet</p>
+    <p><strong>b)</strong> az adott minta mellett a legjobb predikciót adó modellrendet választja ki</p>
+    <p><strong>c)</strong> a mintaszám növekedésével egyre kevésbé valószínűen választ a valódinál kisebb rendet</p>
+  </div>
+
+  <div class="feladat">
+    <p><strong>1.</strong> Az Akaike-féle (AIC) információs kritériumra:</p>
+
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+      <p>
+        Helyes válasz:
+        <span class="helyes">b</span>,
+        <span class="helyes">c</span>
+      </p>
+
+      <p class="magyarazat">
+        Az AIC Shibata-értelemben hatásos, vagyis predikciós szempontból jó
+        modellrendet választ. Nem konzisztens, tehát nem feltétlenül választja
+        ki egyre biztosabban az igazi rendet. Viszont konzervatív: az alulbecslés
+        valószínűsége 0-hoz tart.
+      </p>
+    </details>
+  </div>
+
+  <div class="feladat">
+    <p><strong>2.</strong> A Schwarz-féle bayesi (BIC) információs kritériumra:</p>
+
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+      <p>
+        Helyes válasz:
+        <span class="helyes">a</span>,
+        <span class="helyes">c</span>
+      </p>
+
+      <p class="magyarazat">
+        A BIC konzisztens, ezért a mintaszám növekedésével egyre valószínűbben
+        választja ki a valódi rendet. Ebből következik az is, hogy konzervatív,
+        tehát egyre kevésbé választ a valódinál kisebb rendet.
+      </p>
+    </details>
+  </div>
+
+  <div class="feladat">
+    <p><strong>3.</strong> A Hannan--Quinn-féle (HQIC) információs kritériumra:</p>
+
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+      <p>
+        Helyes válasz:
+        <span class="helyes">a</span>,
+        <span class="helyes">c</span>
+      </p>
+
+      <p class="magyarazat">
+        A HQIC szintén konzisztens rendbecslési kritérium. Emiatt az igazi rendet
+        választja ki aszimptotikusan, és konzervatív is.
+      </p>
+    </details>
+  </div>
+
+
+  <h3>3. feladat</h3>
+
+  <p class="utasitas">
+    <strong>3. feladat</strong> — jó válasz 2 pont, hiányzó válasz 0, rossz válasz -1 pont.
+  </p>
+
+  <div class="feladat">
+    <p>
+      Legyenek a normális eloszlásból generált elsőrendű ARCH folyamat paraméterei
+      $\alpha_0=0.9$, $\alpha_1=2.5$.
+    </p>
+
+    <p><strong>a)</strong> Ez a folyamat erősen stacionárius, de sem szórása, sem várható értéke nem véges.</p>
+    <p><strong>b)</strong> Ez a folyamat erősen stacionárius, és véges szórású.</p>
+    <p><strong>c)</strong> Ilyen paraméterek mellett nem létezik az ARCH(1) egyenlet erősen stacionárius megoldása.</p>
+
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+
+      <p>
+        Helyes válasz:
+        <span class="helyes">a</span>
+      </p>
+
+      <p class="magyarazat">
+        Gauss-zaj esetén ARCH(1)-nél az erős stacionaritás feltétele
+        $0&lt;\alpha_1&lt;2e^C\approx3.5686$. Itt $\alpha_1=2.5$, tehát
+        létezik erősen stacionárius megoldás.
+      </p>
+
+      <p class="magyarazat">
+        A gyenge stacionaritáshoz viszont véges variancia kellene, amelyhez
+        $\alpha_1&lt;1$ szükséges. Ez nem teljesül, ezért a folyamatnak nincs
+        véges szórása. Ebben a paramétertartományban a stacionárius eloszlás
+        olyan nehézfarkú, hogy a várható érték sem véges.
+      </p>
+    </details>
+  </div>
+
+
+  <h3>4. feladat</h3>
+
+  <p class="utasitas">
+    <strong>4. feladat (5 pont)</strong>
+  </p>
+
+  <div class="feladat">
+    <p>
+      A
+      \[
+      \frac{5}{2\pi}
+      \frac{1}{\left|e^{2i\lambda}+\frac13e^{i\lambda}-\frac23\right|^2}
+      \]
+      függvény milyen típusú és milyen paraméterű folyamat spektrálsűrűség-függvénye?
+    </p>
+
+    <p>A folyamatmodell, típusa és rendje:</p>
+    <p>A folyamat paraméterei:</p>
+    <p>A zaj szórásnégyzete:</p>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+
+      <p class="magyarazat">
+        Általánosan egy ARMA$(p,q)$ folyamat spektrálsűrűsége:
+        \[
+        f(\lambda)
+        =
+        \frac{\sigma^2}{2\pi}
+        \frac{|\theta(e^{-i\lambda})|^2}
+             {|\varphi(e^{-i\lambda})|^2}.
+        \]
+        AR$(p)$ esetén nincs MA-rész, tehát:
+        \[
+        f(\lambda)
+        =
+        \frac{\sigma^2}{2\pi}
+        \frac{1}
+             {|1-\varphi_1e^{-i\lambda}-\cdots-\varphi_pe^{-ip\lambda}|^2}.
+        \]
+      </p>
+
+      <p class="magyarazat">
+        A nevező:
+        \[
+        \left|e^{2i\lambda}+\frac13e^{i\lambda}-\frac23\right|^2.
+        \]
+        Mivel $|e^{-2i\lambda}|=1$, szorozhatunk vele az abszolútértéken belül:
+        \[
+        \left|e^{2i\lambda}+\frac13e^{i\lambda}-\frac23\right|
+        =
+        \left|1+\frac13e^{-i\lambda}-\frac23e^{-2i\lambda}\right|.
+        \]
+      </p>
+
+      <p class="magyarazat">
+        Ezt összevetjük az AR(2) nevezőjével:
+        \[
+        1-\varphi_1e^{-i\lambda}-\varphi_2e^{-2i\lambda}.
+        \]
+        Így:
+        \[
+        \varphi_1=-\frac13,
+        \qquad
+        \varphi_2=\frac23.
+        \]
+      </p>
+
+      <p class="magyarazat">
+        <strong>A folyamatmodell:</strong>
+        \[
+        X_t=-\frac13X_{t-1}+\frac23X_{t-2}+\varepsilon_t.
+        \]
+      </p>
+
+      <p class="magyarazat">
+        <strong>Típusa és rendje:</strong> AR(2).<br>
+        <strong>Paraméterei:</strong> $\varphi_1=-\frac13$, $\varphi_2=\frac23$.<br>
+        <strong>A zaj szórásnégyzete:</strong> $\sigma^2=5$.
+      </p>
+    </details>
+  </div>
+</section>
 
 
 </body>
