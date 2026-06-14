@@ -376,83 +376,251 @@
   </p>
 
   <div class="feladat">
-    <p>
-      <strong>1.</strong> A fentiek közül melyek igazak az AR(1) folyamatra?
-    </p>
+  <p>
+    <strong>1.</strong> A fentiek közül melyek igazak az AR(1) folyamatra?
+  </p>
 
-    <div class="valaszok">
-      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
-    </div>
-
-    <details>
-      <summary>Megoldás mutatása</summary>
-      <p>
-        Helyes válasz:
-        <span class="helyes">a</span>,
-        <span class="helyes">d</span>
-      </p>
-    </details>
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
   </div>
 
-  <div class="feladat">
+  <details>
+    <summary>Megoldás mutatása</summary>
     <p>
-      <strong>2.</strong> A fentiek közül melyek igazak az MA(1) folyamatra?
+      Helyes válasz:
+      <span class="helyes">a</span>,
+      <span class="helyes">d</span>
     </p>
 
-    <div class="valaszok">
-      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
-    </div>
-
-    <details>
-      <summary>Megoldás mutatása</summary>
-      <p>
-        Helyes válasz:
-        <span class="helyes">c</span>,
-        <span class="helyes">d</span>
-      </p>
-    </details>
-  </div>
-
-  <div class="feladat">
-    <p>
-      <strong>3.</strong> A fentiek közül melyek igazak az ARCH(1) folyamatra?
+    <p class="magyarazat">
+      <strong>a) Igaz.</strong> AR(1)-nél
+      $X_t=\alpha X_{t-1}+\varepsilon_t$, ezért a stacionárius megoldás
+      eloszlása kielégíti az
+      $X \stackrel{d}{=} \alpha X+\varepsilon$ felbontást. Pozitív
+      $\alpha$ mellett ez éppen alfa-felbontó jellegű eloszlást jelent.
     </p>
 
-    <div class="valaszok">
-      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
-    </div>
-
-    <details>
-      <summary>Megoldás mutatása</summary>
-      <p>
-        Helyes válasz:
-        <span class="helyes">b</span>,
-        <span class="helyes">e</span>,
-        <span class="helyes">f</span>
-      </p>
-    </details>
-  </div>
-
-  <div class="feladat">
-    <p>
-      <strong>4.</strong> A fentiek közül melyek igazak a BL(0,0,1) folyamatra?
+    <p class="magyarazat">
+      <strong>b) Hamis.</strong> AR(1) lineáris modell. Rögzített zajeloszlás
+      mellett a paraméter megváltoztatása nem hozza létre azt a nemlineáris
+      jelenséget, hogy ugyanazon zaj mellett pusztán a paramétertől függően
+      egyszer reguláris változású, máskor nem reguláris változású stacionárius
+      eloszlást kapjunk.
     </p>
 
-    <div class="valaszok">
-      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
-    </div>
+    <p class="magyarazat">
+      <strong>c) Hamis.</strong> AR(1)-nél az autokorrelációs függvény
+      általában végtelen sok nemnulla értékkel rendelkezik:
+      $r(k)=\alpha^k$. Tehát nem csak véges sok értéke nem nulla.
+    </p>
 
-    <details>
-      <summary>Megoldás mutatása</summary>
-      <p>
-        Helyes válasz:
-        <span class="helyes">b</span>,
-        <span class="helyes">d</span>,
-        <span class="helyes">e</span>,
-        <span class="helyes">f</span>
-      </p>
-    </details>
+    <p class="magyarazat">
+      <strong>d) Igaz.</strong> Az egylépéses legkisebb négyzetes előrejelzés
+      a feltételes várható érték. AR(1)-nél
+      $X_{t+1}=\alpha X_t+\varepsilon_{t+1}$, ahol
+      $E(\varepsilon_{t+1}\mid\mathcal F_t)=0$, ezért
+      $\widehat X_{t+1}=\alpha X_t$, vagyis a zaj elhagyásával kapjuk.
+    </p>
+
+    <p class="magyarazat">
+      <strong>e) Hamis.</strong> AR(1)-nél az egymást követő értékek általában
+      korreláltak, hiszen $r(1)=\alpha$. Csak a degenerált $\alpha=0$ esetben
+      lenne korrelálatlan, de ezt a feladat kizárja.
+    </p>
+
+    <p class="magyarazat">
+      <strong>f) Hamis.</strong> Az AR(1) stacionárius eloszlása valóban függ
+      a zaj eloszlásától, de a létezés paraméterfeltétele nem: az oksági
+      stacionárius megoldás feltétele $|\alpha|<1$.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>2.</strong> A fentiek közül melyek igazak az MA(1) folyamatra?
+  </p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
   </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>
+      Helyes válasz:
+      <span class="helyes">c</span>,
+      <span class="helyes">d</span>
+    </p>
+
+    <p class="magyarazat">
+      <strong>a) Hamis.</strong> Az alfa-felbontó szerkezet az AR(1)-es
+      stacionárius egyenlethez kapcsolódik, ahol
+      $X \stackrel{d}{=} \alpha X+\varepsilon$. Az MA(1) nem ilyen rekurzív
+      stacionárius egyenletből adódik.
+    </p>
+
+    <p class="magyarazat">
+      <strong>b) Hamis.</strong> Az MA(1) lineáris, véges zajkombináció:
+      $X_t=\varepsilon_t+\theta\varepsilon_{t-1}$. Rögzített zajeloszlás
+      mellett nem a paraméter okozza azt a nemlineáris váltást, hogy egyszer
+      reguláris változású, máskor nem reguláris változású stacionárius
+      eloszlás legyen.
+    </p>
+
+    <p class="magyarazat">
+      <strong>c) Igaz.</strong> MA(1)-nél az autokorrelációs függvény csak
+      az 1. késleltetésig lehet nem nulla. Vagyis az ACF véges sok helyen
+      nem nulla, és a nulla késleltetéssel együtt egynél több ilyen érték van.
+    </p>
+
+    <p class="magyarazat">
+      <strong>d) Igaz.</strong> MA(1)-nél
+      $X_{t+1}=\varepsilon_{t+1}+\theta\varepsilon_t$.
+      Mivel $\varepsilon_{t+1}$ jövőbeli zaj és várható értéke 0, az
+      egylépéses előrejelzés $\widehat X_{t+1}=\theta\varepsilon_t$,
+      vagyis az egyenletből a jövőbeli zaj elhagyásával kapjuk.
+    </p>
+
+    <p class="magyarazat">
+      <strong>e) Hamis.</strong> MA(1)-nél általában van első késleltetésű
+      autokorreláció, tehát nem korrelálatlan értékű folyamat. Csak degenerált
+      paraméter esetben lenne az, amit a feladat kizár.
+    </p>
+
+    <p class="magyarazat">
+      <strong>f) Hamis.</strong> Véges rendű MA-folyamat fehér zajból
+      automatikusan stacionárius. A stacionaritás létezésének nincs olyan
+      paraméterfeltétele, amelyet a zaj eloszlása módosítana.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>3.</strong> A fentiek közül melyek igazak az ARCH(1) folyamatra?
+  </p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>
+      Helyes válasz:
+      <span class="helyes">b</span>,
+      <span class="helyes">e</span>,
+      <span class="helyes">f</span>
+    </p>
+
+    <p class="magyarazat">
+      <strong>a) Hamis.</strong> Az ARCH(1) nem lineáris AR(1)-egyenlet
+      $X_t=\alpha X_{t-1}+\varepsilon_t$ alakban. A stacionárius eloszlás
+      nem alfa-felbontó AR(1)-es értelemben.
+    </p>
+
+    <p class="magyarazat">
+      <strong>b) Igaz.</strong> ARCH(1)-nél a farokviselkedés a paramétertől
+      függ. A jegyzetben Gauss-zaj mellett a stacionárius megoldás Pareto-szerű
+      farokkal jelenik meg, és a farokkitevő a paraméterből adódó egyenlettel
+      határozható meg. Ez nemlineáris modelleknél tipikus jelenség.
+    </p>
+
+    <p class="magyarazat">
+      <strong>c) Hamis.</strong> ARCH(1) esetén maga az $X_t$ folyamat
+      korrelálatlan értékű, tehát az autokorrelációk pozitív késleltetésnél
+      nullák. Nem arról van szó, hogy egynél több, de csak véges sok
+      autokorreláció lenne nem nulla.
+    </p>
+
+    <p class="magyarazat">
+      <strong>d) Hamis.</strong> ARCH(1)-nél
+      $X_{t+1}=\sigma_{t+1}\varepsilon_{t+1}$, ezért
+      $E(X_{t+1}\mid\mathcal F_t)=0$. A zaj elhagyása nem úgy adja meg
+      az előrejelzést, mint AR vagy MA esetben. Itt inkább a feltételes
+      variancia előrejelezhető:
+      $\sigma_{t+1}^2=\alpha_0+\alpha_1X_t^2$.
+    </p>
+
+    <p class="magyarazat">
+      <strong>e) Igaz.</strong> ARCH(1) folyamatnál az értékek korrelálatlanok,
+      vagyis $corr(X_t,X_{t-k})=0$ pozitív késleltetésekre, miközben a négyzetek
+      vagy abszolút értékek már mutathatnak függést.
+    </p>
+
+    <p class="magyarazat">
+      <strong>f) Igaz.</strong> ARCH(1)-nél a szigorú stacionaritás
+      paraméterfeltétele függ a zaj eloszlásától. Gauss-zaj esetén például
+      $0&lt;\alpha_1&lt;2e^C\approx3.5686$, míg más zajeloszlásnál más határ
+      adódhat.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>4.</strong> A fentiek közül melyek igazak a BL(0,0,1,1) folyamatra?
+  </p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>
+      Helyes válasz:
+      <span class="helyes">b</span>,
+      <span class="helyes">d</span>,
+      <span class="helyes">e</span>,
+      <span class="helyes">f</span>
+    </p>
+
+    <p class="magyarazat">
+      <strong>a) Hamis.</strong> A BL(0,0,1,1) nem AR(1)-típusú lineáris
+      rekurzió, ezért a stacionárius eloszlását nem az
+      $X\stackrel{d}{=}\alpha X+\varepsilon$ alfa-felbontó szerkezet írja le.
+    </p>
+
+    <p class="magyarazat">
+      <strong>b) Igaz.</strong> A jegyzetben a BL(0,0,1,1) modell
+      $X(t)=\varepsilon(t)+cX(t-1)\varepsilon(t-1)$ alakú. Uniform zaj esetén
+      $0&lt;c&lt;1$ mellett a stacionárius eloszlás korlátos, míg
+      $1&lt;c&lt;e$ mellett Pareto-szerű, reguláris változású farok jelenik meg.
+      Tehát ugyanazon zaj mellett a paramétertől függően mindkét viselkedés
+      előfordulhat.
+    </p>
+
+    <p class="magyarazat">
+      <strong>c) Hamis.</strong> A BL(0,0,1,1) nem véges rendű MA-folyamat,
+      ezért nem az jellemzi, hogy az autokorrelációs függvényének egynél több,
+      de csak véges sok értéke nem nulla. A konkrét egyszerű bilineáris modell
+      gyakran korrelálatlan értékű.
+    </p>
+
+    <p class="magyarazat">
+      <strong>d) Igaz.</strong> BL(0,0,1,1)-nél
+      $X_{t+1}=\varepsilon_{t+1}+cX_t\varepsilon_t$.
+      Mivel a jövőbeli zaj várható értéke 0, az egylépéses előrejelzés
+      $\widehat X_{t+1}=cX_t\varepsilon_t$, vagyis az egyenletből a jövőbeli
+      zaj elhagyásával kapjuk.
+    </p>
+
+    <p class="magyarazat">
+      <strong>e) Igaz.</strong> A BL(0,0,1,1) folyamat lehet korrelálatlan
+      értékű, miközben nem független. Ez tipikus nemlineáris idősoros jelenség:
+      a lineáris korreláció nem látja a teljes függési struktúrát.
+    </p>
+
+    <p class="magyarazat">
+      <strong>f) Igaz.</strong> A stacionárius megoldás létezésének
+      paraméterfeltétele függ a zaj eloszlásától. Uniform zaj esetén például
+      a jegyzet szerint a BL(0,0,1,1) modell stacionárius megoldása akkor
+      létezik, ha $0&lt;c&lt;e$; más zajeloszlásnál más feltétel adódhat.
+    </p>
+  </details>
+</div>
 
   <p class="utasitas">
     <strong>Figyelem!</strong> Egy folyamattípusra több állítás is igaz lehet, illetve egy állítás
