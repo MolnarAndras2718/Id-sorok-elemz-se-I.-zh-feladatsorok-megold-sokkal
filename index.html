@@ -982,11 +982,592 @@
 
 
 
+
   
 </section>
 
 
 
+<section class="feladatsor">
+  <h2 class="feladatsor-cim">2021.06.08.</h2>
+  <p class="meta">Idősorok vizsga</p>
+
+  <div class="feladat">
+    <p><strong>Név:</strong></p>
+    <p><strong>Hallgatói azonosító:</strong></p>
+
+    <p>
+      <strong>A 3 feladatsor kitöltésére háromszor 20, összesen 60 perc áll rendelkezésre.</strong><br>
+      Összesen 60 pont érhető el. Az elégségeshez 25% (15 pont) elérése szükséges.<br>
+      A vizsga során segédeszköz nem használható.<br>
+      Jó munkát!
+    </p>
+
+    <p>
+      <strong>Figyelem!</strong> A tesztfeladatok kitöltése során a rossz válasz -1 pontot ér.
+    </p>
+  </div>
+
+  <h3>1. feladatsor (20 pont)</h3>
+
+  <h3>1. feladat</h3>
+
+  <p class="utasitas">
+    <strong>1. feladat.</strong> Egyértelműen jelölje meg a jó választ!
+    Jó válasz: 2 pont, hiányzó válasz: 0 pont, rossz válasz: -1 pont.
+  </p>
+
+  <div class="feladat">
+    <p>
+      <strong>1.</strong>
+      Korlátos eloszlású, pl. $U(0,1)$ generáló zaj esetén,
+      $\alpha=0.5$ paraméter mellett az AR(1) folyamat stacionárius
+      eloszlásának minden momentuma véges. Honnan következik ez?
+    </p>
+
+    <p><strong>a)</strong> Az AR(1) stacionárius megoldásának explicit alakjából következik.</p>
+    <p><strong>b)</strong> Az AR(1) maximumának határeloszlásából következik.</p>
+    <p><strong>c)</strong> A Kesten--Vervaat--Goldie tételből következik.</p>
+    <p><strong>d)</strong> Az AR(1) folyamat stacionárius eloszlásának Weibull jellegű faroklecsengéséből következik.</p>
+
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+      <p>
+        Helyes válasz:
+        <span class="helyes">a</span>
+      </p>
+
+      <p class="magyarazat">
+        AR(1)-nél az oksági stacionárius megoldás explicit alakja:
+        \[
+        X_t=\sum_{j=0}^{\infty}\alpha^j\varepsilon_{t-j}.
+        \]
+        Ha $|\alpha|<1$ és a generáló zaj korlátos, akkor ez a végtelen
+        súlyozott összeg is korlátos, ezért minden momentuma véges.
+      </p>
+    </details>
+  </div>
+
+  <div class="feladat">
+    <p>
+      <strong>2.</strong>
+      A $[0,1]$ intervallumon egyenletes eloszlású generáló zaj esetén
+      a BL(0,0,1) folyamat stacionárius eloszlásának pontosan akkor lesz
+      végtelen momentuma, ha paramétere 1-nél nagyobb. Honnan következik ez?
+    </p>
+
+    <p><strong>a)</strong> Abból következik, hogy a Ljapunov-exponens ilyenkor negatív.</p>
+    <p><strong>b)</strong> A lineáris folyamatok maximumainak határeloszlásából következik.</p>
+    <p><strong>c)</strong> A Kesten--Vervaat--Goldie tételből következik.</p>
+    <p><strong>d)</strong> Az autokorreláció függvény becslésének hibája alapján számolható ki.</p>
+
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+      <p>
+        Helyes válasz:
+        <span class="helyes">c</span>
+      </p>
+
+      <p class="magyarazat">
+        A bilineáris modell stacionárius eloszlásának farokviselkedése
+        nemlineáris sztochasztikus rekurzióból adódik. A nehéz farok és a
+        végtelen momentumok megjelenését a Kesten--Vervaat--Goldie típusú
+        eredmények írják le.
+      </p>
+    </details>
+  </div>
+
+  <div class="feladat">
+    <p>
+      <strong>3.</strong>
+      A $[0,1]$ intervallumon egyenletes eloszlású generáló zaj esetén
+      az ARCH(1) egyenletnek pontosan akkor létezik stacionárius eloszlása,
+      ha $\alpha_0$ és $\alpha_1$ paraméterei pozitívak és $\alpha_1$
+      kisebb $e$-nél. Honnan következik ez?
+    </p>
+
+    <p><strong>a)</strong> Abból következik, hogy a Ljapunov-exponens ilyenkor negatív.</p>
+    <p><strong>b)</strong> A lineáris folyamatok maximumainak határeloszlásából következik.</p>
+    <p><strong>c)</strong> A Kesten--Vervaat--Goldie tételből következik.</p>
+    <p><strong>d)</strong> Az autokorreláció függvény becslésének hibája alapján számolható ki.</p>
+
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+      <p>
+        Helyes válasz:
+        <span class="helyes">a</span>
+      </p>
+
+      <p class="magyarazat">
+        ARCH-típusú rekurzióknál a szigorú stacionaritás létezési feltétele
+        a hozzá tartozó Ljapunov-exponens negativitásából következik.
+        Ez adja meg, hogy a paraméter milyen tartományában létezik
+        stacionárius megoldás.
+      </p>
+    </details>
+  </div>
+
+  <div class="feladat">
+    <p>
+      <strong>4.</strong>
+      Az AR($p$) egyenlet explicit megoldásának megadásához melyik eljárást
+      kell elvégeznünk?
+    </p>
+
+    <p><strong>a)</strong> Az egyenletet iterálva alkalmazzuk a megoldásformára.</p>
+    <p><strong>b)</strong> A sztochasztikus rekurziós egyenlet általános megoldásába behelyettesítjük ezt a speciális esetet.</p>
+    <p><strong>c)</strong> Megkeressük azt a momentumot, melynek értéke 1.</p>
+    <p><strong>d)</strong> Taylor-sorba fejtjük a karakterisztikus polinom reciprokát.</p>
+
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+      <p>
+        Helyes válasz:
+        <span class="helyes">d</span>
+      </p>
+
+      <p class="magyarazat">
+        AR($p$) esetén az oksági megoldás végtelen MA-alakban írható fel:
+        \[
+        X_t=\psi(B)\varepsilon_t,
+        \qquad
+        \psi(B)=\frac{1}{\varphi(B)}.
+        \]
+        A $\psi_j$ együtthatókat a karakterisztikus polinom reciprokának
+        Taylor-sorából kapjuk.
+      </p>
+    </details>
+  </div>
+
+
+
+
+
+
+
+
+
+
+<h3>2. feladat</h3>
+
+<p class="utasitas">
+  <strong>2. feladat.</strong> Jelölje be, hogy Igaz, vagy Hamis-e az állítás
+  (jó válasz: 2 pont, hiányzó válasz: 0 pont, rossz válasz: -1 pont).
+</p>
+
+<div class="feladat">
+  <p>
+    <strong>1.</strong>
+    Az autoregresszió folyamatok oksági stacionárius megoldása, ha létezik,
+    mindig folytonos eloszlású.
+  </p>
+
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+
+    <p class="magyarazat">
+      Az AR-folyamat stacionárius eloszlása a generáló zaj eloszlásától is függ.
+      Nem igaz, hogy mindig folytonos eloszlású lenne. Például degenerált vagy
+      speciális diszkrét zajeloszlás mellett nem kapunk feltétlenül folytonos
+      eloszlást. A korábban tanult példa csak azt mutatja, hogy diszkrét zajból
+      <em>előfordulhat</em> folytonos stacionárius eloszlás, nem azt, hogy ez
+      mindig így van.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>2.</strong>
+    A mozgóátlag folyamat stacionaritásának feltétele, hogy a karakterisztikus
+    polinom gyökei az egységkörön kívül legyenek.
+  </p>
+
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+
+    <p class="magyarazat">
+      A véges rendű MA-folyamat fehér zajból automatikusan gyengén stacionárius.
+      A karakterisztikus polinom gyökeinek egységkörön kívülisége nem a
+      stacionaritás, hanem az invertálhatóság feltétele.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>3.</strong>
+    Portmanteau próbák zaj/reziduális független értékű voltát tesztelik.
+  </p>
+
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+
+    <p class="magyarazat">
+      A Portmanteau-próbák, például a Box--Pierce- vagy Ljung--Box-teszt,
+      elsősorban azt vizsgálják, hogy a reziduumok autokorrelációi
+      szignifikánsan eltérnek-e nullától. Ez a korrelálatlanságot vagy
+      fehérzaj-jelleget ellenőrzi, de nem bizonyít teljes függetlenséget.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>4.</strong>
+    A mozgóátlag folyamat esetén a <em>parciális</em> autokorreláció
+    függvényének csak véges sok értéke nem 0.
+  </p>
+
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+
+    <p class="magyarazat">
+      MA($q$) folyamatnál az autokorrelációs függvény vág le véges sok tag után:
+      $r(k)=0$, ha $k>q$. A parciális autokorreláció ezzel szemben általában
+      nem vág le, hanem fokozatosan cseng le. Véges sok nemnulla PACF-érték
+      inkább AR-folyamatokra jellemző.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>5.</strong>
+    Gauss zajból generálva az ARCH($p$) folyamatokat, különbözik az erős
+    és a gyenge stacionaritás feltétele.
+  </p>
+
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>Helyes válasz: <span class="helyes">Igaz</span></p>
+
+    <p class="magyarazat">
+      ARCH-folyamatoknál a szigorú stacionaritás és a gyenge stacionaritás
+      feltétele eltérhet. ARCH(1)-nél Gauss-zaj esetén a gyenge stacionaritás
+      például véges varianciát igényel, ezért tipikusan $\alpha_1&lt;1$ kell.
+      A szigorú stacionaritás viszont Lyapunov-exponens feltételből adódik,
+      és Gauss-zaj esetén ennél tágabb tartományt is megengedhet.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>6.</strong>
+    Ha létezik a spektrálsűrűség függvény, akkor az átlag mindig konzisztens
+    becslése a várható értéknek.
+  </p>
+
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>Helyes válasz: <span class="helyes">Igaz</span></p>
+
+    <p class="magyarazat">
+      Ha létezik a spektrálsűrűség-függvény, akkor a spektrális mértéknek nincs
+      pozitív ponttömege a 0 frekvencián. A tanult tétel szerint a mintaátlag
+      pontosan akkor konzisztens becslése a várható értéknek, ha
+      $F(\{0\})=0$. Ekkor a mintaátlag varianciája 0-hoz tart.
+    </p>
+  </details>
+</div>
+
+
+
+
+<h3>3. feladat</h3>
+
+<p class="utasitas">
+  <strong>3. feladat (14 pont)</strong>
+</p>
+
+<div class="feladat">
+  <p><strong>a)</strong> Ha paramétere 1-nél nagyobb, akkor autokovariancia függvényének becslését
+  végtelenhez tartó sorozattal kell osztani, hogy létezzen határeloszlása, és ekkor lesz
+  a határeloszlásnak olyan momentuma, amely végtelen.</p>
+
+  <p><strong>b)</strong> Az egyenlet oksági stacionárius megoldása pontosan akkor létezik, ha
+  paraméterének abszolút értéke 1-nél kisebb.</p>
+
+  <p><strong>c)</strong> A folyamat fehér zaj.</p>
+
+  <p><strong>d)</strong> Rögzített eloszlású zaj mellett <em>csak a folyamat paraméterének értékétől
+  függően</em> egyaránt lehet reguláris változású és nem reguláris változású
+  stacionárius megoldása az egyenletnek.</p>
+
+  <p><strong>e)</strong> A generáló zaj eloszlása befolyásolja a stacionárius eloszlás létezésének
+  parametrikus feltételét.</p>
+
+  <p><strong>f)</strong> A folyamat autokorreláció függvényének egynél több, de csak véges sok
+  értéke nem 0.</p>
+</div>
+
+<p class="utasitas">
+  Egyértelműen jelölje, hogy a <strong>tanultak alapján</strong>,
+  <strong>degenerált, 0 paraméterű folyamatot nem véve figyelembe</strong>:
+</p>
+
+
+<div class="feladat">
+  <p>
+    <strong>1.</strong> A fentiek közül melyek igazak az AR(1) modellre?
+  </p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+
+    <p>
+      Helyes válasz:
+      <span class="helyes">b</span>
+    </p>
+
+    <p class="magyarazat">
+      <strong>a) Hamis.</strong> Ez a nehéz farkú nemlineáris modellekhez
+      kapcsolódó autokovariancia-becslési jelenség, nem az AR(1) modell alapvető
+      tulajdonsága.
+    </p>
+
+    <p class="magyarazat">
+      <strong>b) Igaz.</strong> AR(1)-nél
+      $X_t=\alpha X_{t-1}+\varepsilon_t$, és az oksági stacionárius megoldás
+      pontosan akkor létezik, ha $|\alpha|&lt;1$.
+    </p>
+
+    <p class="magyarazat">
+      <strong>c) Hamis.</strong> AR(1)-nél az egymást követő értékek általában
+      korreláltak, hiszen $r(k)=\alpha^k$. Ezért nem fehér zaj.
+    </p>
+
+    <p class="magyarazat">
+      <strong>d) Hamis.</strong> Ez a paramétertől függő reguláris/nem reguláris
+      farokviselkedés nem az AR(1) lineáris modell tipikus tulajdonsága.
+    </p>
+
+    <p class="magyarazat">
+      <strong>e) Hamis.</strong> Az AR(1) stacionárius eloszlása függhet a zaj
+      eloszlásától, de a létezés paraméterfeltétele nem: az $|\alpha|&lt;1$.
+    </p>
+
+    <p class="magyarazat">
+      <strong>f) Hamis.</strong> AR(1)-nél az autokorrelációs függvény általában
+      végtelen sok nemnulla értékkel rendelkezik: $r(k)=\alpha^k$.
+    </p>
+  </details>
+</div>
+
+
+<div class="feladat">
+  <p>
+    <strong>2.</strong> A fentiek közül melyek igazak az MA(1) modellre?
+  </p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+
+    <p>
+      Helyes válasz:
+      <span class="helyes">f</span>
+    </p>
+
+    <p class="magyarazat">
+      <strong>a) Hamis.</strong> Az MA(1) véges lineáris zajkombináció, nem
+      ilyen nehéz farkú rekurziós modellből származó autokovariancia-becslési
+      jelenség jellemzi.
+    </p>
+
+    <p class="magyarazat">
+      <strong>b) Hamis.</strong> Véges rendű MA-folyamat fehér zajból
+      automatikusan stacionárius. A stacionaritáshoz nem kell $|\theta|&lt;1$;
+      az ilyen gyökfeltétel az invertálhatósághoz kapcsolódik.
+    </p>
+
+    <p class="magyarazat">
+      <strong>c) Hamis.</strong> MA(1)-nél általában van első késleltetésű
+      autokorreláció, ezért nem fehér zaj, kivéve a degenerált $\theta=0$ esetet.
+    </p>
+
+    <p class="magyarazat">
+      <strong>d) Hamis.</strong> Az MA(1) lineáris, véges zajkombináció.
+      Nem az a típusú nemlineáris modell, ahol rögzített zaj mellett pusztán
+      a paramétertől függően reguláris vagy nem reguláris farok jön létre.
+    </p>
+
+    <p class="magyarazat">
+      <strong>e) Hamis.</strong> MA(1)-nél a stacionaritás létezésének nincs
+      olyan paraméterfeltétele, amelyet a zaj eloszlása módosítana.
+    </p>
+
+    <p class="magyarazat">
+      <strong>f) Igaz.</strong> MA(1)-nél az autokorrelációs függvény véges
+      sok helyen nem nulla: a nulla késleltetésnél és legfeljebb az első
+      késleltetésnél. Utána levág.
+    </p>
+  </details>
+</div>
+
+
+<div class="feladat">
+  <p>
+    <strong>3.</strong> A fentiek közül melyek igazak az ARCH(1) modellre?
+  </p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+
+    <p>
+      Helyes válasz:
+      <span class="helyes">a</span>,
+      <span class="helyes">c</span>,
+      <span class="helyes">d</span>,
+      <span class="helyes">e</span>
+    </p>
+
+    <p class="magyarazat">
+      <strong>a) Igaz.</strong> ARCH(1)-nél, ha a paraméter 1-nél nagyobb,
+      a stacionárius megoldás nehéz farkú lehet, és az autokovariancia-becslések
+      határeloszlásához nem a szokásos normalizálás tartozik. Ilyenkor
+      végtelen momentumú határeloszlás is megjelenhet.
+    </p>
+
+    <p class="magyarazat">
+      <strong>b) Hamis.</strong> Ez az AR(1) oksági stacionaritási feltétele.
+      ARCH(1)-nél a szigorú stacionaritás feltétele Lyapunov-exponensből adódik,
+      és függ a zaj eloszlásától.
+    </p>
+
+    <p class="magyarazat">
+      <strong>c) Igaz.</strong> ARCH(1)-nél maga az $X_t$ folyamat korrelálatlan
+      értékű, ezért fehérzaj-jellegű, miközben a négyzetekben már van függés.
+    </p>
+
+    <p class="magyarazat">
+      <strong>d) Igaz.</strong> ARCH(1)-nél rögzített zajeloszlás mellett a
+      paraméter értékétől függően változhat a stacionárius eloszlás farokviselkedése:
+      lehet reguláris változású vagy nem reguláris változású.
+    </p>
+
+    <p class="magyarazat">
+      <strong>e) Igaz.</strong> ARCH(1)-nél a stacionárius megoldás létezésének
+      paraméterfeltétele függ a generáló zaj eloszlásától, mert a feltétel
+      Lyapunov-exponens alakú, például $E\log(\alpha_1\varepsilon_t^2)&lt;0$.
+    </p>
+
+    <p class="magyarazat">
+      <strong>f) Hamis.</strong> ARCH(1)-nél az $X_t$ folyamat autokorrelációi
+      pozitív késleltetésnél nullák. Nem az jellemzi, hogy egynél több, de
+      csak véges sok autokorrelációja nem nulla.
+    </p>
+  </details>
+</div>
+
+
+<div class="feladat">
+  <p>
+    <strong>4.</strong> A fentiek közül melyek igazak a BL(0,0,1,1) modellre?
+  </p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+
+    <p>
+      Helyes válasz:
+      <span class="helyes">a</span>,
+      <span class="helyes">c</span>,
+      <span class="helyes">d</span>,
+      <span class="helyes">e</span>
+    </p>
+
+    <p class="magyarazat">
+      <strong>a) Igaz.</strong> A BL(0,0,1,1) nemlineáris rekurziós modell.
+      Paraméter 1-nél nagyobb értékei mellett nehéz farkú stacionárius megoldás
+      jelenhet meg, ami az autokovariancia-becslések nem standard határeloszlásához
+      és végtelen momentumokhoz vezethet.
+    </p>
+
+    <p class="magyarazat">
+      <strong>b) Hamis.</strong> Ez az AR(1) lineáris oksági stacionaritási
+      feltétele. BL(0,0,1,1)-nél a létezési feltétel nem egyszerűen
+      $|\alpha|&lt;1$.
+    </p>
+
+    <p class="magyarazat">
+      <strong>c) Igaz.</strong> A tanult egyszerű bilineáris modell korrelálatlan
+      értékű, tehát fehérzaj-jellegű lehet, miközben nem független. Ez tipikus
+      nemlineáris idősoros jelenség.
+    </p>
+
+    <p class="magyarazat">
+      <strong>d) Igaz.</strong> BL(0,0,1,1)-nél rögzített zajeloszlás mellett
+      a paramétertől függően lehet korlátos/nem reguláris, illetve reguláris
+      változású nehéz farkú stacionárius eloszlás.
+    </p>
+
+    <p class="magyarazat">
+      <strong>e) Igaz.</strong> A stacionárius eloszlás létezésének parametrikus
+      feltétele függ a generáló zaj eloszlásától. Például uniform zaj esetén
+      más tartomány adódik, mint más zajeloszlásoknál.
+    </p>
+
+    <p class="magyarazat">
+      <strong>f) Hamis.</strong> Ez az MA(1)-re jellemző: ott az autokorrelációs
+      függvény véges sok helyen nem nulla. A BL(0,0,1,1)-et nem ez a véges
+      levágású ACF-tulajdonság jellemzi.
+    </p>
+  </details>
+</div>
+
+
+  
+</section>
+  
 
 
 </body>
