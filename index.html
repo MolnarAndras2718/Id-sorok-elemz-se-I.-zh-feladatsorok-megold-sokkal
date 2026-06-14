@@ -1591,11 +1591,11 @@
     </p>
 
     <p class="magyarazat">
-      <strong>2.</strong> Spektrális becslésnél problémát okozhat, mert ha az
-      autokovariancia-becslés nem pozitív szemidefinit, akkor a hozzá tartozó
-      spektrális sűrűségbecslés sem lesz feltétlenül nemnegatív. Ezért inkább
-      enyhén torzított, de strukturálisan helyes, pozitív szemidefinit becslést
-      használunk.
+      <strong>2.</strong> Nagy késleltetéseknél, amikor a késleltetés értéke
+    megközelíti a mintaelemszámot, nagyon kevés adatpár marad az autokovariancia
+    becslésére. A torzítatlan becslés ilyenkor kis elemszámú átlagból számol,
+    ezért nagy varianciájú és instabil lehet. Emiatt inkább a torzított,
+    de stabilabb becslést használjuk.
     </p>
   </details>
 </div>
@@ -1635,7 +1635,7 @@
       \[
       0&lt;\alpha_1&lt;2e^C\approx 3.5686,
       \]
-      ahol $C$ az Euler--Mascheroni-állandó. Természetesen $\alpha_0&gt;0$
+      ahol $C$ \approx 0.5772$$ az Euler--Mascheroni-állandó. Természetesen $\alpha_0&gt;0$
       szükséges a feltételes variancia pozitivitásához.
     </p>
   </details>
