@@ -1,0 +1,1 @@
+# Id-sorok-elemz-se-I.-zh-feladatsorok-megold-sokkal
