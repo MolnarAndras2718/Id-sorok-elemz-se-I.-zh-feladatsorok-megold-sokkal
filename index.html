@@ -96,9 +96,15 @@
   <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
   <details>
-    <summary>Megoldás mutatása</summary>
-    <p>Helyes válasz: <span class="helyes">Igaz</span></p>
-  </details>
+  <summary>Megoldás mutatása</summary>
+  <p>Helyes válasz: <span class="helyes">Igaz</span></p>
+  <p class="magyarazat">
+    AR(1) folyamatnál, ha $X_t=\varphi X_{t-1}+\varepsilon_t$, akkor az oksági
+    stacionárius megoldás pontosan akkor létezik, ha $|\varphi|<1$.
+    Ekkor a megoldás végtelen múltbeli zajösszegként írható:
+    $X_t=\sum_{j=0}^{\infty}\varphi^j\varepsilon_{t-j}$.
+  </p>
+</details>
 </div>
 
 <div class="feladat">
@@ -177,9 +183,16 @@
   <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
   <details>
-    <summary>Megoldás mutatása</summary>
-    <p>Helyes válasz: <span class="helyes">Igaz</span></p>
-  </details>
+  <summary>Megoldás mutatása</summary>
+  <p>Helyes válasz: <span class="helyes">Igaz</span></p>
+  <p class="magyarazat">
+    Az AR(1) stacionárius megoldása végtelen súlyozott zajösszeg:
+    $X_t=\sum_{j=0}^{\infty}(1/2)^j\varepsilon_{t-j}$.
+    Ha a zaj Weibull-jellegű farokkal rendelkezik, akkor a geometrikusan csökkenő
+    súlyok nem változtatják meg a farok Weibull-exponensét, ezért a stacionárius
+    eloszlás farkvastagsága is $p$ exponensű Weibull-jellegű marad.
+  </p>
+</details>
 </div>
 
 <div class="feladat">
@@ -213,9 +226,19 @@
   <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
   <details>
-    <summary>Megoldás mutatása</summary>
-    <p>Helyes válasz: <span class="helyes">Igaz</span></p>
-  </details>
+  <summary>Megoldás mutatása</summary>
+  <p>Helyes válasz: <span class="helyes">Igaz</span></p>
+  <p class="magyarazat">
+    ARCH(1) esetén Gauss-zajjal a gyenge stacionaritás feltétele
+    $0&lt;\alpha_1&lt;1$, mert ekkor véges a variancia:
+    $D^2X_t=\frac{\alpha_0}{1-\alpha_1}$.
+    A szigorú stacionaritás feltétele viszont
+    $0&lt;\alpha_1&lt;2e^C\approx 3.5686$, ahol $C$ az Euler--Mascheroni-állandó.
+    Ezért a két feltétel különbözik. Például $\alpha_1=2$ mellett a folyamat
+    szigorúan stacionárius lehet, de gyengén nem stacionárius, mert nincs véges
+    varianciája.
+  </p>
+</details>
 </div>
 
 <div class="feladat">
@@ -269,9 +292,14 @@
   <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
   <details>
-    <summary>Megoldás mutatása</summary>
-    <p>Helyes válasz: <span class="helyes">Igaz</span></p>
-  </details>
+  <summary>Megoldás mutatása</summary>
+  <p>Helyes válasz: <span class="helyes">Igaz</span></p>
+  <p class="magyarazat">
+    Ha létezik a spektrálsűrűség-függvény, akkor az autokovariancia-függvény
+    megfelelően reguláris/szummálható jellegű. Ilyenkor a mintaátlag varianciája
+    nullához tart, ezért a mintaátlag konzisztens becslése a várható értéknek.
+  </p>
+</details>
 </div>
 
 
