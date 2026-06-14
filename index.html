@@ -2773,8 +2773,7 @@ Ezzel szemben a feltételes likelihood (conditional likelihood) elhagyja az els�
     <p>Helyes válasz: <span class="helyes">Hamis</span></p>
     <p class="magyarazat">
       Függő idősor esetén a szokásos tapasztalati szórásnégyzet viselkedését
-      befolyásolja az autokorrelációs szerkezet. Különösen hosszú emlékezetű
-      folyamatoknál nem működik úgy, mint független mintában.
+      befolyásolja az autokorrelációs szerkezet. Pozitív autokorreláció esetén például a minta szórásnégyzete rendszerszerűen alábecsüli a folyamat valódi elméleti varianciáját.
     </p>
   </details>
 </div>
@@ -2961,8 +2960,10 @@ Ezzel szemben a feltételes likelihood (conditional likelihood) elhagyja az els�
       a nullhipotézist elutasítjuk.
     </p>
     <p class="magyarazat">
-      Következtetés: erős bizonyíték van az egységgyök ellen; a sor inkább
-      stacionáriusnak tekinthető az alkalmazott modellfeltételek mellett.
+      Következtetés: erős bizonyíték van az egységgyök ellen. Ezért a sor az
+  alkalmazott ADF/AR tesztegyenlet feltételei mellett stacionáriusnak tekinthető.
+  Szigorúan fogalmazva nem azt bizonyítottuk, hogy minden értelemben stacionárius,
+  hanem azt, hogy az egységgyök-nullhipotézist elutasítjuk.
     </p>
   </details>
 </div>
@@ -2976,11 +2977,7 @@ Ezzel szemben a feltételes likelihood (conditional likelihood) elhagyja az els�
   <details>
     <summary>Válasz mutatása</summary>
     <p class="magyarazat">
-      Az approximációs függvény az a függvény, amelyet a neurális háló a
-      bemenet-kimenet kapcsolat közelítésére megtanul:
-      \[
-      x\mapsto \widehat y(x).
-      \]
+     Az approximációs függvény a teljes neurális hálózat által megvalósított globális leképezés, amely a bemeneti vektorból előállítja a végső kimenetet.
     </p>
     <p class="magyarazat">
       Az aktivációs függvény a neuronok nemlineáris transzformációja, például
