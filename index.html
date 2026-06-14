@@ -1664,91 +1664,147 @@
   <p>A zaj szórása (1 pont):</p>
 
   <details>
-    <summary>Megoldás mutatása</summary>
+  <summary>Megoldás mutatása</summary>
 
-    <p class="magyarazat">
-      Általánosan egy ARMA$(p,q)$ folyamat spektrálsűrűsége:
-      \[
-      f(\lambda)
-      =
-      \frac{\sigma^2}{2\pi}
-      \frac{\left|\theta(e^{-i\lambda})\right|^2}
-           {\left|\varphi(e^{-i\lambda})\right|^2},
-      \]
-      ahol
-      \[
-      \varphi(e^{-i\lambda})
-      =
-      1-\varphi_1e^{-i\lambda}-\cdots-\varphi_pe^{-ip\lambda},
-      \]
-      és
-      \[
-      \theta(e^{-i\lambda})
-      =
-      1+\theta_1e^{-i\lambda}+\cdots+\theta_qe^{-iq\lambda}.
-      \]
-    </p>
+  <p class="magyarazat">
+    A jegyzet jelölése szerint egy ARMA$(p,q)$ folyamat:
+    \[
+    X_t=\omega+\sum_{i=1}^{p}\alpha_iX_{t-i}
+        +\varepsilon_t+\sum_{j=1}^{q}\beta_j\varepsilon_{t-j},
+    \qquad
+    \varepsilon_t\sim WN(0,\sigma^2).
+    \]
+  </p>
 
-    <p class="magyarazat">
-      A megadott spektrálsűrűség számlálójában nincs mozgóátlag-polinom,
-      csak konstans szerepel, ezért ez tiszta autoregresszív folyamat,
-      vagyis AR-folyamat.
-    </p>
+  <p class="magyarazat">
+    A hozzá tartozó karakterisztikus polinomok:
+    \[
+    P(x)=\sum_{i=0}^{p}\alpha_i x^{p-i},
+    \qquad
+    Q(x)=\sum_{j=0}^{q}\beta_j x^j,
+    \]
+    ahol
+    \[
+    \alpha_0=1,
+    \qquad
+    \beta_0=1.
+    \]
+  </p>
 
-    <p class="magyarazat">
-      A nevező:
-      \[
-      \left|e^{2i\lambda}+\frac13e^{i\lambda}-\frac23\right|^2.
-      \]
-      Ezt átírjuk úgy, hogy az AR-spektrálsűrűség szokásos alakjához
-      hasonlítsuk. Mivel komplex abszolútértékben vagyunk, szorozhatunk
-      $e^{-2i\lambda}$-val, mert annak abszolútértéke 1:
-      \[
-      \left|e^{2i\lambda}+\frac13e^{i\lambda}-\frac23\right|
-      =
-      \left|1+\frac13e^{-i\lambda}-\frac23e^{-2i\lambda}\right|.
-      \]
-    </p>
+  <p class="magyarazat">
+    A jegyzet szerinti spektrálsűrűség:
+    \[
+    f(\lambda)
+    =
+    \frac{\sigma^2}{2\pi}
+    \left|
+    \frac{Q(e^{i\lambda})}{P(e^{i\lambda})}
+    \right|^2.
+    \]
+  </p>
 
-    <p class="magyarazat">
-      Az AR(2) spektrálsűrűség nevezője általánosan:
-      \[
-      \left|1-\varphi_1e^{-i\lambda}-\varphi_2e^{-2i\lambda}\right|^2.
-      \]
-      Ezt összehasonlítva:
-      \[
-      1-\varphi_1e^{-i\lambda}-\varphi_2e^{-2i\lambda}
-      =
-      1+\frac13e^{-i\lambda}-\frac23e^{-2i\lambda}.
-      \]
-      Ezért
-      \[
-      \varphi_1=-\frac13,
-      \qquad
-      \varphi_2=\frac23.
-      \]
-    </p>
+  <p class="magyarazat">
+    A megadott függvény:
+    \[
+    \frac{5}{2\pi}
+    \frac{1}
+    {\left|e^{2i\lambda}+\frac13e^{i\lambda}-\frac23\right|^2}.
+    \]
+    Mivel a számlálóban csak konstans szerepel, ezért
+    \[
+    Q(e^{i\lambda})=1,
+    \]
+    vagyis nincs mozgóátlag-rész. Ez tehát tiszta autoregresszív folyamat.
+  </p>
 
-    <p class="magyarazat">
-      Tehát a folyamatmodell:
-      \[
-      X_t=-\frac13X_{t-1}+\frac23X_{t-2}+\varepsilon_t.
-      \]
-    </p>
+  <p class="magyarazat">
+    A nevező alapján:
+    \[
+    P(e^{i\lambda})
+    =
+    e^{2i\lambda}+\frac13e^{i\lambda}-\frac23.
+    \]
+    Ez egy másodfokú AR-polinom, tehát a modell rendje $p=2$.
+  </p>
 
-    <p class="magyarazat">
-      <strong>A folyamatmodell:</strong> AR-folyamat.
-      <br>
-      <strong>A modell rendje:</strong> AR(2).
-      <br>
-      <strong>Paraméterek:</strong>
-      $\varphi_1=-\frac13$, $\varphi_2=\frac23$.
-      <br>
-      <strong>A zaj varianciája:</strong> $\sigma^2=5$.
-      <br>
-      <strong>A zaj szórása:</strong> $\sigma=\sqrt{5}$.
-    </p>
-  </details>
+  <p class="magyarazat">
+    A jegyzet jelölése szerint AR(2)-nél:
+    \[
+    P(x)
+    =
+    \alpha_0x^2+\alpha_1x+\alpha_2,
+    \qquad
+    \alpha_0=1.
+    \]
+    Itt:
+    \[
+    P(x)
+    =
+    x^2+\frac13x-\frac23.
+    \]
+    Ezért:
+    \[
+    \alpha_1=\frac13,
+    \qquad
+    \alpha_2=-\frac23.
+    \]
+  </p>
+
+  <p class="magyarazat">
+    Viszont az ARMA-egyenletben a jegyzet megjegyzése szerint:
+    \[
+    \widetilde\alpha_i=-\alpha_i
+    \]
+    az egyenletben szereplő késleltetett $X$-ek együtthatóira.
+    Így:
+    \[
+    X_t
+    =
+    -\frac13X_{t-1}
+    +
+    \frac23X_{t-2}
+    +
+    \varepsilon_t.
+    \]
+  </p>
+
+  <p class="magyarazat">
+    A konstans szorzóból:
+    \[
+    \frac{\sigma^2}{2\pi}=\frac{5}{2\pi},
+    \]
+    ezért:
+    \[
+    \sigma^2=5,
+    \qquad
+    \sigma=\sqrt5.
+    \]
+  </p>
+
+  <p class="magyarazat">
+    <strong>A folyamatmodell:</strong> AR-folyamat.
+    <br>
+    <strong>A modell rendje:</strong> AR(2).
+    <br>
+    <strong>A jegyzet szerinti AR-polinom:</strong>
+    \[
+    P(x)=x^2+\frac13x-\frac23.
+    \]
+    <strong>Az egyenlet együtthatói:</strong>
+    \[
+    X_t=-\frac13X_{t-1}+\frac23X_{t-2}+\varepsilon_t.
+    \]
+    <br>
+    <strong>Paraméterek az egyenletben:</strong>
+    \[
+    -\frac13,\quad \frac23.
+    \]
+    <br>
+    <strong>A zaj szórásnégyzete:</strong> $\sigma^2=5$.
+    <br>
+    <strong>A zaj szórása:</strong> $\sigma=\sqrt5$.
+  </p>
+</details>
 </div>
   
 </section>
