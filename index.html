@@ -16,7 +16,7 @@
   <style>
     body {
       font-family: Georgia, serif;
-      max-width: 900px;
+      max-width: 950px;
       margin: 40px auto;
       line-height: 1.6;
       padding: 0 20px;
@@ -24,8 +24,44 @@
       color: #222;
     }
 
-    h1, h2 {
+    h1 {
       color: #111;
+      margin-bottom: 35px;
+    }
+
+    .feladatsor {
+      margin-top: 45px;
+      margin-bottom: 55px;
+      padding: 25px;
+      background: #ffffff;
+      border: 2px solid #d8def5;
+      border-radius: 14px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+    }
+
+    .feladatsor-cim {
+      margin-top: 0;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #d8def5;
+      color: #1b2a5b;
+    }
+
+    .meta {
+      font-size: 0.95rem;
+      color: #666;
+      font-style: italic;
+      margin-top: -5px;
+      margin-bottom: 25px;
+    }
+
+    h3 {
+      margin-top: 30px;
+      color: #111;
+    }
+
+    .utasitas {
+      font-style: italic;
+      margin-bottom: 22px;
     }
 
     .feladat {
@@ -37,9 +73,14 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
 
+    .feladat p {
+      margin-top: 0;
+    }
+
     .valaszok {
       text-align: right;
       margin-top: 10px;
+      margin-bottom: 10px;
       font-style: italic;
     }
 
@@ -68,556 +109,358 @@
     }
   </style>
 </head>
+
 <body>
 
 <h1>Idősorelemzés ZH-feladatok</h1>
 
+<section class="feladatsor">
+  <h2 class="feladatsor-cim">2021.05.25.</h2>
+  <p class="meta">ZH-feladatsor</p>
 
+  <h3>1. feladat</h3>
 
-
-
-
-
-
-
-
-<h2>1. feladat</h2>
-
-<p><em>Jelölje be, hogy Igaz, vagy Hamis-e az állítás
-(jó válasz: 2 pont, hiányzó válasz: 0 pont, rossz válasz: -1 pont).</em></p>
-
-<div class="feladat">
-  <p>
-    <strong>1.</strong>
-    Az elsőrendű autoregresszió folyamat oksági stacionárius megoldása
-    pontosan akkor létezik, ha paraméterének abszolút értéke 1-nél kisebb.
+  <p class="utasitas">
+    Jelölje be, hogy Igaz, vagy Hamis-e az állítás
+    (jó válasz: 2 pont, hiányzó válasz: 0 pont, rossz válasz: -1 pont).
   </p>
 
-  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+  <div class="feladat">
+    <p>
+      <strong>1.</strong>
+      Az elsőrendű autoregresszió folyamat oksági stacionárius megoldása
+      pontosan akkor létezik, ha paraméterének abszolút értéke 1-nél kisebb.
+    </p>
 
-  <details>
-  <summary>Megoldás mutatása</summary>
-  <p>Helyes válasz: <span class="helyes">Igaz</span></p>
-  <p class="magyarazat">
-    AR(1) folyamatnál, ha $X_t=\varphi X_{t-1}+\varepsilon_t$, akkor az oksági
-    stacionárius megoldás pontosan akkor létezik, ha $|\varphi|<1$.
-    Ekkor a megoldás végtelen múltbeli zajösszegként írható:
-    $X_t=\sum_{j=0}^{\infty}\varphi^j\varepsilon_{t-j}$.
-  </p>
-</details>
-</div>
+    <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
-<div class="feladat">
-  <p>
-    <strong>2.</strong>
-    Diszkrét eloszlású zajból generálva diszkrét eloszlású az
-    autoregressziós folyamat stacionárius megoldása is.
-  </p>
+    <details>
+      <summary>Megoldás mutatása</summary>
+      <p>Helyes válasz: <span class="helyes">Igaz</span></p>
+      <p class="magyarazat">
+        AR(1) folyamatnál, ha $X_t=\varphi X_{t-1}+\varepsilon_t$, akkor az oksági
+        stacionárius megoldás pontosan akkor létezik, ha $|\varphi|<1$.
+        Ekkor a megoldás végtelen múltbeli zajösszegként írható:
+        $X_t=\sum_{j=0}^{\infty}\varphi^j\varepsilon_{t-j}$.
+      </p>
+    </details>
+  </div>
 
-  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+  <div class="feladat">
+    <p>
+      <strong>2.</strong>
+      Diszkrét eloszlású zajból generálva diszkrét eloszlású az
+      autoregressziós folyamat stacionárius megoldása is.
+    </p>
 
-  <details>
-  <summary>Megoldás mutatása</summary>
-  <p>Helyes válasz: <span class="helyes">Hamis</span></p>
-  <p class="magyarazat">
-    Ellenpélda: az $X(t)=\frac12 X(t-1)+\varepsilon(t)$ AR(1) folyamatnál,
-    ha a zaj diszkrét eloszlású, például
-    $P(\varepsilon(t)=0)=P(\varepsilon(t)=\frac12)=\frac12$,
-    akkor a stacionárius megoldás eloszlása $U(0,1)$ lesz, vagyis folytonos.
-    Tehát diszkrét zajból nem feltétlenül diszkrét stacionárius eloszlás adódik.
-  </p>
-</details>
-</div>
+    <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
-<div class="feladat">
-  <p>
-    <strong>3.</strong>
-    A mozgóátlag folyamat stacionaritásának feltétele, hogy a karakterisztikus
-    polinom gyökei az egységkörön kívül legyenek.
-  </p>
+    <details>
+      <summary>Megoldás mutatása</summary>
+      <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+      <p class="magyarazat">
+        Ellenpélda: az $X(t)=\frac12 X(t-1)+\varepsilon(t)$ AR(1) folyamatnál,
+        ha a zaj diszkrét eloszlású, például
+        $P(\varepsilon(t)=0)=P(\varepsilon(t)=\frac12)=\frac12$,
+        akkor a stacionárius megoldás eloszlása $U(0,1)$ lesz, vagyis folytonos.
+        Tehát diszkrét zajból nem feltétlenül diszkrét stacionárius eloszlás adódik.
+      </p>
+    </details>
+  </div>
 
-  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+  <div class="feladat">
+    <p>
+      <strong>3.</strong>
+      A mozgóátlag folyamat stacionaritásának feltétele, hogy a karakterisztikus
+      polinom gyökei az egységkörön kívül legyenek.
+    </p>
 
-  <details>
-  <summary>Megoldás mutatása</summary>
-  <p>Helyes válasz: <span class="helyes">Hamis</span></p>
-  <p class="magyarazat">
-    A mozgóátlag-folyamat stacionaritásához nem kell a karakterisztikus polinom
-    gyökeinek az egységkörön kívül lenniük. Fehér zajból képzett véges rendű
-    MA-folyamat gyengén stacionárius. A gyökfeltétel nem a stacionaritás,
-    hanem az invertálhatóság feltétele, vagyis hogy a folyamatnak legyen
-    AR($\infty$) előállítása.
-  </p>
-</details>
-</div>
+    <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
-<div class="feladat">
-  <p>
-    <strong>4.</strong>
-    A Ljung--Box teszt a zaj független értékű voltát teszteli.
-  </p>
+    <details>
+      <summary>Megoldás mutatása</summary>
+      <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+      <p class="magyarazat">
+        A mozgóátlag-folyamat stacionaritásához nem kell a karakterisztikus polinom
+        gyökeinek az egységkörön kívül lenniük. Fehér zajból képzett véges rendű
+        MA-folyamat gyengén stacionárius. A gyökfeltétel nem a stacionaritás,
+        hanem az invertálhatóság feltétele, vagyis hogy a folyamatnak legyen
+        AR($\infty$) előállítása.
+      </p>
+    </details>
+  </div>
 
-  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+  <div class="feladat">
+    <p>
+      <strong>4.</strong>
+      A Ljung--Box teszt a zaj független értékű voltát teszteli.
+    </p>
 
-  <details>
-  <summary>Megoldás mutatása</summary>
-  <p>Helyes válasz: <span class="helyes">Hamis</span></p>
-  <p class="magyarazat">
-    A Ljung--Box teszt nem általában a függetlenséget teszteli, hanem azt,
-    hogy az autokorrelációk szignifikánsan eltérnek-e nullától. Vagyis inkább
-    a fehérzaj-jelleghez, pontosabban a korrelálatlansághoz kapcsolódik.
-    A függetlenség vizsgálatára külön tesztek szerepelnek, például
-    különbség-előjel teszt, return point test, rangteszt vagy BDS-teszt.
-  </p>
-</details>
-</div>
+    <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
-<div class="feladat">
-  <p>
-    <strong>5.</strong>
-    A $p$ exponensű Weibull eloszlású zajjal generált $1/2$ együtthatós
-    AR(1) folyamat stacionárius eloszlásának farkvastagsága ugyancsak
-    $p$ exponensű Weibull jellegű.
-  </p>
+    <details>
+      <summary>Megoldás mutatása</summary>
+      <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+      <p class="magyarazat">
+        A Ljung--Box teszt nem általában a függetlenséget teszteli, hanem azt,
+        hogy az autokorrelációk szignifikánsan eltérnek-e nullától. Vagyis inkább
+        a fehérzaj-jelleghez, pontosabban a korrelálatlansághoz kapcsolódik.
+        A függetlenség vizsgálatára külön tesztek szerepelnek, például
+        különbség-előjel teszt, return point test, rangteszt vagy BDS-teszt.
+      </p>
+    </details>
+  </div>
 
-  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+  <div class="feladat">
+    <p>
+      <strong>5.</strong>
+      A $p$ exponensű Weibull eloszlású zajjal generált $1/2$ együtthatós
+      AR(1) folyamat stacionárius eloszlásának farkvastagsága ugyancsak
+      $p$ exponensű Weibull jellegű.
+    </p>
 
-  <details>
-  <summary>Megoldás mutatása</summary>
-  <p>Helyes válasz: <span class="helyes">Igaz</span></p>
-  <p class="magyarazat">
-    Az AR(1) stacionárius megoldása végtelen súlyozott zajösszeg:
-    $X_t=\sum_{j=0}^{\infty}(1/2)^j\varepsilon_{t-j}$.
-    Ha a zaj Weibull-jellegű farokkal rendelkezik, akkor a geometrikusan csökkenő
-    súlyok nem változtatják meg a farok Weibull-exponensét, ezért a stacionárius
-    eloszlás farkvastagsága is $p$ exponensű Weibull-jellegű marad.
-  </p>
-</details>
-</div>
+    <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
-<div class="feladat">
-  <p>
-    <strong>6.</strong>
-    A mozgóátlag folyamat esetén a <em>parciális</em> autokorreláció
-    függvényének csak véges sok értéke nem 0.
-  </p>
+    <details>
+      <summary>Megoldás mutatása</summary>
+      <p>Helyes válasz: <span class="helyes">Igaz</span></p>
+      <p class="magyarazat">
+        Az AR(1) stacionárius megoldása végtelen súlyozott zajösszeg:
+        $X_t=\sum_{j=0}^{\infty}(1/2)^j\varepsilon_{t-j}$.
+        Ha a zaj Weibull-jellegű farokkal rendelkezik, akkor a geometrikusan csökkenő
+        súlyok nem változtatják meg a farok Weibull-exponensét, ezért a stacionárius
+        eloszlás farkvastagsága is $p$ exponensű Weibull-jellegű marad.
+      </p>
+    </details>
+  </div>
 
-  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+  <div class="feladat">
+    <p>
+      <strong>6.</strong>
+      A mozgóátlag folyamat esetén a <em>parciális</em> autokorreláció
+      függvényének csak véges sok értéke nem 0.
+    </p>
 
-  <details>
-  <summary>Megoldás mutatása</summary>
-  <p>Helyes válasz: <span class="helyes">Hamis</span></p>
-  <p class="magyarazat">
-    MA($q$) folyamat esetén az autokorrelációs függvény vág le véges sok tag után:
-    $r(k)=0$, ha $k>q$. A parciális autokorreláció ezzel szemben általában
-    nem vág le, hanem fokozatosan cseng le. Véges sok nemnulla parciális
-    autokorreláció inkább AR-folyamatokra jellemző.
-  </p>
-</details>
-</div>
+    <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
-<div class="feladat">
-  <p>
-    <strong>7.</strong>
-    Gauss zajból generálva az ARCH($p$) folyamatokat, különbözik az erős
-    és a gyenge stacionaritás feltétele.
-  </p>
+    <details>
+      <summary>Megoldás mutatása</summary>
+      <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+      <p class="magyarazat">
+        MA($q$) folyamat esetén az autokorrelációs függvény vág le véges sok tag után:
+        $r(k)=0$, ha $k>q$. A parciális autokorreláció ezzel szemben általában
+        nem vág le, hanem fokozatosan cseng le. Véges sok nemnulla parciális
+        autokorreláció inkább AR-folyamatokra jellemző.
+      </p>
+    </details>
+  </div>
 
-  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+  <div class="feladat">
+    <p>
+      <strong>7.</strong>
+      Gauss zajból generálva az ARCH($p$) folyamatokat, különbözik az erős
+      és a gyenge stacionaritás feltétele.
+    </p>
 
-  <details>
-  <summary>Megoldás mutatása</summary>
-  <p>Helyes válasz: <span class="helyes">Igaz</span></p>
-  <p class="magyarazat">
-    ARCH(1) esetén Gauss-zajjal a gyenge stacionaritás feltétele
-    $0&lt;\alpha_1&lt;1$, mert ekkor véges a variancia:
-    $D^2X_t=\frac{\alpha_0}{1-\alpha_1}$.
-    A szigorú stacionaritás feltétele viszont
-    $0&lt;\alpha_1&lt;2e^C\approx 3.5686$, ahol $C$ az Euler--Mascheroni-állandó.
-    Ezért a két feltétel különbözik. Például $\alpha_1=2$ mellett a folyamat
-    szigorúan stacionárius lehet, de gyengén nem stacionárius, mert nincs véges
-    varianciája.
-  </p>
-</details>
-</div>
+    <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
-<div class="feladat">
-  <p>
-    <strong>8.</strong>
-    Az Akaike-féle információs kritérium nem konzervatív.
-  </p>
+    <details>
+      <summary>Megoldás mutatása</summary>
+      <p>Helyes válasz: <span class="helyes">Igaz</span></p>
+      <p class="magyarazat">
+        ARCH(1) esetén Gauss-zajjal a gyenge stacionaritás feltétele
+        $0&lt;\alpha_1&lt;1$, mert ekkor véges a variancia:
+        $D^2X_t=\frac{\alpha_0}{1-\alpha_1}$.
+        A szigorú stacionaritás feltétele viszont
+        $0&lt;\alpha_1&lt;2e^C\approx 3.5686$, ahol $C$ az Euler--Mascheroni-állandó.
+        Ezért a két feltétel különbözik. Például $\alpha_1=2$ mellett a folyamat
+        szigorúan stacionárius lehet, de gyengén nem stacionárius, mert nincs véges
+        varianciája.
+      </p>
+    </details>
+  </div>
 
-  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+  <div class="feladat">
+    <p>
+      <strong>8.</strong>
+      Az Akaike-féle információs kritérium nem konzervatív.
+    </p>
 
-  <details>
-  <summary>Megoldás mutatása</summary>
-  <p>Helyes válasz: <span class="helyes">Hamis</span></p>
-  <p class="magyarazat">
-    Az AIC inkonzisztens, tehát a helyes modell kiválasztásának valószínűsége
-    nem feltétlenül tart 1-hez. Viszont konzervatív: rendbecslésnél inkább
-    túlbecsül, míg az alulbecslés valószínűsége 0-hoz tart. Ezért az az állítás,
-    hogy az AIC nem konzervatív, hamis.
-  </p>
-</details>
-</div>
+    <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
-<div class="feladat">
-  <p>
-    <strong>9.</strong>
-    A periodogram eloszlása a végpontok kivételével normális.
-  </p>
+    <details>
+      <summary>Megoldás mutatása</summary>
+      <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+      <p class="magyarazat">
+        Az AIC inkonzisztens, tehát a helyes modell kiválasztásának valószínűsége
+        nem feltétlenül tart 1-hez. Viszont konzervatív: rendbecslésnél inkább
+        túlbecsül, míg az alulbecslés valószínűsége 0-hoz tart. Ezért az az állítás,
+        hogy az AIC nem konzervatív, hamis.
+      </p>
+    </details>
+  </div>
 
-  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+  <div class="feladat">
+    <p>
+      <strong>9.</strong>
+      A periodogram eloszlása a végpontok kivételével normális.
+    </p>
 
-  <details>
-  <summary>Megoldás mutatása</summary>
-  <p>Helyes válasz: <span class="helyes">Hamis</span></p>
-  <p class="magyarazat">
-    A periodogram nem normális eloszlású mennyiség. A periodogram a Fourier-
-    komponensek négyzetes amplitúdóiból épül fel, ezért tipikusan nem normális,
-    hanem inkább $\chi^2$- vagy exponenciális jellegű eloszlással kapcsolódik.
-    Emiatt az az állítás, hogy a végpontok kivételével normális az eloszlása,
-    hamis.
-  </p>
-</details>
-</div>
+    <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
-<div class="feladat">
-  <p>
-    <strong>10.</strong>
-    Ha létezik a spektrálsűrűség-függvény, akkor az átlag mindig konzisztens
-    becslése a várható értéknek.
-  </p>
+    <details>
+      <summary>Megoldás mutatása</summary>
+      <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+      <p class="magyarazat">
+        A periodogram nem normális eloszlású mennyiség. A periodogram a Fourier-
+        komponensek négyzetes amplitúdóiból épül fel, ezért tipikusan nem normális,
+        hanem inkább $\chi^2$- vagy exponenciális jellegű eloszlással kapcsolódik.
+        Emiatt az az állítás, hogy a végpontok kivételével normális az eloszlása,
+        hamis.
+      </p>
+    </details>
+  </div>
 
-  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+  <div class="feladat">
+    <p>
+      <strong>10.</strong>
+      Ha létezik a spektrálsűrűség-függvény, akkor az átlag mindig konzisztens
+      becslése a várható értéknek.
+    </p>
 
-  <!DOCTYPE html>
-<html lang="hu">
-<head>
-  <meta charset="UTF-8">
-  <title>Idősorelemzés ZH-feladatok</title>
+    <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-      }
-    };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <details>
+      <summary>Megoldás mutatása</summary>
+      <p>Helyes válasz: <span class="helyes">Igaz</span></p>
+      <p class="magyarazat">
+        Ha létezik a spektrálsűrűség-függvény, akkor a spektrális mértéknek nincs
+        pozitív ponttömege a 0 frekvencián. A jegyzet tétele szerint a mintaátlag
+        pontosan akkor konzisztens becslése a várható értéknek, ha
+        $F(\{0\})=0$. Ekkor a mintaátlag varianciája nullához tart. Ha a
+        spektrálsűrűség véges 0-ban, akkor konkrétan
+        $T D^2(\overline X_T)\to 2\pi\varphi(0)$, vagyis
+        $D^2(\overline X_T)=O(1/T)$.
+      </p>
+    </details>
+  </div>
 
-  <style>
-    body {
-      font-family: Georgia, serif;
-      max-width: 900px;
-      margin: 40px auto;
-      line-height: 1.6;
-      padding: 0 20px;
-      background-color: #fafafa;
-      color: #222;
-    }
+  <h3>2. feladat</h3>
 
-    h1, h2 {
-      color: #111;
-    }
-
-    .feladat {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 18px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-
-    .valaszok {
-      text-align: right;
-      margin-top: 10px;
-      font-style: italic;
-    }
-
-    details {
-      margin-top: 12px;
-      padding: 10px;
-      background: #f0f4ff;
-      border-radius: 8px;
-      border: 1px solid #c8d5ff;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .helyes {
-      font-weight: bold;
-      text-decoration: underline;
-      color: #003399;
-    }
-
-    .magyarazat {
-      margin-top: 8px;
-      color: #333;
-    }
-  </style>
-</head>
-<body>
-
-<h1>Idősorelemzés ZH-feladatok</h1>
-
-
-
-
-
-
-
-
-
-
-<h2>1. feladat</h2>
-
-<p><em>Jelölje be, hogy Igaz, vagy Hamis-e az állítás
-(jó válasz: 2 pont, hiányzó válasz: 0 pont, rossz válasz: -1 pont).</em></p>
-
-<div class="feladat">
-  <p>
-    <strong>1.</strong>
-    Az elsőrendű autoregresszió folyamat oksági stacionárius megoldása
-    pontosan akkor létezik, ha paraméterének abszolút értéke 1-nél kisebb.
+  <p class="utasitas">
+    <strong>2. feladatsor (23 pont)</strong>
   </p>
 
-  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+  <div class="feladat">
+    <p><strong>a)</strong> Pozitív paraméter mellett a folyamat stacionárius eloszlása csak alfa-felbontó
+    (alpha-decomposable) eloszlás lehet, ha létezik.</p>
 
-  <details>
-  <summary>Megoldás mutatása</summary>
-  <p>Helyes válasz: <span class="helyes">Igaz</span></p>
-  <p class="magyarazat">
-    AR(1) folyamatnál, ha $X_t=\varphi X_{t-1}+\varepsilon_t$, akkor az oksági
-    stacionárius megoldás pontosan akkor létezik, ha $|\varphi|<1$.
-    Ekkor a megoldás végtelen múltbeli zajösszegként írható:
-    $X_t=\sum_{j=0}^{\infty}\varphi^j\varepsilon_{t-j}$.
-  </p>
-</details>
-</div>
+    <p><strong>b)</strong> Rögzített eloszlású zaj mellett <em>csak a paraméter értékétől függően</em>
+    egyaránt lehet reguláris változású és nem reguláris változású stacionárius megoldása
+    az egyenletnek.</p>
 
-<div class="feladat">
-  <p>
-    <strong>2.</strong>
-    Diszkrét eloszlású zajból generálva diszkrét eloszlású az
-    autoregressziós folyamat stacionárius megoldása is.
-  </p>
+    <p><strong>c)</strong> A folyamat autokorreláció függvényének egynél több, de csak véges sok értéke nem 0.</p>
 
-  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+    <p><strong>d)</strong> A stacionárius folyamat egylépéses legkisebb négyzetes előrejelzése a folyamatot
+    leíró egyenlet szerint, a zaj elhagyásával kapható.</p>
 
-  <details>
-  <summary>Megoldás mutatása</summary>
-  <p>Helyes válasz: <span class="helyes">Hamis</span></p>
-  <p class="magyarazat">
-    Ellenpélda: az $X(t)=\frac12 X(t-1)+\varepsilon(t)$ AR(1) folyamatnál,
-    ha a zaj diszkrét eloszlású, például
-    $P(\varepsilon(t)=0)=P(\varepsilon(t)=\frac12)=\frac12$,
-    akkor a stacionárius megoldás eloszlása $U(0,1)$ lesz, vagyis folytonos.
-    Tehát diszkrét zajból nem feltétlenül diszkrét stacionárius eloszlás adódik.
-  </p>
-</details>
-</div>
+    <p><strong>e)</strong> Korrelálatlan értékű folyamat.</p>
 
-<div class="feladat">
-  <p>
-    <strong>3.</strong>
-    A mozgóátlag folyamat stacionaritásának feltétele, hogy a karakterisztikus
-    polinom gyökei az egységkörön kívül legyenek.
+    <p><strong>f)</strong> A generáló zaj eloszlása befolyásolja a stacionárius eloszlás létezésének
+    parametrikus feltételét.</p>
+  </div>
+
+  <p class="utasitas">
+    Egyértelműen jelölje, hogy a <strong>tanultak alapján</strong>,
+    <strong>degenerált, 0 paraméterű folyamatot nem véve figyelembe</strong>:
   </p>
 
-  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+  <div class="feladat">
+    <p>
+      <strong>1.</strong> A fentiek közül melyek igazak az AR(1) folyamatra?
+    </p>
 
-  <details>
-  <summary>Megoldás mutatása</summary>
-  <p>Helyes válasz: <span class="helyes">Hamis</span></p>
-  <p class="magyarazat">
-    A mozgóátlag-folyamat stacionaritásához nem kell a karakterisztikus polinom
-    gyökeinek az egységkörön kívül lenniük. Fehér zajból képzett véges rendű
-    MA-folyamat gyengén stacionárius. A gyökfeltétel nem a stacionaritás,
-    hanem az invertálhatóság feltétele, vagyis hogy a folyamatnak legyen
-    AR($\infty$) előállítása.
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+      <p>
+        Helyes válasz:
+        <span class="helyes">a</span>,
+        <span class="helyes">d</span>
+      </p>
+    </details>
+  </div>
+
+  <div class="feladat">
+    <p>
+      <strong>2.</strong> A fentiek közül melyek igazak az MA(1) folyamatra?
+    </p>
+
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+      <p>
+        Helyes válasz:
+        <span class="helyes">c</span>,
+        <span class="helyes">d</span>
+      </p>
+    </details>
+  </div>
+
+  <div class="feladat">
+    <p>
+      <strong>3.</strong> A fentiek közül melyek igazak az ARCH(1) folyamatra?
+    </p>
+
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+      <p>
+        Helyes válasz:
+        <span class="helyes">b</span>,
+        <span class="helyes">e</span>,
+        <span class="helyes">f</span>
+      </p>
+    </details>
+  </div>
+
+  <div class="feladat">
+    <p>
+      <strong>4.</strong> A fentiek közül melyek igazak a BL(0,0,1) folyamatra?
+    </p>
+
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+      <p>
+        Helyes válasz:
+        <span class="helyes">b</span>,
+        <span class="helyes">d</span>,
+        <span class="helyes">e</span>,
+        <span class="helyes">f</span>
+      </p>
+    </details>
+  </div>
+
+  <p class="utasitas">
+    <strong>Figyelem!</strong> Egy folyamattípusra több állítás is igaz lehet, illetve egy állítás
+    több folyamattípushoz is tartozhat.
+    <br>
+    Minden jó válasz: 2 pont, minden rossz válasz: -1 pont.
   </p>
-</details>
-</div>
-
-<div class="feladat">
-  <p>
-    <strong>4.</strong>
-    A Ljung--Box teszt a zaj független értékű voltát teszteli.
-  </p>
-
-  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
-
-  <details>
-  <summary>Megoldás mutatása</summary>
-  <p>Helyes válasz: <span class="helyes">Hamis</span></p>
-  <p class="magyarazat">
-    A Ljung--Box teszt nem általában a függetlenséget teszteli, hanem azt,
-    hogy az autokorrelációk szignifikánsan eltérnek-e nullától. Vagyis inkább
-    a fehérzaj-jelleghez, pontosabban a korrelálatlansághoz kapcsolódik.
-    A függetlenség vizsgálatára külön tesztek szerepelnek, például
-    különbség-előjel teszt, return point test, rangteszt vagy BDS-teszt.
-  </p>
-</details>
-</div>
-
-<div class="feladat">
-  <p>
-    <strong>5.</strong>
-    A $p$ exponensű Weibull eloszlású zajjal generált $1/2$ együtthatós
-    AR(1) folyamat stacionárius eloszlásának farkvastagsága ugyancsak
-    $p$ exponensű Weibull jellegű.
-  </p>
-
-  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
-
-  <details>
-  <summary>Megoldás mutatása</summary>
-  <p>Helyes válasz: <span class="helyes">Igaz</span></p>
-  <p class="magyarazat">
-    Az AR(1) stacionárius megoldása végtelen súlyozott zajösszeg:
-    $X_t=\sum_{j=0}^{\infty}(1/2)^j\varepsilon_{t-j}$.
-    Ha a zaj Weibull-jellegű farokkal rendelkezik, akkor a geometrikusan csökkenő
-    súlyok nem változtatják meg a farok Weibull-exponensét, ezért a stacionárius
-    eloszlás farkvastagsága is $p$ exponensű Weibull-jellegű marad.
-  </p>
-</details>
-</div>
-
-<div class="feladat">
-  <p>
-    <strong>6.</strong>
-    A mozgóátlag folyamat esetén a <em>parciális</em> autokorreláció
-    függvényének csak véges sok értéke nem 0.
-  </p>
-
-  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
-
-  <details>
-  <summary>Megoldás mutatása</summary>
-  <p>Helyes válasz: <span class="helyes">Hamis</span></p>
-  <p class="magyarazat">
-    MA($q$) folyamat esetén az autokorrelációs függvény vág le véges sok tag után:
-    $r(k)=0$, ha $k>q$. A parciális autokorreláció ezzel szemben általában
-    nem vág le, hanem fokozatosan cseng le. Véges sok nemnulla parciális
-    autokorreláció inkább AR-folyamatokra jellemző.
-  </p>
-</details>
-</div>
-
-<div class="feladat">
-  <p>
-    <strong>7.</strong>
-    Gauss zajból generálva az ARCH($p$) folyamatokat, különbözik az erős
-    és a gyenge stacionaritás feltétele.
-  </p>
-
-  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
-
-  <details>
-  <summary>Megoldás mutatása</summary>
-  <p>Helyes válasz: <span class="helyes">Igaz</span></p>
-  <p class="magyarazat">
-    ARCH(1) esetén Gauss-zajjal a gyenge stacionaritás feltétele
-    $0&lt;\alpha_1&lt;1$, mert ekkor véges a variancia:
-    $D^2X_t=\frac{\alpha_0}{1-\alpha_1}$.
-    A szigorú stacionaritás feltétele viszont
-    $0&lt;\alpha_1&lt;2e^C\approx 3.5686$, ahol $C$ az Euler--Mascheroni-állandó.
-    Ezért a két feltétel különbözik. Például $\alpha_1=2$ mellett a folyamat
-    szigorúan stacionárius lehet, de gyengén nem stacionárius, mert nincs véges
-    varianciája.
-  </p>
-</details>
-</div>
-
-<div class="feladat">
-  <p>
-    <strong>8.</strong>
-    Az Akaike-féle információs kritérium nem konzervatív.
-  </p>
-
-  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
-
-  <details>
-  <summary>Megoldás mutatása</summary>
-  <p>Helyes válasz: <span class="helyes">Hamis</span></p>
-  <p class="magyarazat">
-    Az AIC inkonzisztens, tehát a helyes modell kiválasztásának valószínűsége
-    nem feltétlenül tart 1-hez. Viszont konzervatív: rendbecslésnél inkább
-    túlbecsül, míg az alulbecslés valószínűsége 0-hoz tart. Ezért az az állítás,
-    hogy az AIC nem konzervatív, hamis.
-  </p>
-</details>
-</div>
-
-<div class="feladat">
-  <p>
-    <strong>9.</strong>
-    A periodogram eloszlása a végpontok kivételével normális.
-  </p>
-
-  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
-
-  <details>
-  <summary>Megoldás mutatása</summary>
-  <p>Helyes válasz: <span class="helyes">Hamis</span></p>
-  <p class="magyarazat">
-    A periodogram nem normális eloszlású mennyiség. A periodogram a Fourier-
-    komponensek négyzetes amplitúdóiból épül fel, ezért tipikusan nem normális,
-    hanem inkább $\chi^2$- vagy exponenciális jellegű eloszlással kapcsolódik.
-    Emiatt az az állítás, hogy a végpontok kivételével normális az eloszlása,
-    hamis.
-  </p>
-</details>
-</div>
-
-<div class="feladat">
-  <p>
-    <strong>10.</strong>
-    Ha létezik a spektrálsűrűség-függvény, akkor az átlag mindig konzisztens
-    becslése a várható értéknek.
-  </p>
-
-  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
-
-  <details>
-  <summary>Megoldás mutatása</summary>
-  <p>Helyes válasz: <span class="helyes">Igaz</span></p>
-  <p class="magyarazat">
-    Ha létezik a spektrálsűrűség-függvény, akkor a spektrális mértéknek nincs
-    pozitív ponttömege a 0 frekvencián. A jegyzet tétele szerint a mintaátlag
-    pontosan akkor konzisztens becslése a várható értéknek, ha
-    $F(\{0\})=0$. Ekkor a mintaátlag varianciája nullához tart. Ha a
-    spektrálsűrűség véges 0-ban, akkor konkrétan
-    $T D^2(\overline X_T)\to 2\pi\varphi(0)$, vagyis
-    $D^2(\overline X_T)=O(1/T)$.
-  </p>
-</details>
-</div>
-
-
-
-
-
-
-
-
-
-</body>
-</html>
-</div>
-
-
-
-
-
-
-
-
+</section>
 
 </body>
 </html>
