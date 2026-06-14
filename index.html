@@ -2591,6 +2591,444 @@ Ezzel szemben a feltételes likelihood (conditional likelihood) elhagyja az els�
     </p>
   </details>
 </div>
+
+
+
+
+
+<h3>6. feladat</h3>
+
+<p class="utasitas">
+  <strong>6. feladat.</strong> Karikázza be a helyes választ!
+  Jó válasz: 2 pont, hiányzó válasz: 0 pont, rossz válasz: -1 pont.
+</p>
+
+<div class="feladat">
+  <p>
+    <strong>a)</strong>
+    A $[-1,1]$ intervallumon egyenletes eloszlású generáló zaj esetén
+    a BL(0,0,1,1) folyamat stacionárius eloszlásának pontosan akkor lesz
+    végtelen momentuma, ha paramétere 1-nél nagyobb.
+    Honnan következik ez?
+  </p>
+
+  <p><strong>a)</strong> Abból következik, hogy a Ljapunov-exponens ilyenkor negatív.</p>
+  <p><strong>b)</strong> A lineáris folyamatok maximumainak határeloszlásából következik.</p>
+  <p><strong>c)</strong> A Kesten--Vervaat--Goldie tételből következik.</p>
+  <p><strong>d)</strong> A BL(0,1,1) folyamat stacionárius megoldásának explicit alakjából következik.</p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>
+      Helyes válasz:
+      <span class="helyes">c</span>
+    </p>
+
+    <p class="magyarazat">
+      A bilineáris modell nehéz farkú stacionárius eloszlásának és végtelen
+      momentumainak megjelenése Kesten--Vervaat--Goldie típusú eredményekből
+      következik. Ezek írják le a sztochasztikus rekurziók reguláris változású
+      farokviselkedését.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>b)</strong>
+    A $[-1,1]$ intervallumon egyenletes eloszlású generáló zaj esetén
+    az ARCH(1) egyenletnek pontosan akkor létezik stacionárius eloszlása,
+    ha $\alpha_0$ és $\alpha_1$ paraméterei pozitívak és $\alpha_1$ kisebb
+    $e^2$-nél. Honnan következik ez?
+  </p>
+
+  <p><strong>a)</strong> Abból következik, hogy a Ljapunov-exponens ilyenkor negatív.</p>
+  <p><strong>b)</strong> A lineáris folyamatok maximumainak határeloszlásából következik.</p>
+  <p><strong>c)</strong> A Kesten--Vervaat--Goldie tételből következik.</p>
+  <p><strong>d)</strong> Az ARCH(1) folyamat stacionárius megoldásának explicit alakjából következik.</p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>
+      Helyes válasz:
+      <span class="helyes">a</span>
+    </p>
+
+    <p class="magyarazat">
+      ARCH(1)-nél az erős stacionaritás feltétele a Ljapunov-exponens
+      negativitása:
+      \[
+      E\log(\alpha_1\varepsilon_t^2)&lt;0.
+      \]
+      Uniform zaj esetén ebből adódik a megfelelő paraméterfeltétel.
+    </p>
+  </details>
+</div>
+
+
+<h3>7. feladat</h3>
+
+<p class="utasitas">
+  <strong>7. feladat.</strong> Jelölje be, hogy Igaz vagy Hamis-e az állítás
+  (jó válasz: 2 pont, hiányzó válasz: 0 pont, rossz válasz: -1 pont).
+</p>
+
+<div class="feladat">
+  <p>
+    <strong>a)</strong>
+    A mozgóátlag folyamat stacionaritásának feltétele, hogy a karakterisztikus
+    polinom gyökei az egységkörön kívül legyenek.
+  </p>
+
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+    <p class="magyarazat">
+      Véges rendű MA-folyamat fehér zajból automatikusan stacionárius.
+      A gyökfeltétel az invertálhatóságra vonatkozik, nem a stacionaritásra.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>b)</strong>
+    Az autoregresszió oksági stacionárius megoldása, ha létezik,
+    mindig folytonos eloszlású.
+  </p>
+
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+    <p class="magyarazat">
+      Az AR-folyamat stacionárius eloszlása a generáló zaj eloszlásától függ.
+      Nem igaz, hogy mindig folytonos lenne. Speciális diszkrét vagy degenerált
+      zaj esetén nem feltétlenül kapunk folytonos eloszlást.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>c)</strong>
+    A Portmanteau-próbák a zaj/reziduális független értékű voltát tesztelik.
+  </p>
+
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+    <p class="magyarazat">
+      A Portmanteau-próbák, például a Box--Pierce- vagy Ljung--Box-teszt,
+      az autokorrelációkat vizsgálják. Tehát a fehérzaj-jelleghez /
+      korrelálatlansághoz kapcsolódnak, nem a teljes függetlenséget tesztelik.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>d)</strong>
+    A Brock--Dechert--Scheinkman (BDS) teszttel a zaj/reziduális független
+    értékű volta tesztelhető.
+  </p>
+
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>Helyes válasz: <span class="helyes">Igaz</span></p>
+    <p class="magyarazat">
+      A BDS-teszt nemlineáris függések kimutatására használható, és az i.i.d.
+      jelleg, vagyis a független és azonos eloszlású megfigyelések nullhipotézisét
+      vizsgálja.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>e)</strong>
+    A tapasztalati szórásnégyzet mindig torzítatlan becslése a stacionárius idősor
+    varianciájának.
+  </p>
+
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+    <p class="magyarazat">
+      Függő idősor esetén a szokásos tapasztalati szórásnégyzet viselkedését
+      befolyásolja az autokorrelációs szerkezet. Különösen hosszú emlékezetű
+      folyamatoknál nem működik úgy, mint független mintában.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>f)</strong>
+    Rövid emlékezet esetén az átlag szórásnégyzete mindig $O(1/n)$ rendben
+    cseng le.
+  </p>
+
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>Helyes válasz: <span class="helyes">Igaz</span></p>
+    <p class="magyarazat">
+      Rövid emlékezetű folyamatoknál az autokovarianciák elég gyorsan lecsengenek,
+      ezért a mintaátlag varianciája a szokásos rendben csökken:
+      \[
+      D^2(\overline X_n)=O(1/n).
+      \]
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>g)</strong>
+    Az átlag minden stacionárius idősor esetén konzisztens becslése a várható értéknek.
+  </p>
+
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+    <p class="magyarazat">
+      A mintaátlag konzisztenciájához nem elég önmagában a stacionaritás.
+      Spektrális megfogalmazásban például az kell, hogy a spektrális mértéknek
+      ne legyen pozitív ponttömege a 0 frekvencián:
+      \[
+      F(\{0\})=0.
+      \]
+    </p>
+  </details>
+</div>
+
+
+<h3>8. feladat</h3>
+
+<p class="utasitas">
+  <strong>8. feladat.</strong> Röviden válaszolja meg az alábbi kérdéseket.
+  Csak néhány szavas/mondatos vagy egyszerű formulás válaszokat kérek/fogadok el.
+</p>
+
+<div class="feladat">
+  <p>
+    <strong>a)</strong>
+    Mi a regulárisan változó függvény és mi az 1 dimenziós reguláris változású eloszlás?
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+    <p class="magyarazat">
+      Egy $R(x)$ függvény regulárisan változó, ha minden $c&gt;0$ esetén
+      \[
+      \frac{R(cx)}{R(x)}\to c^\rho
+      \]
+      valamilyen $\rho$ mellett. Ekkor $R(x)=x^\rho L(x)$, ahol $L$ lassan
+      változó.
+    </p>
+    <p class="magyarazat">
+      Egy eloszlás 1 dimenzióban reguláris változású, ha a farka hatványrendben
+      cseng le, például
+      \[
+      P(X&gt;x)\sim p x^{-\alpha}L(x),\qquad
+      P(X&lt;-x)\sim q x^{-\alpha}L(x).
+      \]
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>b)</strong>
+    Adja meg az AR(1) folyamat paraméterbecslését és annak közelítő eloszlását!
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+    <p class="magyarazat">
+      Ha
+      \[
+      X_t=\alpha X_{t-1}+\varepsilon_t,
+      \]
+      akkor
+      \[
+      \widehat\alpha=
+      \frac{\sum_{t=2}^{n}X_tX_{t-1}}
+           {\sum_{t=2}^{n}X_{t-1}^2}.
+      \]
+    </p>
+    <p class="magyarazat">
+      Közelítő eloszlása:
+      \[
+      \widehat\alpha\approx
+      N\left(\alpha,\frac{1-\alpha^2}{n}\right),
+      \]
+      vagy
+      \[
+      \sqrt n(\widehat\alpha-\alpha)\Rightarrow N(0,1-\alpha^2).
+      \]
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>c)</strong>
+    Mi a Gauss-zajból generált ARCH(1) folyamat erős stacionaritásának
+    parametrikus feltétele?
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+    <p class="magyarazat">
+      ARCH(1)-nél:
+      \[
+      X_t=\sigma_t\varepsilon_t,\qquad
+      \sigma_t^2=\alpha_0+\alpha_1X_{t-1}^2.
+      \]
+      Az erős stacionaritás feltétele:
+      \[
+      E\log(\alpha_1\varepsilon_t^2)&lt;0.
+      \]
+    </p>
+    <p class="magyarazat">
+      Gauss-zaj esetén:
+      \[
+      0&lt;\alpha_1&lt;2e^C\approx 3.5686,
+      \]
+      ahol $C$ az Euler--Mascheroni-állandó, és $\alpha_0&gt;0$.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>d)</strong>
+    Milyen feltételek mellett cseng le a stacionárius eloszlás úgy, mint a zaj konstansszorosa?
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+    <p class="magyarazat">
+      Lineáris folyamatoknál, például ARMA esetén, ha a generáló zaj eloszlása
+      reguláris változású / szubexponenciális jellegű, és a folyamat oksági
+      stacionárius megoldása létezik, akkor a stacionárius eloszlás farka
+      aszimptotikusan a zaj farkának konstansszorosa lehet.
+    </p>
+    <p class="magyarazat">
+      Tipikusan:
+      \[
+      P(|X|&gt;x)\sim C\,P(|\varepsilon|&gt;x),
+      \]
+      ahol a konstans $C$ a lineáris reprezentáció együtthatóitól függ.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>e)</strong>
+    Egy idősorból származó mintára, amelynek tulajdonságairól előzetes ismeretünk nincs,
+    az ADF (Augmented Dickey--Fuller) teszt p-értéke 0.001. Mire következtet?
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+    <p class="magyarazat">
+      Az ADF-teszt nullhipotézise, hogy a folyamatnak egységgyöke van,
+      vagyis nem stacionárius/unit root jellegű. Ha a p-érték 0.001, akkor
+      a nullhipotézist elutasítjuk.
+    </p>
+    <p class="magyarazat">
+      Következtetés: erős bizonyíték van az egységgyök ellen; a sor inkább
+      stacionáriusnak tekinthető az alkalmazott modellfeltételek mellett.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>f)</strong>
+    Mi az approximációs és az aktivációs függvény egy feedforward neural network-ben?
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+    <p class="magyarazat">
+      Az approximációs függvény az a függvény, amelyet a neurális háló a
+      bemenet-kimenet kapcsolat közelítésére megtanul:
+      \[
+      x\mapsto \widehat y(x).
+      \]
+    </p>
+    <p class="magyarazat">
+      Az aktivációs függvény a neuronok nemlineáris transzformációja, például
+      ReLU, sigmoid vagy tanh. Ez teszi lehetővé, hogy a háló nemlineáris
+      kapcsolatokat is közelítsen.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>g)</strong>
+    Mitől rekurrens egy neurális háló?
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+    <p class="magyarazat">
+      Attól rekurrens, hogy van benne visszacsatolás / belső állapot:
+      a háló aktuális kimenete vagy rejtett állapota függ a korábbi időpontok
+      rejtett állapotától is.
+    </p>
+    <p class="magyarazat">
+      Ezért képes szekvenciális adatok, például idősorok múltbeli információit
+      felhasználni.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>h)</strong>
+    Mi az LSTM specifikus jellemzője?
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+    <p class="magyarazat">
+      Az LSTM speciális rekurrens háló, amely memóriacellát és kapukat használ.
+      Tipikus kapui: input gate, forget gate és output gate.
+    </p>
+    <p class="magyarazat">
+      Ezek szabályozzák, hogy mit őrizzen meg, mit felejtsen el, és mit adjon
+      tovább a háló. Ez segít a hosszabb távú függések megtanulásában.
+    </p>
+  </details>
+</div>
+
   
   
 </section>
