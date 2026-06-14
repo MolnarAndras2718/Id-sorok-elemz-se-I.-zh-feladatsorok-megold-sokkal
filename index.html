@@ -1830,239 +1830,294 @@
 
   <h3>1. feladat</h3>
 
-  <p class="utasitas">
-    <strong>1. feladat</strong> — minden jó válasz 2 pont, rossz válasz -1 pontot ér.
+<p class="utasitas">
+  <strong>1. feladat</strong> — minden jó válasz 2 pont, rossz válasz -1 pontot ér.
+</p>
+
+<div class="feladat">
+  <p>
+    <strong>a)</strong> Stacionárius eloszlásának szórása minden olyan paraméterérték mellett,
+    amelyre létezik véges szórású stacionárius megoldás, nagyobb, mint a generáló zajé.
   </p>
 
-  <div class="feladat">
-    <p><strong>a)</strong> Stacionárius eloszlásának faroka minden olyan paraméterérték mellett,
-    amelyre létezik véges szórású stacionárius megoldás, nagyobb, mint a generáló zajé.</p>
-
-    <p><strong>b)</strong> A normális zaj eloszlása befolyásolja a stacionárius eloszlás
-    létezésének parametrikus feltételét.</p>
-
-    <p><strong>c)</strong> Normális eloszlású zajból generálva a stacionárius eloszlás
-    minden egész rendű momentuma lehet végtelen megfelelő paraméterek esetén.</p>
-
-    <p><strong>d)</strong> Autokorreláció függvényének egynél több, de csak véges sok értéke nem 0.</p>
-
-    <p><strong>e)</strong> A konstans $\frac{1}{2\pi}$ függvény lehet ilyen folyamat
-    spektrálsűrűség-függvénye.</p>
-
-    <p><strong>f)</strong> Rögzített zaj mellett csak a paraméter értékétől függően
-    egyaránt lehet reguláris változású és nem reguláris változású stacionárius megoldása.</p>
-  </div>
-
-  <p class="utasitas">
-    Karikázza be, hogy a <strong>tanultak alapján</strong>,
-    <strong>degenerált, 0 paraméterű folyamatot nem véve figyelembe</strong>
-    a fentiek közül melyek igazak.
+  <p>
+    <strong>b)</strong> A generáló zaj eloszlása befolyásolja a stacionárius eloszlás
+    létezésének parametrikus feltételét.
   </p>
 
-  <div class="feladat">
-    <p><strong>1.</strong> Az AR(1) folyamatra/egyenletre?</p>
+  <p>
+    <strong>c)</strong> Normális eloszlású zajból generálva a stacionárius eloszlás minden
+    egész rendű momentuma lehet végtelen megfelelő paraméterek esetén.
+  </p>
 
-    <div class="valaszok">
-      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
-    </div>
+  <p>
+    <strong>d)</strong> Autokorreláció függvényének egynél több, de csak véges sok értéke nem 0.
+  </p>
 
-    <details>
-      <summary>Megoldás mutatása</summary>
+  <p>
+    <strong>e)</strong> A konstans $\frac{3}{2\pi}$ függvény lehet ilyen folyamat
+    spektrálsűrűség-függvénye.
+  </p>
 
-      <p>
-        Helyes válasz:
-        <span class="helyes">nincs ilyen állítás</span>
-      </p>
+  <p>
+    <strong>f)</strong> Rögzített zaj mellett csak a paraméter értékétől függően egyaránt lehet
+    reguláris változású és nem reguláris változású stacionárius megoldása.
+  </p>
+</div>
 
-      <p class="magyarazat">
-        <strong>a) Hamis.</strong> AR(1)-nél a stacionárius eloszlás farokviselkedése
-        közvetlenül a zajtól függ. Normális zaj esetén például normális jellegű
-        stacionárius eloszlás adódik, nem lesz a generáló zajnál nehezebb farkú.
-      </p>
+<p class="utasitas">
+  Karikázza be, hogy a <strong>tanultak alapján</strong>,
+  <strong>degenerált, 0 paraméterű folyamatot nem véve figyelembe</strong>
+  a fentiek közül melyek igazak.
+</p>
 
-      <p class="magyarazat">
-        <strong>b) Hamis.</strong> AR(1)-nél a stacionárius megoldás létezésének
-        paraméterfeltétele $|\alpha|&lt;1$, ez nem a normális zajeloszlástól függ.
-      </p>
 
-      <p class="magyarazat">
-        <strong>c) Hamis.</strong> Normális zajból generált stacionárius AR(1)
-        normális eloszlású, ezért minden momentuma véges.
-      </p>
+<div class="feladat">
+  <p><strong>1.</strong> Az AR(1) folyamatra/egyenletre?</p>
 
-      <p class="magyarazat">
-        <strong>d) Hamis.</strong> AR(1)-nél az autokorrelációs függvény
-        $r(k)=\alpha^k$, tehát általában végtelen sok nemnulla értéke van.
-      </p>
-
-      <p class="magyarazat">
-        <strong>e) Hamis.</strong> Nemdegenerált AR(1) spektrálsűrűsége nem konstans;
-        konstans spektrum fehérzaj-jellegű folyamatra jellemző.
-      </p>
-
-      <p class="magyarazat">
-        <strong>f) Hamis.</strong> Ez a paramétertől függő reguláris/nem reguláris
-        farokváltás nem az AR(1) lineáris modell tipikus tulajdonsága.
-      </p>
-    </details>
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
   </div>
 
-  <div class="feladat">
-    <p><strong>2.</strong> Az MA(1) folyamatra/egyenletre?</p>
+  <details>
+    <summary>Megoldás mutatása</summary>
 
-    <div class="valaszok">
-      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
-    </div>
+    <p>
+      Helyes válasz:
+      <span class="helyes">a</span>
+    </p>
 
-    <details>
-      <summary>Megoldás mutatása</summary>
+    <p class="magyarazat">
+      <strong>a) Igaz.</strong> AR(1)-nél
+      \[
+      X_t=\alpha X_{t-1}+\varepsilon_t.
+      \]
+      Ha $|\alpha|&lt;1$, akkor
+      \[
+      D^2X_t=\frac{D^2\varepsilon_t}{1-\alpha^2}.
+      \]
+      Nemdegenerált esetben $\alpha\ne0$, ezért
+      \[
+      D^2X_t&gt;D^2\varepsilon_t,
+      \]
+      tehát a stacionárius eloszlás szórása nagyobb, mint a generáló zajé.
+    </p>
 
-      <p>
-        Helyes válasz:
-        <span class="helyes">d</span>
-      </p>
+    <p class="magyarazat">
+      <strong>b) Hamis.</strong> AR(1)-nél a stacionárius megoldás létezésének
+      paraméterfeltétele $|\alpha|&lt;1$. Ez nem a generáló zaj konkrét
+      eloszlásától függ.
+    </p>
 
-      <p class="magyarazat">
-        <strong>a) Hamis.</strong> MA(1) véges lineáris zajkombináció, nem Kesten-típusú
-        nehézfarkú rekurziós modell.
-      </p>
+    <p class="magyarazat">
+      <strong>c) Hamis.</strong> Normális zajból generált stacionárius AR(1)
+      normális eloszlású, ezért minden momentuma véges.
+    </p>
 
-      <p class="magyarazat">
-        <strong>b) Hamis.</strong> MA(1)-nél a stacionaritás nem ilyen zajeloszlástól
-        függő paraméterfeltételen múlik; véges rendű MA-folyamat fehér zajból
-        stacionárius.
-      </p>
+    <p class="magyarazat">
+      <strong>d) Hamis.</strong> AR(1)-nél az autokorrelációs függvény
+      \[
+      r(k)=\alpha^k,
+      \]
+      tehát általában végtelen sok nemnulla értéke van.
+    </p>
 
-      <p class="magyarazat">
-        <strong>c) Hamis.</strong> Normális zajból generált MA(1) normális eloszlású
-        véges lineáris kombináció, így minden momentuma véges.
-      </p>
+    <p class="magyarazat">
+      <strong>e) Hamis.</strong> Nemdegenerált AR(1) spektrálsűrűsége nem konstans.
+      Konstans spektrum fehérzaj-jellegű, korrelálatlan folyamatra jellemző.
+    </p>
 
-      <p class="magyarazat">
-        <strong>d) Igaz.</strong> MA(1)-nél az autokorreláció csak a 0. és legfeljebb
-        az 1. késleltetésnél nem nulla, utána levág.
-      </p>
+    <p class="magyarazat">
+      <strong>f) Hamis.</strong> Ez a paramétertől függő reguláris/nem reguláris
+      farokváltás nem az AR(1) lineáris modell tipikus tulajdonsága.
+    </p>
+  </details>
+</div>
 
-      <p class="magyarazat">
-        <strong>e) Hamis.</strong> Nemdegenerált MA(1) spektruma általában nem konstans.
-      </p>
 
-      <p class="magyarazat">
-        <strong>f) Hamis.</strong> MA(1) lineáris, véges zajkombináció; nem a paramétertől
-        függő reguláris/nem reguláris farokváltás jellemzi.
-      </p>
-    </details>
+<div class="feladat">
+  <p><strong>2.</strong> Az MA(1) folyamatra/egyenletre?</p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
   </div>
 
-  <div class="feladat">
-    <p><strong>3.</strong> ARCH(1) folyamatra/egyenletre?</p>
+  <details>
+    <summary>Megoldás mutatása</summary>
 
-    <div class="valaszok">
-      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
-    </div>
+    <p>
+      Helyes válasz:
+      <span class="helyes">a</span>,
+      <span class="helyes">d</span>
+    </p>
 
-    <details>
-      <summary>Megoldás mutatása</summary>
+    <p class="magyarazat">
+      <strong>a) Igaz.</strong> MA(1)-nél
+      \[
+      X_t=\varepsilon_t+\theta\varepsilon_{t-1}.
+      \]
+      Ezért
+      \[
+      D^2X_t=(1+\theta^2)D^2\varepsilon_t.
+      \]
+      Nemdegenerált esetben $\theta\ne0$, így a stacionárius eloszlás szórása
+      nagyobb, mint a generáló zajé.
+    </p>
 
-      <p>
-        Helyes válasz:
-        <span class="helyes">a</span>,
-        <span class="helyes">b</span>,
-        <span class="helyes">c</span>,
-        <span class="helyes">e</span>,
-        <span class="helyes">f</span>
-      </p>
+    <p class="magyarazat">
+      <strong>b) Hamis.</strong> Véges rendű MA-folyamat fehér zajból
+      automatikusan stacionárius. A stacionaritás létezésének nincs olyan
+      paraméterfeltétele, amelyet a generáló zaj eloszlása módosítana.
+    </p>
 
-      <p class="magyarazat">
-        <strong>a) Igaz.</strong> ARCH(1)-nél a stacionárius eloszlás gyakran
-        nehézfarkúbb, mint a generáló zaj, még Gauss-zaj esetén is.
-      </p>
+    <p class="magyarazat">
+      <strong>c) Hamis.</strong> Normális zajból generált MA(1) normális eloszlású
+      véges lineáris kombináció, így minden momentuma véges.
+    </p>
 
-      <p class="magyarazat">
-        <strong>b) Igaz.</strong> ARCH(1)-nél a szigorú stacionaritás feltétele
-        Lyapunov-exponensből adódik:
-        $E\log(\alpha_1\varepsilon_t^2)&lt;0$, ezért függ a zaj eloszlásától.
-      </p>
+    <p class="magyarazat">
+      <strong>d) Igaz.</strong> MA(1)-nél az autokorrelációs függvény csak
+      véges sok helyen nem nulla: a 0. és legfeljebb az 1. késleltetésnél.
+      Utána levág.
+    </p>
 
-      <p class="magyarazat">
-        <strong>c) Igaz.</strong> Normális zaj mellett megfelelő paraméterek esetén
-        az ARCH(1) stacionárius eloszlása annyira nehézfarkú lehet, hogy egész
-        rendű momentumai is végtelenek.
-      </p>
+    <p class="magyarazat">
+      <strong>e) Hamis.</strong> Nemdegenerált MA(1) spektruma általában nem konstans.
+    </p>
 
-      <p class="magyarazat">
-        <strong>d) Hamis.</strong> ARCH(1)-nél maga az $X_t$ folyamat korrelálatlan
-        értékű, tehát az autokorrelációk pozitív késleltetésnél nullák. Nem az
-        jellemzi, hogy egynél több, de véges sok autokorrelációja nem nulla.
-      </p>
+    <p class="magyarazat">
+      <strong>f) Hamis.</strong> MA(1) lineáris, véges zajkombináció; nem a
+      paramétertől függő reguláris/nem reguláris farokváltás jellemzi.
+    </p>
+  </details>
+</div>
 
-      <p class="magyarazat">
-        <strong>e) Igaz.</strong> ARCH(1) korrelálatlan értékű, ezért ha a varianciája
-        1, akkor spektrálsűrűsége konstans $\frac{1}{2\pi}$ lehet.
-      </p>
 
-      <p class="magyarazat">
-        <strong>f) Igaz.</strong> Rögzített zajeloszlás mellett a paraméter értékétől
-        függően lehet a stacionárius eloszlás reguláris változású vagy nem reguláris
-        változású.
-      </p>
-    </details>
+<div class="feladat">
+  <p><strong>3.</strong> ARCH(1) folyamatra/egyenletre?</p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
   </div>
 
-  <div class="feladat">
-    <p><strong>4.</strong> BL(0,0,1,1) folyamatra/egyenletre?</p>
+  <details>
+    <summary>Megoldás mutatása</summary>
 
-    <div class="valaszok">
-      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
-    </div>
+    <p>
+      Helyes válasz:
+      <span class="helyes">b</span>,
+      <span class="helyes">c</span>,
+      <span class="helyes">e</span>,
+      <span class="helyes">f</span>
+    </p>
 
-    <details>
-      <summary>Megoldás mutatása</summary>
+    <p class="magyarazat">
+      <strong>a) Hamis.</strong> ARCH(1)-nél a stacionárius eloszlás szórása
+      nem minden véges szórású paramétertartományban szükségképpen nagyobb,
+      mint a generáló zajé. Például
+      \[
+      D^2X_t=\frac{\alpha_0}{1-\alpha_1}
+      \]
+      a szokásos normalizált zaj esetén, és ez függ $\alpha_0$-tól is.
+    </p>
 
-      <p>
-        Helyes válasz:
-        <span class="helyes">a</span>,
-        <span class="helyes">b</span>,
-        <span class="helyes">c</span>,
-        <span class="helyes">e</span>,
-        <span class="helyes">f</span>
-      </p>
+    <p class="magyarazat">
+      <strong>b) Igaz.</strong> ARCH(1)-nél a szigorú stacionaritás feltétele
+      Lyapunov-exponensből adódik:
+      \[
+      E\log(\alpha_1\varepsilon_t^2)&lt;0.
+      \]
+      Ezért a stacionárius megoldás létezésének paraméterfeltétele függ a
+      generáló zaj eloszlásától.
+    </p>
 
-      <p class="magyarazat">
-        <strong>a) Igaz.</strong> A BL(0,0,1,1) nemlineáris rekurziós modell,
-        és stacionárius megoldása lehet a zajnál nehezebb farkú.
-      </p>
+    <p class="magyarazat">
+      <strong>c) Igaz.</strong> Normális zaj mellett megfelelő paraméterek esetén
+      az ARCH(1) stacionárius eloszlása annyira nehézfarkú lehet, hogy egész
+      rendű momentumai is végtelenek lehetnek.
+    </p>
 
-      <p class="magyarazat">
-        <strong>b) Igaz.</strong> A stacionárius megoldás létezésének paraméterfeltétele
-        Lyapunov-exponens jellegű feltételből adódik, ezért függhet a generáló zaj
-        eloszlásától.
-      </p>
+    <p class="magyarazat">
+      <strong>d) Hamis.</strong> ARCH(1)-nél maga az $X_t$ folyamat korrelálatlan
+      értékű, tehát az autokorrelációk pozitív késleltetésnél nullák. Nem az
+      jellemzi, hogy egynél több, de véges sok autokorrelációja nem nulla.
+    </p>
 
-      <p class="magyarazat">
-        <strong>c) Igaz.</strong> Normális zaj mellett megfelelő paraméterek esetén
-        a bilineáris modell stacionárius eloszlása is lehet olyan nehézfarkú, hogy
-        egész rendű momentumai végtelenek.
-      </p>
+    <p class="magyarazat">
+      <strong>e) Igaz.</strong> ARCH(1) korrelálatlan értékű folyamat lehet.
+      Ha a varianciája $3$, akkor a spektrálsűrűsége konstans
+      \[
+      f(\lambda)=\frac{3}{2\pi}.
+      \]
+    </p>
 
-      <p class="magyarazat">
-        <strong>d) Hamis.</strong> Ez az MA(1)-re jellemző levágó ACF-tulajdonság.
-        A BL(0,0,1,1) nem véges rendű MA-folyamat.
-      </p>
+    <p class="magyarazat">
+      <strong>f) Igaz.</strong> Rögzített zajeloszlás mellett a paraméter értékétől
+      függően lehet a stacionárius eloszlás reguláris változású vagy nem reguláris
+      változású.
+    </p>
+  </details>
+</div>
 
-      <p class="magyarazat">
-        <strong>e) Igaz.</strong> A BL(0,0,1,1) lehet korrelálatlan értékű,
-        fehérzaj-jellegű folyamat, ezért megfelelő varianciával konstans
-        $\frac{1}{2\pi}$ spektrum is előfordulhat.
-      </p>
 
-      <p class="magyarazat">
-        <strong>f) Igaz.</strong> Rögzített zajeloszlás mellett a paraméter értéke
-        döntheti el, hogy a stacionárius eloszlás reguláris változású vagy nem
-        reguláris változású.
-      </p>
-    </details>
+<div class="feladat">
+  <p><strong>4.</strong> BL(0,0,1,1) folyamatra/egyenletre?</p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e &nbsp;&nbsp; f
   </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+
+    <p>
+      Helyes válasz:
+      <span class="helyes">b</span>,
+      <span class="helyes">c</span>,
+      <span class="helyes">e</span>,
+      <span class="helyes">f</span>
+    </p>
+
+    <p class="magyarazat">
+      <strong>a) Hamis.</strong> A BL(0,0,1,1) stacionárius eloszlásának szórása
+      nem minden véges szórású paraméterérték mellett szükségképpen nagyobb,
+      mint a generáló zajé. Ez a szórás a konkrét zajeloszlástól és paramétertől is
+      függ.
+    </p>
+
+    <p class="magyarazat">
+      <strong>b) Igaz.</strong> A BL(0,0,1,1) stacionárius megoldásának
+      létezési feltétele szintén Lyapunov-exponens jellegű, ezért a generáló zaj
+      eloszlása befolyásolja a parametrikus feltételt.
+    </p>
+
+    <p class="magyarazat">
+      <strong>c) Igaz.</strong> Normális zaj mellett megfelelő paraméterek esetén
+      a bilineáris modell stacionárius eloszlása is lehet olyan nehézfarkú, hogy
+      egész rendű momentumai végtelenek.
+    </p>
+
+    <p class="magyarazat">
+      <strong>d) Hamis.</strong> Ez az MA(1)-re jellemző levágó ACF-tulajdonság.
+      A BL(0,0,1,1) nem véges rendű MA-folyamat.
+    </p>
+
+    <p class="magyarazat">
+      <strong>e) Igaz.</strong> A BL(0,0,1,1) lehet korrelálatlan értékű,
+      fehérzaj-jellegű folyamat. Ha a varianciája $3$, akkor a spektrálsűrűsége
+      konstans
+      \[
+      f(\lambda)=\frac{3}{2\pi}.
+      \]
+    </p>
+
+    <p class="magyarazat">
+      <strong>f) Igaz.</strong> Rögzített zajeloszlás mellett a paraméter értéke
+      döntheti el, hogy a stacionárius eloszlás reguláris változású vagy nem
+      reguláris változású.
+    </p>
+  </details>
+</div>
 
 
   <h3>2. feladat</h3>
