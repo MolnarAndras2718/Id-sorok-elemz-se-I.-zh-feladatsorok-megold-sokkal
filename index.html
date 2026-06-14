@@ -1669,7 +1669,7 @@
   <p class="magyarazat">
     A jegyzet jelölése szerint egy ARMA$(p,q)$ folyamat:
     \[
-    X_t=\omega+\sum_{i=1}^{p}\alpha_iX_{t-i}
+    X_t=\omega+\sum_{i=1}^{p}\widetilde\alpha_iX_{t-i}
         +\varepsilon_t+\sum_{j=1}^{q}\beta_j\varepsilon_{t-j},
     \qquad
     \varepsilon_t\sim WN(0,\sigma^2).
@@ -1677,7 +1677,7 @@
   </p>
 
   <p class="magyarazat">
-    A hozzá tartozó karakterisztikus polinomok:
+    A jegyzetben a spektrálsűrűséghez tartozó karakterisztikus polinomok:
     \[
     P(x)=\sum_{i=0}^{p}\alpha_i x^{p-i},
     \qquad
@@ -1688,6 +1688,11 @@
     \alpha_0=1,
     \qquad
     \beta_0=1.
+    \]
+    Fontos: itt a $P$-polinom együtthatói és az AR-egyenletben jobb oldalon
+    szereplő együtthatók előjele ellentétes:
+    \[
+    \widetilde\alpha_i=-\alpha_i.
     \]
   </p>
 
@@ -1701,20 +1706,22 @@
     \frac{Q(e^{i\lambda})}{P(e^{i\lambda})}
     \right|^2.
     \]
+    Tehát a nevezőből a $P$-polinomot, a számlálóból a $Q$-polinomot olvassuk ki.
   </p>
 
   <p class="magyarazat">
     A megadott függvény:
     \[
+    f(\lambda)=
     \frac{5}{2\pi}
     \frac{1}
     {\left|e^{2i\lambda}+\frac13e^{i\lambda}-\frac23\right|^2}.
     \]
-    Mivel a számlálóban csak konstans szerepel, ezért
+    A számlálóban nincs $\lambda$-tól függő tag, ezért
     \[
     Q(e^{i\lambda})=1,
     \]
-    vagyis nincs mozgóátlag-rész. Ez tehát tiszta autoregresszív folyamat.
+    vagyis nincs mozgóátlag-rész. A folyamat tehát tiszta AR-folyamat.
   </p>
 
   <p class="magyarazat">
@@ -1724,47 +1731,42 @@
     =
     e^{2i\lambda}+\frac13e^{i\lambda}-\frac23.
     \]
-    Ez egy másodfokú AR-polinom, tehát a modell rendje $p=2$.
+    Ez azt jelenti, hogy
+    \[
+    P(x)=x^2+\frac13x-\frac23.
+    \]
+    Mivel ez másodfokú polinom, a modell rendje:
+    \[
+    p=2.
+    \]
   </p>
 
   <p class="magyarazat">
-    A jegyzet jelölése szerint AR(2)-nél:
+    A jegyzet szerinti $P$-polinom-együtthatók:
     \[
-    P(x)
-    =
-    \alpha_0x^2+\alpha_1x+\alpha_2,
+    \alpha_0=1,
     \qquad
-    \alpha_0=1.
-    \]
-    Itt:
-    \[
-    P(x)
-    =
-    x^2+\frac13x-\frac23.
-    \]
-    Ezért:
-    \[
     \alpha_1=\frac13,
     \qquad
     \alpha_2=-\frac23.
     \]
+    Ezek még nem közvetlenül a jobb oldalra rendezett AR-együtthatók.
   </p>
 
   <p class="magyarazat">
-    Viszont az ARMA-egyenletben a jegyzet megjegyzése szerint:
+    Az AR-egyenlet bal oldali alakban:
     \[
-    \widetilde\alpha_i=-\alpha_i
+    X_t+\frac13X_{t-1}-\frac23X_{t-2}=\varepsilon_t.
     \]
-    az egyenletben szereplő késleltetett $X$-ek együtthatóira.
-    Így:
+    Ha jobb oldalra rendezzük:
     \[
-    X_t
-    =
-    -\frac13X_{t-1}
-    +
-    \frac23X_{t-2}
-    +
-    \varepsilon_t.
+    X_t=-\frac13X_{t-1}+\frac23X_{t-2}+\varepsilon_t.
+    \]
+    Tehát az egyenletben szereplő AR-együtthatók:
+    \[
+    \widetilde\alpha_1=-\frac13,
+    \qquad
+    \widetilde\alpha_2=\frac23.
     \]
   </p>
 
@@ -1782,26 +1784,26 @@
   </p>
 
   <p class="magyarazat">
-    <strong>A folyamatmodell:</strong> AR-folyamat.
-    <br>
-    <strong>A modell rendje:</strong> AR(2).
-    <br>
+    <strong>Összefoglalás:</strong><br>
+    <strong>A folyamatmodell:</strong> AR-folyamat.<br>
+    <strong>A modell rendje:</strong> AR(2).<br>
     <strong>A jegyzet szerinti AR-polinom:</strong>
     \[
     P(x)=x^2+\frac13x-\frac23.
     \]
-    <strong>Az egyenlet együtthatói:</strong>
+    <strong>Bal oldali egyenletalak:</strong>
+    \[
+    X_t+\frac13X_{t-1}-\frac23X_{t-2}=\varepsilon_t.
+    \]
+    <strong>Jobb oldalra rendezett egyenlet:</strong>
     \[
     X_t=-\frac13X_{t-1}+\frac23X_{t-2}+\varepsilon_t.
     \]
-    <br>
-    <strong>Paraméterek az egyenletben:</strong>
+    <strong>Az egyenlet AR-együtthatói:</strong>
     \[
     -\frac13,\quad \frac23.
     \]
-    <br>
-    <strong>A zaj szórásnégyzete:</strong> $\sigma^2=5$.
-    <br>
+    <strong>A zaj szórásnégyzete:</strong> $\sigma^2=5$.<br>
     <strong>A zaj szórása:</strong> $\sigma=\sqrt5$.
   </p>
 </details>
