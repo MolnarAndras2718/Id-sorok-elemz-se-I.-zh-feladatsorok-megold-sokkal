@@ -1,77 +1,7 @@
-<!DOCTYPE html>
-<html lang="hu">
-<head>
-  <meta charset="UTF-8">
-  <title>Idősorelemzés ZH-feladatok</title>
-
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-      }
-    };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-  <style>
-    body {
-      font-family: Georgia, serif;
-      max-width: 900px;
-      margin: 40px auto;
-      line-height: 1.6;
-      padding: 0 20px;
-      background-color: #fafafa;
-      color: #222;
-    }
-
-    h1, h2 {
-      color: #111;
-    }
-
-    .feladat {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 18px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-
-    .valaszok {
-      text-align: right;
-      margin-top: 10px;
-      font-style: italic;
-    }
-
-    details {
-      margin-top: 12px;
-      padding: 10px;
-      background: #f0f4ff;
-      border-radius: 8px;
-      border: 1px solid #c8d5ff;
-    }
-
-    summary {
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .helyes {
-      font-weight: bold;
-      text-decoration: underline;
-      color: #003399;
-    }
-  </style>
-</head>
-
-<body>
-
-<h1>Idősorelemzés ZH-feladatok</h1>
-
 <h2>1. feladat</h2>
 
 <p><em>Jelölje be, hogy Igaz, vagy Hamis-e az állítás
-(válasz: 2 pont, hiányzó válasz: 0 pont, rossz válasz: -1 pont).</em></p>
+(jó válasz: 2 pont, hiányzó válasz: 0 pont, rossz válasz: -1 pont).</em></p>
 
 <div class="feladat">
   <p>
@@ -80,9 +10,7 @@
     pontosan akkor létezik, ha paraméterének abszolút értéke 1-nél kisebb.
   </p>
 
-  <div class="valaszok">
-    Igaz &nbsp;&nbsp;&nbsp; Hamis
-  </div>
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
   <details>
     <summary>Megoldás mutatása</summary>
@@ -97,9 +25,7 @@
     autoregressziós folyamat stacionárius megoldása is.
   </p>
 
-  <div class="valaszok">
-    Igaz &nbsp;&nbsp;&nbsp; Hamis
-  </div>
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
   <details>
     <summary>Megoldás mutatása</summary>
@@ -107,5 +33,132 @@
   </details>
 </div>
 
-</body>
-</html>
+<div class="feladat">
+  <p>
+    <strong>3.</strong>
+    A mozgóátlag folyamat stacionaritásának feltétele, hogy a karakterisztikus
+    polinom gyökei az egységkörön kívül legyenek.
+  </p>
+
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>4.</strong>
+    A Ljung--Box teszt a zaj független értékű voltát teszteli.
+  </p>
+
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+    <p class="magyarazat">
+      A Ljung--Box teszt a fehérzaj-jelleghez kapcsolódó autokorrelálatlanságot
+      vizsgálja, nem általában a teljes függetlenséget.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>5.</strong>
+    A $p$ exponensű Weibull eloszlású zajjal generált $1/2$ együtthatós
+    AR(1) folyamat stacionárius eloszlásának farkvastagsága ugyancsak
+    $p$ exponensű Weibull jellegű.
+  </p>
+
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>Helyes válasz: <span class="helyes">Igaz</span></p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>6.</strong>
+    A mozgóátlag folyamat esetén a <em>parciális</em> autokorreláció
+    függvényének csak véges sok értéke nem 0.
+  </p>
+
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+    <p class="magyarazat">
+      MA-folyamatnál az autokorreláció vág le véges sok tag után; a parciális
+      autokorreláció általában végtelen sok nemnulla értékkel rendelkezik.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>7.</strong>
+    Gauss zajból generálva az ARCH($p$) folyamatokat, különbözik az erős
+    és a gyenge stacionaritás feltétele.
+  </p>
+
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>Helyes válasz: <span class="helyes">Igaz</span></p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>8.</strong>
+    Az Akaike-féle információs kritérium nem konzervatív.
+  </p>
+
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+    <p class="magyarazat">
+      A jegyzet szerint az AIC inkonzisztens, de konzervatív: a valódi rendet
+      inkább túlbecsüli, az alulbecslés valószínűsége 0-hoz tart.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>9.</strong>
+    A periodogram eloszlása a végpontok kivételével normális.
+  </p>
+
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>10.</strong>
+    Ha létezik a spektrálsűrűség-függvény, akkor az átlag mindig konzisztens
+    becslése a várható értéknek.
+  </p>
+
+  <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>Helyes válasz: <span class="helyes">Igaz</span></p>
+  </details>
+</div>
