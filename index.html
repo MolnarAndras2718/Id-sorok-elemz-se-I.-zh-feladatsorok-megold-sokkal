@@ -111,9 +111,16 @@
   <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
   <details>
-    <summary>Megoldás mutatása</summary>
-    <p>Helyes válasz: <span class="helyes">Hamis</span></p>
-  </details>
+  <summary>Megoldás mutatása</summary>
+  <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+  <p class="magyarazat">
+    Ellenpélda: az $X(t)=\frac12 X(t-1)+\varepsilon(t)$ AR(1) folyamatnál,
+    ha a zaj diszkrét eloszlású, például
+    $P(\varepsilon(t)=0)=P(\varepsilon(t)=\frac12)=\frac12$,
+    akkor a stacionárius megoldás eloszlása $U(0,1)$ lesz, vagyis folytonos.
+    Tehát diszkrét zajból nem feltétlenül diszkrét stacionárius eloszlás adódik.
+  </p>
+</details>
 </div>
 
 <div class="feladat">
@@ -126,9 +133,16 @@
   <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
   <details>
-    <summary>Megoldás mutatása</summary>
-    <p>Helyes válasz: <span class="helyes">Hamis</span></p>
-  </details>
+  <summary>Megoldás mutatása</summary>
+  <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+  <p class="magyarazat">
+    A mozgóátlag-folyamat stacionaritásához nem kell a karakterisztikus polinom
+    gyökeinek az egységkörön kívül lenniük. Fehér zajból képzett véges rendű
+    MA-folyamat gyengén stacionárius. A gyökfeltétel nem a stacionaritás,
+    hanem az invertálhatóság feltétele, vagyis hogy a folyamatnak legyen
+    AR($\infty$) előállítása.
+  </p>
+</details>
 </div>
 
 <div class="feladat">
@@ -140,13 +154,16 @@
   <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
   <details>
-    <summary>Megoldás mutatása</summary>
-    <p>Helyes válasz: <span class="helyes">Hamis</span></p>
-    <p class="magyarazat">
-      A Ljung--Box teszt a fehérzaj-jelleghez kapcsolódó autokorrelálatlanságot
-      vizsgálja, nem általában a teljes függetlenséget.
-    </p>
-  </details>
+  <summary>Megoldás mutatása</summary>
+  <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+  <p class="magyarazat">
+    A Ljung--Box teszt nem általában a függetlenséget teszteli, hanem azt,
+    hogy az autokorrelációk szignifikánsan eltérnek-e nullától. Vagyis inkább
+    a fehérzaj-jelleghez, pontosabban a korrelálatlansághoz kapcsolódik.
+    A függetlenség vizsgálatára külön tesztek szerepelnek, például
+    különbség-előjel teszt, return point test, rangteszt vagy BDS-teszt.
+  </p>
+</details>
 </div>
 
 <div class="feladat">
@@ -175,13 +192,15 @@
   <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
   <details>
-    <summary>Megoldás mutatása</summary>
-    <p>Helyes válasz: <span class="helyes">Hamis</span></p>
-    <p class="magyarazat">
-      MA-folyamatnál az autokorreláció vág le véges sok tag után; a parciális
-      autokorreláció általában végtelen sok nemnulla értékkel rendelkezik.
-    </p>
-  </details>
+  <summary>Megoldás mutatása</summary>
+  <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+  <p class="magyarazat">
+    MA($q$) folyamat esetén az autokorrelációs függvény vág le véges sok tag után:
+    $r(k)=0$, ha $k>q$. A parciális autokorreláció ezzel szemben általában
+    nem vág le, hanem fokozatosan cseng le. Véges sok nemnulla parciális
+    autokorreláció inkább AR-folyamatokra jellemző.
+  </p>
+</details>
 </div>
 
 <div class="feladat">
@@ -208,13 +227,15 @@
   <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
   <details>
-    <summary>Megoldás mutatása</summary>
-    <p>Helyes válasz: <span class="helyes">Hamis</span></p>
-    <p class="magyarazat">
-      A jegyzet szerint az AIC inkonzisztens, de konzervatív: a valódi rendet
-      inkább túlbecsüli, az alulbecslés valószínűsége 0-hoz tart.
-    </p>
-  </details>
+  <summary>Megoldás mutatása</summary>
+  <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+  <p class="magyarazat">
+    Az AIC inkonzisztens, tehát a helyes modell kiválasztásának valószínűsége
+    nem feltétlenül tart 1-hez. Viszont konzervatív: rendbecslésnél inkább
+    túlbecsül, míg az alulbecslés valószínűsége 0-hoz tart. Ezért az az állítás,
+    hogy az AIC nem konzervatív, hamis.
+  </p>
+</details>
 </div>
 
 <div class="feladat">
@@ -226,9 +247,16 @@
   <div class="valaszok">Igaz &nbsp;&nbsp;&nbsp; Hamis</div>
 
   <details>
-    <summary>Megoldás mutatása</summary>
-    <p>Helyes válasz: <span class="helyes">Hamis</span></p>
-  </details>
+  <summary>Megoldás mutatása</summary>
+  <p>Helyes válasz: <span class="helyes">Hamis</span></p>
+  <p class="magyarazat">
+    A periodogram nem normális eloszlású mennyiség. A periodogram a Fourier-
+    komponensek négyzetes amplitúdóiból épül fel, ezért tipikusan nem normális,
+    hanem inkább $\chi^2$- vagy exponenciális jellegű eloszlással kapcsolódik.
+    Emiatt az az állítás, hogy a végpontok kivételével normális az eloszlása,
+    hamis.
+  </p>
+</details>
 </div>
 
 <div class="feladat">
