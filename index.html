@@ -628,7 +628,363 @@
     <br>
     Minden jó válasz: 2 pont, minden rossz válasz: -1 pont.
   </p>
+
+
+
+
+
+
+
+  
+<h3>3. feladat</h3>
+
+<p class="utasitas">
+  <strong>3. feladat (6 pont)</strong>
+</p>
+
+<div class="feladat">
+  <p>
+    Egyértelműen jelölje, hogy az információs kritériumok alábbi tulajdonságai közül melyik igaz:
+  </p>
+
+  <p><strong>a)</strong> konzisztens</p>
+  <p><strong>b)</strong> Shibata értelemben hatásos</p>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>1.</strong> Az Akaike-féle (AIC) információs kritériumra:
+  </p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>
+      Helyes válasz:
+      <span class="helyes">b</span>
+    </p>
+
+    <p class="magyarazat">
+      Az AIC nem konzisztens, mert nem feltétlenül választja ki 1-hez tartó
+      valószínűséggel a valódi rendet. Viszont Shibata értelemben hatásos,
+      vagyis előrejelzési/approximációs szempontból aszimptotikusan kedvező
+      tulajdonságú.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>2.</strong> A Schwarz-féle bayesi (BIC) információs kritériumra:
+  </p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>
+      Helyes válasz:
+      <span class="helyes">a</span>
+    </p>
+
+    <p class="magyarazat">
+      A BIC konzisztens: elég nagy mintánál a helyes modellrend kiválasztásának
+      valószínűsége 1-hez tart. Nem a Shibata-féle hatásosság a fő tulajdonsága,
+      hanem a konzisztens rendválasztás.
+    </p>
+  </details>
+</div>
+
+<div class="feladat">
+  <p>
+    <strong>3.</strong> A Hannan--Quinn-féle (HQIC) információs kritériumra:
+  </p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>
+      Helyes válasz:
+      <span class="helyes">a</span>
+    </p>
+
+    <p class="magyarazat">
+      A HQIC-et konzisztens rendbecslési kritériumként vezetik be.
+      A büntetőtagja lassabban nő, mint a BIC-é, de elég gyorsan ahhoz,
+      hogy a rendbecslés konzisztens maradjon.
+    </p>
+  </details>
+</div>
+
+<p class="utasitas">
+  <strong>Figyelem!</strong> Egy tulajdonság több kritériumhoz is tartozhat.
+</p>
+
+
+<h3>4. feladat</h3>
+
+<p class="utasitas">
+  <strong>4. feladat (3 pont)</strong>
+</p>
+
+<div class="feladat">
+  <p>
+    Egyértelműen jelölje, hogy az alábbi állítások közül melyik igaz.
+  </p>
+
+  <p>
+    A periodogram várható értéke előáll, mint kétszer a zaj szórásnégyzete plusz
+  </p>
+
+  <p><strong>a)</strong> Fejér-magok összege</p>
+  <p><strong>b)</strong> sin és cos függvények összege</p>
+  <p><strong>c)</strong> Fejér-magok súlyozott összege</p>
+  <p><strong>d)</strong> sin és cos függvények súlyozott összege</p>
+
+  <div class="valaszok">
+    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
+  </div>
+
+  <details>
+    <summary>Megoldás mutatása</summary>
+    <p>
+      Helyes válasz:
+      <span class="helyes">c</span>
+    </p>
+
+    <p class="magyarazat">
+      A periodogram a frekvenciatartalom becslésére szolgál. Periodikus komponens
+      plusz zaj esetén a periodogram várható értéke a zajból származó konstans
+      alapszintből, azaz kétszer a zaj szórásnégyzetéből, valamint a valódi
+      frekvenciák köré koncentrálódó Fejér-magok súlyozott összegéből áll.
+      A súlyok a periodikus komponensek amplitúdóitól függenek, ezért nem
+      egyszerű Fejér-magok összege, hanem súlyozott összeg.
+    </p>
+  </details>
+</div>
+
+
+
+
+
+<h3>5. feladat</h3>
+
+<p class="utasitas">
+  <strong>5. feladat (3 pont)</strong>
+</p>
+
+<div class="feladat">
+  <p>
+    AR(1) folyamat esetén miben különbözik a teljes és a feltételes likelihood,
+    és mi ennek a következménye?
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+    <p class="magyarazat">
+      AR(1)-nél a teljes likelihood tartalmazza a kezdőérték, például $X_1$
+      stacionárius sűrűségét is:
+      $L_{\text{teljes}}=f_X(x_1)\prod_{t=2}^T f(x_t\mid x_{t-1})$.
+      A feltételes likelihood ezzel szemben $X_1$-re feltételez, ezért
+      $L_{\text{felt}}=\prod_{t=2}^T f(x_t\mid x_{t-1})$.
+    </p>
+    <p class="magyarazat">
+      Következmény: a feltételes likelihood egyszerűbb, és AR(1)-nél a kapott
+      becslés gyakorlatilag/aszimptotikusan közel van a teljes likelihood-becsléshez;
+      a különbség nagy mintában eltűnik.
+    </p>
+  </details>
+</div>
+
+
+<h3>6. feladat</h3>
+
+<p class="utasitas">
+  <strong>6. feladat (4 pont)</strong>
+</p>
+
+<div class="feladat">
+  <p>
+    Mi a Kullback--Leibler távolság, mit mér, és milyen tulajdonságait ismeri?
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+    <p class="magyarazat">
+      Két sűrűség, $f$ és $g$ Kullback--Leibler távolsága:
+      $D_{\mathrm{KL}}(f\Vert g)=\int f(x)\log\frac{f(x)}{g(x)}\,dx
+      =E_f\left(\log\frac{f(X)}{g(X)}\right)$.
+    </p>
+    <p class="magyarazat">
+      Azt méri, hogy mennyi információveszteséggel jár, ha a valódi $f$
+      eloszlást a $g$ modellel közelítjük.
+    </p>
+    <p class="magyarazat">
+      Tulajdonságai: $D_{\mathrm{KL}}(f\Vert g)\ge 0$,
+      és pontosan akkor 0, ha $f=g$ majdnem mindenütt. Nem szimmetrikus,
+      tehát általában $D_{\mathrm{KL}}(f\Vert g)\ne D_{\mathrm{KL}}(g\Vert f)$,
+      és nem valódi metrika.
+    </p>
+  </details>
+</div>
+
+
+<h3>7. feladat</h3>
+
+<p class="utasitas">
+  <strong>7. feladat (2 pont)</strong>
+</p>
+
+<div class="feladat">
+  <p>
+    Mi a regulárisan változó függvény, és mi az 1 dimenziós reguláris változású eloszlás?
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+    <p class="magyarazat">
+      Egy $R(x)$ függvény regulárisan változó, ha minden $c&gt;0$ esetén
+      $\frac{R(cx)}{R(x)}\to g(c)&lt;\infty$, amint $x\to\infty$.
+      Karamata szerint ilyenkor $R(x)=x^\beta L(x)$, ahol $L$ lassan változó
+      függvény.
+    </p>
+    <p class="magyarazat">
+      Egy $X$ valószínűségi változó eloszlása 1 dimenzióban regulárisan változó,
+      ha a farok valamilyen $\beta&gt;0$ mellett
+      $P(X&gt;x)=p x^{-\beta}L(x)$ és
+      $P(X\le -x)=q x^{-\beta}L(x)$, ahol $p+q=1$.
+    </p>
+  </details>
+</div>
+
+
+<h3>8. feladat</h3>
+
+<p class="utasitas">
+  <strong>8. feladat (3 pont)</strong>
+</p>
+
+<div class="feladat">
+  <p>
+    Adja meg az AR(1) folyamat paraméterbecslését és annak közelítő eloszlását.
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+    <p class="magyarazat">
+      Nulla várható értékű AR(1)-nél:
+      $X_t=\alpha X_{t-1}+\varepsilon_t$.
+      A feltételes ML / legkisebb négyzetes becslés:
+      \[
+      \widehat\alpha
+      =
+      \frac{\sum_{t=2}^T X_tX_{t-1}}
+           {\sum_{t=2}^T X_{t-1}^2}.
+      \]
+    </p>
+    <p class="magyarazat">
+      Közelítő eloszlása:
+      \[
+      \widehat\alpha
+      \approx
+      N\left(\alpha,\frac{1-\alpha^2}{T-1}\right),
+      \]
+      vagy ekvivalensen
+      $\sqrt{T-1}(\widehat\alpha-\alpha)\Rightarrow N(0,1-\alpha^2)$.
+    </p>
+  </details>
+</div>
+
+
+<h3>9. feladat</h3>
+
+<p class="utasitas">
+  <strong>9. feladat (3 pont)</strong>
+</p>
+
+<div class="feladat">
+  <p>
+    A rend $p$ és a mintaelemszám $N$ függvényében mennyi a büntető faktor az
+    Akaike, Bayes vagy Schwartz, Hannan--Quinn információs kritériumok esetén?
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+    <p class="magyarazat">
+      A kritériumok alakja általában:
+      $-2\log L + \text{büntetőtag}$.
+    </p>
+    <p class="magyarazat">
+      Akaike:
+      \[
+      AIC(p)=-2\log L_p+2p.
+      \]
+    </p>
+    <p class="magyarazat">
+      Bayes/Schwarz:
+      \[
+      BIC(p)=-2\log L_p+p\log N.
+      \]
+    </p>
+    <p class="magyarazat">
+      Hannan--Quinn:
+      \[
+      HQIC(p)=-2\log L_p+2p\log\log N.
+      \]
+    </p>
+  </details>
+</div>
+
+
+<h3>10. feladat</h3>
+
+<p class="utasitas">
+  <strong>10. feladat (2 pont)</strong>
+</p>
+
+<div class="feladat">
+  <p>
+    Mi köze a periodogramnak az autokovariancia függvény pozitív definit becsléséhez?
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+    <p class="magyarazat">
+      A periodogram az autokovariancia-függvény becslésének csonkított
+      Fourier-transzformációjaként írható fel:
+      \[
+      I_N(\lambda)
+      =
+      2\sum_{\tau=-(N-1)}^{N-1}\widehat R(\tau)\cos(\tau\lambda).
+      \]
+    </p>
+    <p class="magyarazat">
+      Ha az autokovariancia-becslést a periodogramon keresztül, azaz Fourier-
+      együtthatóként kapjuk, akkor strukturálisan helyes, pozitív definit
+      autokovariancia-becsléshez jutunk. Ez azért fontos, mert egy tetszőleges,
+      pontonként torzítatlan becslés nem feltétlenül pozitív definit, és akár
+      negatív varianciát is eredményezhetne.
+    </p>
+  </details>
+</div>
+
+
+
+
+  
 </section>
+
+
+
+
 
 </body>
 </html>
