@@ -3073,7 +3073,7 @@ Ezzel szemben a feltételes likelihood (conditional likelihood) elhagyja az els�
 
     <p>
       <strong>c)</strong> Normális eloszlású zajból generálva a stacionárius
-      eloszlás minden momentuma véges.
+      eloszlás minden momentuma végtelen.
     </p>
 
     <p>
@@ -3105,7 +3105,6 @@ Ezzel szemben a feltételes likelihood (conditional likelihood) elhagyja az els�
       <p>
         Helyes válasz:
         <span class="helyes">b</span>,
-        <span class="helyes">c</span>
       </p>
 
       <p class="magyarazat">
@@ -3124,8 +3123,9 @@ Ezzel szemben a feltételes likelihood (conditional likelihood) elhagyja az els�
       </p>
 
       <p class="magyarazat">
-        <strong>c) Igaz.</strong> Normális zajból generált stacionárius AR(1)
-        normális eloszlású, ezért minden momentuma véges.
+        <strong>c) Hamis.</strong> Normális zajból generált stacionárius AR(1)
+        normális eloszlású, ezért nemhogy nem végtelen minden momentuma, hanem
+        minden momentuma véges.
       </p>
 
       <p class="magyarazat">
@@ -3152,7 +3152,6 @@ Ezzel szemben a feltételes likelihood (conditional likelihood) elhagyja az els�
       <p>
         Helyes válasz:
         <span class="helyes">b</span>,
-        <span class="helyes">c</span>
       </p>
 
       <p class="magyarazat">
@@ -3170,8 +3169,8 @@ Ezzel szemben a feltételes likelihood (conditional likelihood) elhagyja az els�
       </p>
 
       <p class="magyarazat">
-        <strong>c) Igaz.</strong> Normális zajból generált MA(1) normális
-        eloszlású véges lineáris kombináció, ezért minden momentuma véges.
+        <strong>c) Hamis.</strong> Normális zajból generált MA(1) normális eloszlású
+        véges lineáris kombináció, ezért minden momentuma véges, nem végtelen.
       </p>
 
       <p class="magyarazat">
@@ -3216,9 +3215,11 @@ Ezzel szemben a feltételes likelihood (conditional likelihood) elhagyja az els�
       </p>
 
       <p class="magyarazat">
-        <strong>c) Hamis.</strong> Normális zaj mellett ARCH(1)-nél megfelelő
-        paraméterek esetén a stacionárius eloszlás nehézfarkú lehet, és nem
-        feltétlenül véges minden momentuma.
+        <strong>c) Hamis.</strong> Normális zajból generált ARCH(1) stacionárius
+        eloszlása megfelelő paraméterek mellett lehet nehézfarkú, és lehetnek
+        végtelen momentumai, de nem igaz, hogy minden momentuma végtelen. Például
+        ha létezik véges második momentum, akkor az alacsonyabb rendű momentumok is
+        végesek.
       </p>
 
       <p class="magyarazat">
@@ -3244,17 +3245,11 @@ Ezzel szemben a feltételes likelihood (conditional likelihood) elhagyja az els�
 
       <p>
         Helyes válasz:
-        <span class="helyes">a</span>,
         <span class="helyes">d</span>
       </p>
 
       <p class="magyarazat">
-        <strong>a) Igaz.</strong> A BL(0,0,1,1) folyamat lehet korrelálatlan
-        értékű, fehérzaj-jellegű folyamat. Ha a varianciája $5$, akkor a
-        spektrálsűrűsége konstans:
-        \[
-        f(\lambda)=\frac{5}{2\pi}.
-        \]
+        <strong>a) Hamis.</strong> A BL(0,0,1,1) folyamat csak elfajult esetben lehetne fehérzaj folyamat.
       </p>
 
       <p class="magyarazat">
@@ -3263,9 +3258,10 @@ Ezzel szemben a feltételes likelihood (conditional likelihood) elhagyja az els�
       </p>
 
       <p class="magyarazat">
-        <strong>c) Hamis.</strong> Normális zaj mellett a BL(0,0,1,1) stacionárius
-        eloszlása Kesten--Vervaat--Goldie típusú eredmények alapján lehet
-        nehézfarkú, ezért nem garantált, hogy minden momentuma véges.
+        <strong>c) Hamis.</strong> Normális zajból generált BL(0,0,1,1) folyamatnál
+        megfelelő paraméterek mellett megjelenhet nehézfarkú stacionárius eloszlás,
+        de az nem igaz, hogy minden momentuma végtelen. A végtelen momentumok a
+        farokkitevőtől függenek.
       </p>
 
       <p class="magyarazat">
