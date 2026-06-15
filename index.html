@@ -3588,6 +3588,298 @@ Ezzel szemben a feltételes likelihood (conditional likelihood) elhagyja az els�
 
 
 
+<h3>7. feladat</h3>
+
+<p class="utasitas">
+  <strong>7. feladat (2 pont)</strong>
+</p>
+
+<div class="feladat">
+  <p>
+    Adja meg az AR(1) folyamat paraméterbecslését és annak közelítő eloszlását.
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+
+    <p class="magyarazat">
+      Ha
+      \[
+      X_t=\alpha X_{t-1}+\varepsilon_t,
+      \]
+      akkor az AR(1) paraméterének legkisebb négyzetes / feltételes ML becslése:
+      \[
+      \widehat\alpha=
+      \frac{\sum_{t=2}^{n}X_tX_{t-1}}
+           {\sum_{t=2}^{n}X_{t-1}^2}.
+      \]
+    </p>
+
+    <p class="magyarazat">
+      Közelítő eloszlása:
+      \[
+      \sqrt n(\widehat\alpha-\alpha)
+      \Rightarrow
+      N(0,1-\alpha^2),
+      \]
+      vagyis közelítőleg
+      \[
+      \widehat\alpha
+      \approx
+      N\left(\alpha,\frac{1-\alpha^2}{n}\right).
+      \]
+    </p>
+  </details>
+</div>
+
+
+<h3>8. feladat</h3>
+
+<p class="utasitas">
+  <strong>8. feladat (4 pont)</strong>
+</p>
+
+<div class="feladat">
+  <p>
+    Definiálja, mikor konzervatív egy rendbecslési kritérium, illetve hogy mi
+    a Shibata-féle hatásosság.
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+
+    <p class="magyarazat">
+      Egy rendbecslési kritérium <strong>konzervatív</strong>, ha a valódi rend
+      alulbecslésének valószínűsége nullához tart:
+      \[
+      P(\widehat p&lt;p_0)\to 0.
+      \]
+      Tehát aszimptotikusan nem választ túl kicsi modellt.
+    </p>
+
+    <p class="magyarazat">
+      A <strong>Shibata-féle hatásosság</strong> predikciós hatásosságot jelent:
+      a kiválasztott modellrend aszimptotikusan olyan jó előrejelzési hibát ad,
+      mint az optimális rend. Ez főleg akkor fontos, amikor nem a valódi véges
+      rend megtalálása a cél, hanem a minél jobb előrejelzés.
+    </p>
+
+    <p class="magyarazat">
+      Példa: az AIC Shibata-értelemben hatásos, de nem konzisztens. A BIC és
+      a HQIC konzisztens kritériumok, de nem Shibata-hatásosak.
+    </p>
+  </details>
+</div>
+
+
+<h3>9. feladat</h3>
+
+<p class="utasitas">
+  <strong>9. feladat (2 pont)</strong>
+</p>
+
+<div class="feladat">
+  <p>
+    Mi a Hannan--Quinn-kritérium, és mi a karakterisztikus, kizárólag ezt a
+    kritériumot jellemző tulajdonsága?
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+
+    <p class="magyarazat">
+      A Hannan--Quinn-kritérium alakja:
+      \[
+      HQIC(p)=-2\log L_p+2p\log\log n.
+      \]
+      Itt \(p\) a modell rendje / paraméterszáma, \(n\) a mintaelemszám.
+    </p>
+
+    <p class="magyarazat">
+      Jellegzetessége, hogy a büntetőtagja
+      \[
+      2p\log\log n.
+      \]
+      Ez lassabban nő, mint a BIC \(p\log n\) büntetése, de gyorsabban, mint
+      az AIC konstans \(2p\) büntetése.
+    </p>
+
+    <p class="magyarazat">
+      A HQIC konzisztens rendbecslési kritérium, és a konzisztens kritériumok
+      között aszimptotikusan minimális büntetésűnek tekinthető.
+    </p>
+  </details>
+</div>
+
+
+<h3>10. feladat</h3>
+
+<p class="utasitas">
+  <strong>10. feladat (2 pont)</strong>
+</p>
+
+<div class="feladat">
+  <p>
+    Diszkrét spektrum becslése esetén adja meg a periodogram várható értékét,
+    mint a frekvencia függvényét.
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+
+    <p class="magyarazat">
+      Diszkrét spektrum, azaz periodikus komponensek plusz fehér zaj esetén
+      a periodogram várható értéke egy konstans zajszintből és a valódi
+      frekvenciák köré koncentrálódó Fejér-magok súlyozott összegéből áll.
+    </p>
+
+    <p class="magyarazat">
+      Tipikus alakban:
+      \[
+      E I_n(\lambda)
+      =
+      2\sigma^2
+      +
+      \sum_j A_j^2 F_n(\lambda-\lambda_j),
+      \]
+      ahol \(F_n\) a Fejér-mag, \(\lambda_j\) a valódi frekvenciák, az \(A_j\)-k
+      pedig az amplitúdókból származó súlyok.
+    </p>
+
+    <p class="magyarazat">
+      A lényeg: a várható érték csúcsokat ad a valódi frekvenciák körül,
+      és ezek a csúcsok Fejér-mag alakúak.
+    </p>
+  </details>
+</div>
+
+
+<h3>11. feladat</h3>
+
+<p class="utasitas">
+  <strong>11. feladat (4 pont)</strong>
+</p>
+
+<div class="feladat">
+  <p>
+    Adja meg az egyenletes \(U(0,1)\) zajból generált BL(0,0,1,1) folyamat
+    stacionárius eloszlása létezésének parametrikus feltételét.
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+
+    <p class="magyarazat">
+      A tanult egyszerű bilineáris modell:
+      \[
+      X_t=\varepsilon_t+cX_{t-1}\varepsilon_{t-1}.
+      \]
+    </p>
+
+    <p class="magyarazat">
+      A stacionárius megoldás létezése a Ljapunov-exponens negativitásához
+      kapcsolódik:
+      \[
+      E\log |c\varepsilon_t|&lt;0.
+      \]
+    </p>
+
+    <p class="magyarazat">
+      Ha \(\varepsilon_t\sim U(0,1)\), akkor
+      \[
+      E\log \varepsilon_t=-1.
+      \]
+      Ezért:
+      \[
+      E\log |c\varepsilon_t|
+      =
+      \log c + E\log\varepsilon_t
+      =
+      \log c-1.
+      \]
+    </p>
+
+    <p class="magyarazat">
+      A feltétel:
+      \[
+      \log c-1&lt;0
+      \quad\Longleftrightarrow\quad
+      c&lt;e.
+      \]
+      Pozitív paraméter mellett tehát:
+      \[
+      0&lt;c&lt;e.
+      \]
+    </p>
+  </details>
+</div>
+
+
+<h3>12. feladat</h3>
+
+<p class="utasitas">
+  <strong>12. feladat (6 pont)</strong>
+</p>
+
+<div class="feladat">
+  <p>
+    Adja meg az AR(\(p\)) folyamat stacionárius megoldása létezésének feltételét,
+    bizonyítsa ezt az állítást, és írja fel a megoldást.
+  </p>
+
+  <details>
+    <summary>Válasz mutatása</summary>
+
+    <p class="magyarazat">
+      Az AR(\(p\)) modell:
+      \[
+      X_t=\alpha_1X_{t-1}+\cdots+\alpha_pX_{t-p}+\varepsilon_t.
+      \]
+      A hozzá tartozó AR-polinom késleltetési alakban:
+      \[
+      \varphi(z)=1-\alpha_1z-\cdots-\alpha_pz^p.
+      \]
+    </p>
+
+    <p class="magyarazat">
+      Az oksági stacionárius megoldás létezésének feltétele:
+      \[
+      \varphi(z)\ne0
+      \quad \text{minden } |z|\le1 \text{ esetén}.
+      \]
+      Vagyis a késleltetési polinom gyökei az egységkörön kívül vannak.
+    </p>
+
+    <p class="magyarazat">
+      Ekkor a reciprok polinom Taylor-sorba fejthető:
+      \[
+      \frac{1}{\varphi(z)}
+      =
+      \sum_{j=0}^{\infty}\psi_jz^j,
+      \]
+      ahol
+      \[
+      \sum_{j=0}^{\infty}|\psi_j|&lt;\infty.
+      \]
+    </p>
+
+    <p class="magyarazat">
+      Ezért az AR(\(p\)) folyamat oksági stacionárius megoldása:
+      \[
+      X_t=\sum_{j=0}^{\infty}\psi_j\varepsilon_{t-j}.
+      \]
+      Ez egy végtelen MA-reprezentáció.
+    </p>
+
+    <p class="magyarazat">
+      Rövid bizonyítás: ha a gyökök az egységkörön kívül vannak, akkor
+      \(\frac{1}{\varphi(z)}\) analitikus az egységkör környezetében, ezért
+      Taylor-sora abszolút konvergens. A zajra alkalmazva ezt a szűrőt kapjuk
+      a fenti végtelen mozgóátlag alakot, amely stacionárius megoldást ad.
+    </p>
+  </details>
+</div>
+
 
 
   
