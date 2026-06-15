@@ -3031,5 +3031,371 @@ Ezzel szemben a feltételes likelihood (conditional likelihood) elhagyja az els�
 </section>
 
 
+
+
+<section class="feladatsor">
+  <h2 class="feladatsor-cim">2019.06.24.</h2>
+  <p class="meta">Idősorok vizsga</p>
+
+  <div class="feladat">
+    <p><strong>Név:</strong></p>
+    <p><strong>Hallgatói azonosító:</strong></p>
+
+    <p>
+      <strong>A feladatsor kitöltésére 90 perc áll rendelkezésre.</strong><br>
+      A vizsga során segédeszköz nem használható.<br>
+      A sikeres teszthez 40%, azaz 12 pont elérése szükséges.<br>
+      Jó munkát!
+    </p>
+
+    <p>
+      <strong>Figyelem!</strong> A tesztfeladatok kitöltése során a rossz válasz -1 pontot ér.
+    </p>
+  </div>
+
+
+  <h3>1. feladat</h3>
+
+  <p class="utasitas">
+    <strong>1. feladat (10 pont)</strong>
+  </p>
+
+  <div class="feladat">
+    <p>
+      <strong>a)</strong> A konstans $\frac{5}{2\pi}$ függvény lehet ilyen
+      nem elfajult folyamat spektrálsűrűség-függvénye.
+    </p>
+
+    <p>
+      <strong>b)</strong> Egyenletes eloszlású zajból generálva a stacionárius
+      eloszlás minden momentuma véges.
+    </p>
+
+    <p>
+      <strong>c)</strong> Normális eloszlású zajból generálva a stacionárius
+      eloszlás minden momentuma véges.
+    </p>
+
+    <p>
+      <strong>d)</strong> Egyenletes eloszlású zajból generálva a paraméter
+      függvényében előfordulhat az is, hogy a stacionárius eloszlás minden
+      momentuma véges, és az is, hogy van végtelen momentuma.
+    </p>
+  </div>
+
+  <p class="utasitas">
+    Karikázza be, hogy a <strong>tanultak alapján</strong>, pozitív együtthatókat
+    feltételezve, tehát például degenerált, 0 paraméterű folyamatot nem véve
+    figyelembe, a fentiek közül melyek igazak.
+  </p>
+
+
+  <div class="feladat">
+    <p>
+      <strong>1.</strong> A fentiek közül melyek igazak az AR(1) folyamatra?
+    </p>
+
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+
+      <p>
+        Helyes válasz:
+        <span class="helyes">b</span>,
+        <span class="helyes">c</span>
+      </p>
+
+      <p class="magyarazat">
+        <strong>a) Hamis.</strong> Nem elfajult AR(1) folyamat spektrálsűrűsége
+        nem konstans. Konstans spektrum korrelálatlan, fehérzaj-jellegű
+        folyamatra jellemző.
+      </p>
+
+      <p class="magyarazat">
+        <strong>b) Igaz.</strong> AR(1)-nél, ha $|\alpha|&lt;1$, akkor
+        \[
+        X_t=\sum_{j=0}^{\infty}\alpha^j\varepsilon_{t-j}.
+        \]
+        Ha a zaj egyenletes eloszlású, tehát korlátos, akkor ez az összeg is
+        korlátos, ezért minden momentuma véges.
+      </p>
+
+      <p class="magyarazat">
+        <strong>c) Igaz.</strong> Normális zajból generált stacionárius AR(1)
+        normális eloszlású, ezért minden momentuma véges.
+      </p>
+
+      <p class="magyarazat">
+        <strong>d) Hamis.</strong> Ez a paramétertől függő „minden momentum
+        véges / van végtelen momentum” váltás nem az AR(1) lineáris modell
+        tipikus tulajdonsága.
+      </p>
+    </details>
+  </div>
+
+
+  <div class="feladat">
+    <p>
+      <strong>2.</strong> A fentiek közül melyek igazak az MA(1) folyamatra?
+    </p>
+
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+
+      <p>
+        Helyes válasz:
+        <span class="helyes">b</span>,
+        <span class="helyes">c</span>
+      </p>
+
+      <p class="magyarazat">
+        <strong>a) Hamis.</strong> Nem elfajult MA(1) folyamat spektruma általában
+        nem konstans, mert az autokorreláció az első késleltetésnél még nem nulla.
+      </p>
+
+      <p class="magyarazat">
+        <strong>b) Igaz.</strong> MA(1)-nél
+        \[
+        X_t=\varepsilon_t+\theta\varepsilon_{t-1}.
+        \]
+        Egyenletes eloszlású zaj esetén ez véges, korlátos lineáris kombináció,
+        ezért minden momentuma véges.
+      </p>
+
+      <p class="magyarazat">
+        <strong>c) Igaz.</strong> Normális zajból generált MA(1) normális
+        eloszlású véges lineáris kombináció, ezért minden momentuma véges.
+      </p>
+
+      <p class="magyarazat">
+        <strong>d) Hamis.</strong> MA(1) lineáris, véges zajkombináció; nem
+        jellemzi a paramétertől függő nehézfarkú / korlátos váltás.
+      </p>
+    </details>
+  </div>
+
+
+  <div class="feladat">
+    <p>
+      <strong>3.</strong> A fentiek közül melyek igazak az ARCH(1) folyamatra?
+    </p>
+
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+
+      <p>
+        Helyes válasz:
+        <span class="helyes">a</span>,
+        <span class="helyes">d</span>
+      </p>
+
+      <p class="magyarazat">
+        <strong>a) Igaz.</strong> ARCH(1) esetén maga az $X_t$ folyamat
+        korrelálatlan értékű lehet. Ha a variancia $5$, akkor a spektrálsűrűsége
+        konstans:
+        \[
+        f(\lambda)=\frac{5}{2\pi}.
+        \]
+      </p>
+
+      <p class="magyarazat">
+        <strong>b) Hamis.</strong> Egyenletes zaj mellett ARCH(1)-nél a paraméter
+        értékétől függően előfordulhat nehéz farkú stacionárius eloszlás is,
+        amelynek bizonyos momentumai végtelenek.
+      </p>
+
+      <p class="magyarazat">
+        <strong>c) Hamis.</strong> Normális zaj mellett ARCH(1)-nél megfelelő
+        paraméterek esetén a stacionárius eloszlás nehézfarkú lehet, és nem
+        feltétlenül véges minden momentuma.
+      </p>
+
+      <p class="magyarazat">
+        <strong>d) Igaz.</strong> Egyenletes zaj mellett a paramétertől függően
+        lehet olyan eset, amikor minden momentum véges, és olyan is, amikor
+        a stacionárius eloszlásnak van végtelen momentuma.
+      </p>
+    </details>
+  </div>
+
+
+  <div class="feladat">
+    <p>
+      <strong>4.</strong> A fentiek közül melyek igazak a BL(0,0,1,1) folyamatra?
+    </p>
+
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+
+      <p>
+        Helyes válasz:
+        <span class="helyes">a</span>,
+        <span class="helyes">d</span>
+      </p>
+
+      <p class="magyarazat">
+        <strong>a) Igaz.</strong> A BL(0,0,1,1) folyamat lehet korrelálatlan
+        értékű, fehérzaj-jellegű folyamat. Ha a varianciája $5$, akkor a
+        spektrálsűrűsége konstans:
+        \[
+        f(\lambda)=\frac{5}{2\pi}.
+        \]
+      </p>
+
+      <p class="magyarazat">
+        <strong>b) Hamis.</strong> Uniform zaj mellett a BL(0,0,1,1) stacionárius
+        megoldása nem minden paramétertartományban rendelkezik minden momentummal.
+      </p>
+
+      <p class="magyarazat">
+        <strong>c) Hamis.</strong> Normális zaj mellett a BL(0,0,1,1) stacionárius
+        eloszlása Kesten--Vervaat--Goldie típusú eredmények alapján lehet
+        nehézfarkú, ezért nem garantált, hogy minden momentuma véges.
+      </p>
+
+      <p class="magyarazat">
+        <strong>d) Igaz.</strong> Uniform zaj mellett a paramétertől függően
+        kétféle viselkedés is előfordulhat: például $0&lt;c&lt;1$ esetén a
+        stacionárius eloszlás korlátos, míg $1&lt;c&lt;e$ esetén Pareto-szerű
+        farok jelenhet meg, és bizonyos momentumok végtelenek lehetnek.
+      </p>
+    </details>
+  </div>
+
+
+  <h3>2. feladat</h3>
+
+  <p class="utasitas">
+    <strong>2. feladat (2 pont)</strong> Karikázza be a helyes válasz betűjelét.
+  </p>
+
+  <div class="feladat">
+    <p>
+      ARCH(1) folyamat esetén, ha a stacionárius eloszlás regularitási indexe
+      $\kappa=3$, akkor az autokovariancia-függvény becslését alkalmasan megválasztott
+    </p>
+
+    <p>
+      <strong>a)</strong> végtelenhez tartó sorozattal kell osztani, hogy létezzen
+      határeloszlása, és ekkor lesz a határeloszlásnak olyan momentuma, amely végtelen.
+    </p>
+
+    <p>
+      <strong>b)</strong> végtelenhez tartó sorozattal kell osztani, hogy létezzen
+      határeloszlása, és ekkor a határeloszlásnak minden momentuma véges lesz.
+    </p>
+
+    <p>
+      <strong>c)</strong> 0-hoz tartó sorozattal kell osztani, hogy létezzen
+      határeloszlása, és ekkor lesz a határeloszlásnak olyan momentuma, amely végtelen.
+    </p>
+
+    <p>
+      <strong>d)</strong> 0-hoz tartó sorozattal kell osztani, hogy létezzen
+      határeloszlása, és ekkor a határeloszlásnak minden momentuma véges lesz.
+    </p>
+
+    <p>
+      <strong>e)</strong> Nem skálázható úgy, hogy létezzen a határeloszlás.
+    </p>
+
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+
+      <p>
+        Helyes válasz:
+        <span class="helyes">a</span>
+      </p>
+
+      <p class="magyarazat">
+        Nehézfarkú ARCH-folyamatnál az autokovariancia-becslés határeloszlásához
+        nem a szokásos normális skálázás tartozik. A megfelelő normalizáló
+        sorozat végtelenhez tart. Regularitási index $\kappa=3$ esetén stabil,
+        nehézfarkú határeloszlás jelenik meg, amelynek bizonyos momentumai
+        végtelenek.
+      </p>
+    </details>
+  </div>
+
+
+  <h3>3. feladat</h3>
+
+  <p class="utasitas">
+    <strong>3. feladat (2 pont)</strong> Karikázza be a helyes válasz betűjelét.
+  </p>
+
+  <div class="feladat">
+    <p>
+      Gauss generáló zaj esetén az ARCH(1) folyamat stacionárius eloszlása
+      pontosan akkor rendelkezik véges negyedik momentummal, ha
+      $\alpha_1&lt;\frac{1}{\sqrt 3}$.
+      Honnan következik ez?
+    </p>
+
+    <p><strong>a)</strong> A stacionárius megoldás létezésének feltételéből számolható.</p>
+    <p><strong>b)</strong> A Ljapunov-exponens alapján számolható.</p>
+    <p><strong>c)</strong> Az ARCH(1) maximumainak határeloszlásából számolható.</p>
+    <p><strong>d)</strong> A Kesten--Vervaat--Goldie tétel alapján számolható.</p>
+    <p><strong>e)</strong> Az autokorreláció-függvény becslésére vonatkozó határeloszlásból számolható.</p>
+
+    <div class="valaszok">
+      a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e
+    </div>
+
+    <details>
+      <summary>Megoldás mutatása</summary>
+
+      <p>
+        Helyes válasz:
+        <span class="helyes">d</span>
+      </p>
+
+      <p class="magyarazat">
+        ARCH(1)-nél a negyedik momentum létezése a stacionárius eloszlás
+        farokviselkedéséhez kapcsolódik. Gauss-zaj esetén a Kesten--Vervaat--Goldie
+        tételből kapott farokindex alapján dönthető el, hogy mely momentumok
+        végesek.
+      </p>
+
+      <p class="magyarazat">
+        Ekvivalensen a negyedik momentum feltétele:
+        \[
+        \alpha_1^2 E(\varepsilon_t^4)&lt;1.
+        \]
+        Standard normális zaj esetén $E(\varepsilon_t^4)=3$, ezért:
+        \[
+        3\alpha_1^2&lt;1
+        \quad\Longleftrightarrow\quad
+        \alpha_1&lt;\frac{1}{\sqrt 3}.
+        \]
+      </p>
+    </details>
+  </div>
+</section>
+
+
+
+  
+
+
 </body>
 </html>
