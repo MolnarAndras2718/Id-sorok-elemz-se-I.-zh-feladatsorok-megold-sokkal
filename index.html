@@ -946,19 +946,11 @@
     <summary>Válasz mutatása</summary>
     <p class="magyarazat">
       A periodogram az autokovariancia-függvény becslésének csonkított
-      Fourier-transzformációjaként írható fel:
-      \[
-      I_N(\lambda)
-      =
-      2\sum_{\tau=-(N-1)}^{N-1}\widehat R(\tau)\cos(\tau\lambda).
-      \]
+      Fourier-transzformációjaként írható fel.
     </p>
     <p class="magyarazat">
-      Ha az autokovariancia-becslést a periodogramon keresztül, azaz Fourier-
-      együtthatóként kapjuk, akkor strukturálisan helyes, pozitív definit
-      autokovariancia-becsléshez jutunk. Ez azért fontos, mert egy tetszőleges,
-      pontonként torzítatlan becslés nem feltétlenül pozitív definit, és akár
-      negatív varianciát is eredményezhetne.
+      A spektrálelmélet szerint egy determinisztikus sorozat (vagy mátrix) akkor és csak akkor pozitív szemidefinit, ha a Fourier-transzformáltja (a spektruma) minden pontban nemnegatív.
+      Mivel a periodogram definícióból adódóan sohasem negatív, ezért a torzított mintabeli autokovariancia függvény - ami ennek az alapját képezi - pozitív definit lesz.
     </p>
   </details>
 </div>
