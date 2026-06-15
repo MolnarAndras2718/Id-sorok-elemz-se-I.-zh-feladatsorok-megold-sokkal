@@ -3472,51 +3472,6 @@ Ezzel szemben a feltételes likelihood (conditional likelihood) elhagyja az els�
 
 
 
-<h3>7. feladat</h3>
-
-<p class="utasitas">
-  <strong>7. feladat (2 pont)</strong>
-</p>
-
-<div class="feladat">
-  <p>
-    Adja meg az AR(1) folyamat paraméterbecslését és annak közelítő eloszlását.
-  </p>
-
-  <details>
-    <summary>Válasz mutatása</summary>
-
-    <p class="magyarazat">
-      Ha
-      \[
-      X_t=\alpha X_{t-1}+\varepsilon_t,
-      \]
-      akkor az AR(1) paraméterének legkisebb négyzetes / feltételes ML becslése:
-      \[
-      \widehat\alpha=
-      \frac{\sum_{t=2}^{n}X_tX_{t-1}}
-           {\sum_{t=2}^{n}X_{t-1}^2}.
-      \]
-    </p>
-
-    <p class="magyarazat">
-      Közelítő eloszlása:
-      \[
-      \sqrt n(\widehat\alpha-\alpha)
-      \Rightarrow
-      N(0,1-\alpha^2),
-      \]
-      vagyis közelítőleg
-      \[
-      \widehat\alpha
-      \approx
-      N\left(\alpha,\frac{1-\alpha^2}{n}\right).
-      \]
-    </p>
-  </details>
-</div>
-
-
 <h3>8. feladat</h3>
 
 <p class="utasitas">
