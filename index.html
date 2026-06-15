@@ -3333,66 +3333,6 @@ Ezzel szemben a feltételes likelihood (conditional likelihood) elhagyja az els�
 
 
 
-
-
-  
-<h3>4. feladat</h3>
-
-<p class="utasitas">
-  <strong>4. feladat (2 pont)</strong> Karikázza be a helyes megoldást.
-</p>
-
-<div class="feladat">
-  <p>
-    Gauss generáló zaj esetén az ARCH(1) folyamat stacionárius eloszlása
-    pontosan akkor rendelkezik véges negyedik momentummal, ha
-    $\alpha_1&lt;\frac{1}{\sqrt{3}}$. Honnan következik ez?
-  </p>
-
-  <p><strong>a)</strong> A stacionárius megoldás létezésének feltételéből számolható.</p>
-  <p><strong>b)</strong> A Ljapunov-exponens alapján számolható.</p>
-  <p><strong>c)</strong> Az ARCH(1) maximumainak határeloszlásából számolható.</p>
-  <p><strong>d)</strong> A Kesten--Vervaat--Goldie tétel alapján számolható.</p>
-  <p><strong>e)</strong> Az autokorreláció-függvény becslésére vonatkozó határeloszlásból számolható.</p>
-
-  <div class="valaszok">
-    a &nbsp;&nbsp; b &nbsp;&nbsp; c &nbsp;&nbsp; d &nbsp;&nbsp; e
-  </div>
-
-  <details>
-    <summary>Megoldás mutatása</summary>
-
-    <p>
-      Helyes válasz:
-      <span class="helyes">d</span>
-    </p>
-
-    <p class="magyarazat">
-      Az ARCH(1) stacionárius eloszlásának farokviselkedése Kesten--Vervaat--Goldie
-      típusú eredményekből következik. A negyedik momentum végessége a farokindexhez
-      kapcsolódik.
-    </p>
-
-    <p class="magyarazat">
-      Közvetlenül is ellenőrizhető:
-      \[
-      X_t^2=(\alpha_0+\alpha_1X_{t-1}^2)\varepsilon_t^2.
-      \]
-      A negyedik momentum létezéséhez standard normális zaj esetén
-      \[
-      \alpha_1^2E(\varepsilon_t^4)&lt;1.
-      \]
-      Mivel normális zajnál $E(\varepsilon_t^4)=3$, ezért
-      \[
-      3\alpha_1^2&lt;1
-      \quad\Longleftrightarrow\quad
-      \alpha_1&lt;\frac{1}{\sqrt3}.
-      \]
-    </p>
-  </details>
-</div>
-
-
 <h3>5. feladat</h3>
 
 <p class="utasitas">
