@@ -756,22 +756,10 @@
   <details>
   <summary>Megoldás mutatása</summary>
   <p>
-    Helyes válasz a feltöltött jegyzet explicit periodogram-képlete alapján:
+    Helyes válasz:
     <span class="helyes">d</span>
   </p>
 
-  <p class="magyarazat">
-    A jegyzetben a periodogram az autokovariancia-becslés csonkított
-    Fourier-transzformáltjaként szerepel:
-    \[
-    I_N(\lambda)
-    =
-    2\sum_{\tau=-(N-1)}^{N-1}\widehat R(\tau)\cos(\tau\lambda).
-    \]
-    Ez autokovarianciákkal súlyozott trigonometrikus, konkrétan koszinuszos
-    tagok összege, ezért a megadott válaszok közül a <strong>d)</strong>
-    illeszkedik közvetlenül a feltöltött jegyzethez.
-  </p>
 </div>
 
 
@@ -3652,46 +3640,6 @@ Ezzel szemben a feltételes likelihood (conditional likelihood) elhagyja az els�
 </div>
 
 
-<h3>10. feladat</h3>
-
-<p class="utasitas">
-  <strong>10. feladat (2 pont)</strong>
-</p>
-
-<div class="feladat">
-  <p>
-    Diszkrét spektrum becslése esetén adja meg a periodogram várható értékét,
-    mint a frekvencia függvényét.
-  </p>
-
-  <details>
-    <summary>Válasz mutatása</summary>
-
-    <p class="magyarazat">
-      Diszkrét spektrum, azaz periodikus komponensek plusz fehér zaj esetén
-      a periodogram várható értéke egy konstans zajszintből és a valódi
-      frekvenciák köré koncentrálódó Fejér-magok súlyozott összegéből áll.
-    </p>
-
-    <p class="magyarazat">
-      Tipikus alakban:
-      \[
-      E I_n(\lambda)
-      =
-      2\sigma^2
-      +
-      \sum_j A_j^2 F_n(\lambda-\lambda_j),
-      \]
-      ahol \(F_n\) a Fejér-mag, \(\lambda_j\) a valódi frekvenciák, az \(A_j\)-k
-      pedig az amplitúdókból származó súlyok.
-    </p>
-
-    <p class="magyarazat">
-      A lényeg: a várható érték csúcsokat ad a valódi frekvenciák körül,
-      és ezek a csúcsok Fejér-mag alakúak.
-    </p>
-  </details>
-</div>
 
 
 <h3>11. feladat</h3>
@@ -3733,22 +3681,18 @@ Ezzel szemben a feltételes likelihood (conditional likelihood) elhagyja az els�
       \[
       E\log |c\varepsilon_t|
       =
-      \log c + E\log\varepsilon_t
+      \log |c| + E\log\varepsilon_t
       =
-      \log c-1.
+      \log |c|-1.
       \]
     </p>
 
     <p class="magyarazat">
       A feltétel:
       \[
-      \log c-1&lt;0
+      \log |c|-1&lt;0
       \quad\Longleftrightarrow\quad
-      c&lt;e.
-      \]
-      Pozitív paraméter mellett tehát:
-      \[
-      0&lt;c&lt;e.
+      |c|&lt;e.
       \]
     </p>
   </details>
