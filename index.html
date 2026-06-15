@@ -780,14 +780,13 @@
     <p class="magyarazat">
       AR(1)-nél a teljes likelihood tartalmazza a kezdőérték, például $X_1$
       stacionárius sűrűségét is:
-      $L_{\text{teljes}}=f_X(x_1)\prod_{t=2}^T f(x_t\mid x_{t-1})$.
-      A feltételes likelihood ezzel szemben $X_1$-re feltételez, ezért
+      $L_{\text{teljes}}=f_X(x_1)\prod_{t=2}^T f(x_t\mid x_{t-1})$. A plusz tag miatt a log-likelihood egyenlet nem-lineárissá válik. Nem lehet sima OLS-sel, zárt alakban megoldani.
+      A feltételes likelihood ezzel szemben $X_1$-re feltételez, ezt adottnak tekinti, ezért
       $L_{\text{felt}}=\prod_{t=2}^T f(x_t\mid x_{t-1})$.
     </p>
     <p class="magyarazat">
-      Következmény: a feltételes likelihood egyszerűbb, és AR(1)-nél a kapott
-      becslés gyakorlatilag/aszimptotikusan közel van a teljes likelihood-becsléshez;
-      a különbség nagy mintában eltűnik.
+      Következmény: a feltételes likelihood egyszerűb, könnyen számolható, viszont kis mintán a feltételes likelihood információt veszít (kidob egy megfigyelést), és a becslések torzítottabbak lehetnek, mint a teljes likelihood esetén. 
+      Nagy minta esetén a két becslés aszimptotikusan ekvivalens, a különbség elhanyagolható.
     </p>
   </details>
 </div>
